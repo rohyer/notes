@@ -2,7 +2,7 @@
 @import '../../node_modules/bootstrap/scss/main-bootstrap/main-bootstrap';
 
 // Font face
-// @import '../fonts/font-face/font-face';
+@import '../fonts/font-face/font-face';
 
 // Variables
 @import './variables';
@@ -11,5 +11,7 @@
 @import './default';
 
 // Custom
+@import './custom/login';
+@import './custom/register';
 @import './custom/header';
 @import './custom/main-content';

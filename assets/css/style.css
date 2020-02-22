@@ -11336,8 +11336,164 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Thin.ttf");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Thin.otf");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Light.otf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Regular.otf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Medium.otf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Bold.otf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("../fonts/NotoSansTC/NotoSansTC-Black.otf");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../fonts/Comfortaa/Comfortaa-Light.otf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../fonts/Comfortaa/Comfortaa-Regular.otf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../fonts/Comfortaa/Comfortaa-Medium.otf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../fonts/Comfortaa/Comfortaa-SemiBold.otf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../fonts/Comfortaa/Comfortaa-Bold.otf");
+  font-weight: 900;
+  font-style: normal; }
 h1 {
   margin: 0; }
+
+#login-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 45px 30px;
+  width: 400px;
+  height: 450px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  text-align: center; }
+  #login-box h1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px; }
+  #login-box h2 {
+    font-family: 'Comfortaa';
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 30px; }
+
+form input.info-login {
+  font-family: 'Noto Sans TC';
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  text-indent: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition-duration: .2s; }
+  form input.info-login:focus {
+    box-shadow: 0 0 0 1.5px #3C4BEB;
+    background-color: #fff; }
+form a#forgotten-password {
+  float: left;
+  width: 100%;
+  margin-bottom: 50px; }
+form a#link-register {
+  font-family: 'Noto Sans TC';
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+  padding: 7px 20px;
+  transition-duration: .2s;
+  text-decoration: none; }
+  form a#link-register:hover {
+    color: #007bff; }
+form input[type="submit"] {
+  font-family: 'Noto Sans TC';
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  float: right;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3C4BEB;
+  color: #fff; }
 
 header#header {
   width: 100%;
