@@ -14,8 +14,8 @@
         <h1>Notes</h1>
         <h2>Faça seu login</h2>
         <form action="" method="post">
-            <input type="email" name="email-login" id="email-login" placeholder="Email" class="info-login">
-            <input type="password" name="password-login" id="password-login" placeholder="Senha" class="info-login">
+            <input type="email" name="email-login" placeholder="Email" class="login-info">
+            <input type="password" name="password-login" placeholder="Senha" class="login-info">
             <a href="#" id="forgotten-password">Esqueceu seu email ou senha?</a>
 
             <a href="./register.php" id="link-register">Criar conta</a>
