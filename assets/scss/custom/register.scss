@@ -7,7 +7,7 @@
     right: 0;
     margin: auto;
     padding: 45px 30px;
-    width: 650px;
+    width: 625px;
     height: 600px;
     border: 1px solid #CCC;
     border-radius: 8px;
@@ -30,7 +30,7 @@
     }
 
     form {
-        input {
+        input, select {
             &.register-info {
                 font-size: 16px;
                 font-weight: 300;
@@ -50,16 +50,51 @@
                     box-shadow: 0 0 0 1.5px #3C4BEB;
                     background-color: #fff;
                 }
+                
+                &.register-half-size {
+                    &:nth-child(odd) {
+                        float: left;
+                        width: 48%;
+                    }
 
-                &:nth-child(odd) {
-                    float: left;
-                    width: 48%;
+                    &:nth-child(even) {
+                        float: right;
+                        width: 48%;
+                    }
                 }
+            }
+        }
 
-                &:nth-child(even) {
-                    float: right;
-                    width: 48%;
-                }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            font-style: normal;
+            float: left;
+            padding: 7px 20px;
+            margin-top: 10px;
+            transition-duration: .2s;
+            text-decoration: none;
+    
+            &:hover {
+                color: #007bff;
+            }
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            font-weight: 400;
+            font-style: normal;
+            float: right;
+            padding: 7px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3C4BEB;
+            color: #fff;
+            outline: 0;
+
+            &:hover {
+                box-shadow: 0px 2px 2px #ccc;
             }
         }
     }

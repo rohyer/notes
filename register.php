@@ -10,27 +10,42 @@
   </head>
   <body>
 
+  <?php
+
+  require_once './src/model/User.php';
+  $objUser = new User();
+
+  if (isset($_POST['btnRegister'])) {
+    if ($objUser->registerUser($_POST) == true) {
+      echo "<script>alert('Cadastro Realizado')</script>";
+    }
+  }
+
+
+  ?>
+
     <div id="register-box">
       <h1>Notes</h1>
       <h2>Faça seu cadastro</h2>
 
       <form action="" method="post">
-        <input type="text" name="name-register" class="register-info" placeholder="Nome">
+        <input type="text" name="name-register" class="register-info" placeholder="Nome" required>
 
-        <input type="email" name="email-register" class="register-info" placeholder="Email">
+        <input type="email" name="email-register" class="register-info" placeholder="Email" required>
 
-        <input type="password" name="password-register" class="register-info" placeholder="Senha">
+        <input type="password" name="password-register" class="register-info register-half-size" placeholder="Senha" required>
 
-        <input type="password" name="password-register-confirm" class="register-info" placeholder="Confirme sua senha">
+        <input type="password" name="password-confirm-register" class="register-info register-half-size" placeholder="Confirme sua senha" required>
 
-        <input type="tel" name="cell-phone-register" class="register-info" placeholder="celular">
-
-        <select name="sex-register" id="">
+        <select name="sex-register" class="register-info register-half-size" required>
+          <option value="">Sexo</option>
           <option value="M">Masculino</option>
           <option value="F">Feminino</option>
         </select>
 
-        <select name="state-register" id="">
+        <input type="tel" name="cellphone-register" class="register-info register-half-size" placeholder="celular" required>
+
+        <select name="state-register" class="register-info register-half-size" required>
           <option value="AC">AC</option>
           <option value="AL">AL</option>
           <option value="AP">AP</option>
@@ -60,11 +75,11 @@
           <option value="TO">TO</option>
         </select>
 
-        <input type="text" name="city-register" id="">
+        <input type="text" name="city-register" class="register-info register-half-size" placeholder="Cidade" required>
 
         <a href="./login.php">Voltar</a>
 
-        <input type="submit" value="Cadastrar" name="btnCadastrar">
+        <input type="submit" value="Cadastrar" name="btnRegister">
       </form>
     </div>
     

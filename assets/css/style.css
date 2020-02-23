@@ -11501,7 +11501,7 @@ h1 {
   right: 0;
   margin: auto;
   padding: 45px 30px;
-  width: 650px;
+  width: 625px;
   height: 600px;
   border: 1px solid #CCC;
   border-radius: 8px;
@@ -11518,7 +11518,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     margin-bottom: 30px; }
-  #register-box form input.register-info {
+  #register-box form input.register-info, #register-box form select.register-info {
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -11532,15 +11532,40 @@ h1 {
     padding: 10px;
     margin-bottom: 20px;
     transition-duration: .2s; }
-    #register-box form input.register-info:focus {
+    #register-box form input.register-info:focus, #register-box form select.register-info:focus {
       box-shadow: 0 0 0 1.5px #3C4BEB;
       background-color: #fff; }
-    #register-box form input.register-info:nth-child(odd) {
+    #register-box form input.register-info.register-half-size:nth-child(odd), #register-box form select.register-info.register-half-size:nth-child(odd) {
       float: left;
       width: 48%; }
-    #register-box form input.register-info:nth-child(even) {
+    #register-box form input.register-info.register-half-size:nth-child(even), #register-box form select.register-info.register-half-size:nth-child(even) {
       float: right;
       width: 48%; }
+  #register-box form a {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+    padding: 7px 20px;
+    margin-top: 10px;
+    transition-duration: .2s;
+    text-decoration: none; }
+    #register-box form a:hover {
+      color: #007bff; }
+  #register-box form input[type="submit"] {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    float: right;
+    padding: 7px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3C4BEB;
+    color: #fff;
+    outline: 0; }
+    #register-box form input[type="submit"]:hover {
+      box-shadow: 0px 2px 2px #ccc; }
 
 header#header {
   width: 100%;
