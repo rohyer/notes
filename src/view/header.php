@@ -13,16 +13,20 @@
 
         <?php
             
-            if (session_status() !== PHP_SESSION_ACTIVE) {
-                session_start();
-                echo $_SESSION['logado'];
+            session_start();
+            echo $_SESSION['logado'];
+            echo $_SESSION['user_datas']['name'];
+            echo $_SESSION['user_datas']['email'];
+            echo $_SESSION['user_datas']['password'];
+            echo $_SESSION['user_datas']['sex'];
+            echo $_SESSION['user_datas']['cellphone'];
+            echo $_SESSION['user_datas']['state'];
+            echo $_SESSION['user_datas']['city'];
 
-                if (!isset($_SESSION['logado'])) {
-                    header("Location: ./login.php");
-                }
+            if (!isset($_SESSION['logado'])) {
+                header("Location: ./login.php");
             }
             
-        
         ?>
 
         <header id="header">

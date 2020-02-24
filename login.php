@@ -11,13 +11,14 @@
   <body>
 
   <?php
-  if (session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
-
-    if (isset($_SESSION['logado'])) {
-      header("Location: ./index.php");
-    }
+  
+  session_start();
+  if ((isset ($_SESSION['logado']) == true) and (isset ($_SESSION['password']) == true)) {
+    unset($_SESSION['login']);
+    unset($_SESSION['senha']);
+    header('location:index.php');
   }
+  
 
   require_once './src/model/User.php';
   $objUserLogin = new User();
@@ -45,7 +46,7 @@
             <input type="submit" value="Entrar" name="btnLogin">
         </form>
     </div>
-
+   
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

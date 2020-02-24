@@ -75,14 +75,15 @@ class User {
             $stmt->bindParam(":encryptedPasswordUser", $this->encryptedPasswordUser);
 
             if ($stmt->execute()) {
-                $datasLogin = $stmt->fetch();
+                $datasLogin = $stmt->fetch(PDO::FETCH_OBJ);
 
-                if (session_status() !== PHP_SESSION_ACTIVE) {
-                    session_start();
-                    $_SESSION['logado'] = true;
-                    $_SESSION['password'] = true;
-                    $_SESSION['user_datas'] = $datasLogin->name;
-                }
+                session_start();
+                $_SESSION['logado'] = true;
+                $_SESSION['password'] = true;
+                $_SESSION['user_datas'] = array('name' => $datasLogin->nameuser,
+                    'email' => $datasLogin->emailuser, 'password' => $datasLogin->passworduser,
+                    'sex' => $datasLogin->sexuser, 'cellphone' => $datasLogin->cellphoneuser,
+                    'state' => $datasLogin->stateuser, 'city' => $datasLogin->cityuser);
 
                 return true;
             } else {
@@ -99,7 +100,7 @@ class User {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
-
+        
         session_unset();
         session_destroy();
         header("location: ../../login.php");

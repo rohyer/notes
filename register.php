@@ -12,6 +12,14 @@
 
   <?php
 
+  session_start();
+  if ((isset ($_SESSION['logado']) == true) and (isset ($_SESSION['password']) == true)) {
+    unset($_SESSION['login']);
+    unset($_SESSION['senha']);
+    header('location:index.php');
+  }
+  
+
   require_once './src/model/User.php';
   $objUserRegister = new User();
 
