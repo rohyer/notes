@@ -9,6 +9,29 @@
     <title>Login</title>
   </head>
   <body>
+
+  <?php
+  if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+
+    if (isset($_SESSION['logado'])) {
+      header("Location: ./index.php");
+    }
+  }
+
+  require_once './src/model/User.php';
+  $objUserLogin = new User();
+
+  if (isset($_POST['btnLogin'])) {
+    if ($objUserLogin->loginUser($_POST) == true) {
+      header("Location: ../notes/index.php");
+    } else {
+      echo "<script>alert('Email ou senha incorreto');</script>";
+    }
+  }
+
+
+  ?>
     
     <div id="login-box">
         <h1>Notes</h1>
@@ -19,7 +42,7 @@
             <a href="#" id="forgotten-password">Esqueceu seu email ou senha?</a>
 
             <a href="./register.php" id="link-register">Criar conta</a>
-            <input type="submit" value="Entrar" name="btnLogar">
+            <input type="submit" value="Entrar" name="btnLogin">
         </form>
     </div>
 

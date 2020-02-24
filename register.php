@@ -13,11 +13,19 @@
   <?php
 
   require_once './src/model/User.php';
-  $objUser = new User();
+  $objUserRegister = new User();
 
   if (isset($_POST['btnRegister'])) {
-    if ($objUser->registerUser($_POST) == true) {
-      echo "<script>alert('Cadastro Realizado')</script>";
+
+    $password = $_POST['password-register'];
+    $confirmPassword = $_POST['password-confirm-register'];
+
+    if ($password === $confirmPassword) {
+      if ($objUserRegister->registerUser($_POST) == true) {
+        echo "<script>alert('Cadastro Realizado')</script>";
+      }
+    } else {
+      echo "<script>alert('Senhas não conferem')</script>";
     }
   }
 

@@ -9,7 +9,22 @@
 
         <title>Notes</title>
     </head>
-  <body>
+    <body>
+
+        <?php
+            
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+                echo $_SESSION['logado'];
+
+                if (!isset($_SESSION['logado'])) {
+                    header("Location: ./login.php");
+                }
+            }
+            
+        
+        ?>
+
         <header id="header">
             <div class="container-fluid">
                 <div class="row">
@@ -23,9 +38,11 @@
                     </div>
 
                     <div id="header-right" class="col-8">
+                    <a href="./src/view/sign-out.php">
                         <div id="profile">
                             <!-- <img src="" alt=""> -->
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>
