@@ -18296,4 +18296,35 @@ header#header {
       #header-right #profile #profile-box button:hover {
         background-color: #f1f1f1; }
 
+#main-menu {
+  float: left;
+  width: 250px;
+  height: 92vh;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #main-menu #main-menu-notes h4 {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; }
+    #main-menu #main-menu-notes h4 a {
+      float: left;
+      width: 135px;
+      height: 45px;
+      text-align: center;
+      padding: 10px 15px;
+      color: #444;
+      text-decoration: none; }
+      #main-menu #main-menu-notes h4 a:hover {
+        background-color: #f1f1f1;
+        border-radius: 50px; }
+  #main-menu #main-menu-notes button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: #fff; }
+    #main-menu #main-menu-notes button:hover {
+      background-color: #f1f1f1; }
+
 /*# sourceMappingURL=style.css.map */
