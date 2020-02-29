@@ -1,9 +1,13 @@
 body {
     font-family: 'Noto Sans TC';
-    position: relative;
     float: left;
     width: 100%;
+
+    &.body-pages-in {
+        position: relative;
+    }
 }
+
 
 #page-notes {
     #notes {

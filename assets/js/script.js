@@ -1,3 +1,7 @@
+$('#meuModal').on('shown.bs.modal', function () {
+    $('#meuInput').trigger('focus')
+  })
+
 // CLOSE-OPEN MENU
 const hamburger = window.document.getElementById('hamburger');
 hamburger.addEventListener('click', function(e) {

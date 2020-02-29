@@ -3,11 +3,11 @@
         <h4>
             <a href="./index.php" id="notes">Notas</a>
         </h4>
-        <button><i class="fas fa-plus"></i></button>
+        <button type="button" data-toggle="modal" data-target="#add-note"><i class="fas fa-plus"></i></button>
         <h4>
             <a href="./category.php" id="category">Categorias</a>
         </h4>
-        <button><i class="fas fa-plus"></i></button>
+        <button type="button" data-toggle="modal" data-target="#add-category"><i class="fas fa-plus"></i></button>
     </div>
     <div id="main-menu-trash">
         <h4>
