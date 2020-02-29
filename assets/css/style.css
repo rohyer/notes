@@ -18375,25 +18375,30 @@ header#header {
 #add-note .modal-header input[type="checkbox"] + label {
   position: relative;
   cursor: pointer;
-  padding-left: 30px; }
+  padding-left: 30px;
+  margin-bottom: 0; }
   #add-note .modal-header input[type="checkbox"] + label:before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
     left: 0;
-    bottom: 0;
-    border: solid 2px;
+    bottom: 2px;
+    border: 2px solid;
+    border-radius: 4px;
     vertical-align: bottom; }
+#add-note .modal-header input[type="checkbox"]:checked + label:before {
+  border: 2px solid #000;
+  background-color: #000; }
 #add-note .modal-header input[type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  width: 10px;
-  height: 20px;
-  border-right: solid 3px green;
-  border-bottom: solid 3px green;
+  left: 7px;
+  bottom: 7px;
+  width: 7px;
+  height: 12px;
+  border-right: solid 3px #fff;
+  border-bottom: solid 3px #fff;
   transform: rotate(45deg); }
 #add-note .modal-body input {
   float: left;
@@ -18408,6 +18413,8 @@ header#header {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
+  #add-note .modal-body input#id-user-note {
+    display: none; }
 #add-note .modal-body select {
   float: left;
   width: 23%;
@@ -18445,6 +18452,8 @@ header#header {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
+  #add-category .modal-body input#id-user-category {
+    display: none; }
 
 .modal-body .modal-footer-custom {
   display: flex;

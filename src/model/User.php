@@ -3,6 +3,7 @@
 require_once "Connection.php";
 
 class User {
+    private $idUser;
     private $nameUser;
     private $emailUser;
     private $passwordUser;
@@ -80,10 +81,16 @@ class User {
                 session_start();
                 $_SESSION['logado'] = true;
                 $_SESSION['password'] = true;
-                $_SESSION['user_datas'] = array('name' => $datasLogin->nameuser,
-                    'email' => $datasLogin->emailuser, 'password' => $datasLogin->passworduser,
-                    'sex' => $datasLogin->sexuser, 'cellphone' => $datasLogin->cellphoneuser,
-                    'state' => $datasLogin->stateuser, 'city' => $datasLogin->cityuser);
+                $_SESSION['user_datas'] = array(
+                    'id' => $datasLogin->iduser,
+                    'name' => $datasLogin->nameuser,
+                    'email' => $datasLogin->emailuser,
+                    'password' => $datasLogin->passworduser,
+                    'sex' => $datasLogin->sexuser,
+                    'cellphone' => $datasLogin->cellphoneuser,
+                    'state' => $datasLogin->stateuser,
+                    'city' => $datasLogin->cityuser
+                );
 
                 return true;
             } else {

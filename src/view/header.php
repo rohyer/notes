@@ -2,13 +2,14 @@
     session_start();
     // echo $_SESSION['logado'];
 
-    // echo $_SESSION['user_datas']['name'];
-    // echo $_SESSION['user_datas']['email'];
-    // echo $_SESSION['user_datas']['password'];
-    // echo $_SESSION['user_datas']['sex'];
-    // echo $_SESSION['user_datas']['cellphone'];
-    // echo $_SESSION['user_datas']['state'];
-    // echo $_SESSION['user_datas']['city'];
+    
+    echo $_SESSION['user_datas']['name'];
+    echo $_SESSION['user_datas']['email'];
+    echo $_SESSION['user_datas']['password'];
+    echo $_SESSION['user_datas']['sex'];
+    echo $_SESSION['user_datas']['cellphone'];
+    echo $_SESSION['user_datas']['state'];
+    echo $_SESSION['user_datas']['city'];
             
 
     if (!isset($_SESSION['logado'])) {
@@ -36,6 +37,8 @@
 
                     <div id="profile-box">
                         <p><?php echo $_SESSION['user_datas']['email']; ?></p>
+                        <!-- <p><?php echo $_SESSION['user_datas']['id']; ?></p> -->
+                        <p><?php echo $_SESSION['user_datas']['name']; ?></p>
                         <a href="#">Ver perfil</a>
                         <button>Ativar tema escuro</button>
                         <a href="./src/view/sign-out.php">Sair</a>

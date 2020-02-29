@@ -15,3 +15,9 @@ hamburger.addEventListener('click', function(e) {
         mainMenu.classList.add('opened-main-menu');
     }
 })
+
+// RESET FORM NOTE AND CATEGORY AFTER SUBMIT
+window.addEventListener('load', function(e) {
+    document.getElementById('form-add-note').reset();
+    console.log("a");
+})
