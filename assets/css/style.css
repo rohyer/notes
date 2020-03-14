@@ -18057,6 +18057,11 @@ body {
   body.body-pages-in {
     position: relative; }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 #page-notes #notes {
   background-color: #f1f1f1; }
 
@@ -18309,6 +18314,52 @@ header#header {
       transition-duration: .2s; }
       #header-right #profile #profile-box button:hover {
         background-color: #f1f1f1; }
+
+section#main-content {
+  float: left;
+  width: 100%;
+  transition-duration: .2s;
+  padding-right: 230px;
+  margin-top: 20px; }
+  section#main-content.open-menu-for-content {
+    padding-left: 460px;
+    padding-right: 240px; }
+  section#main-content.open-menu-for-content-2 {
+    padding-left: 300px;
+    padding-right: 300px; }
+  section#main-content ul#all-categories {
+    float: left;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    section#main-content ul#all-categories a {
+      float: left;
+      text-align: center;
+      padding: 15px 30px;
+      border: 1px solid #DDD;
+      border-radius: 5px;
+      color: initial;
+      text-decoration: none; }
+      section#main-content ul#all-categories a:hover {
+        box-shadow: 0px 2px 4px #DDD; }
+      section#main-content ul#all-categories a.categories-first-even {
+        width: 47%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 15px; }
+      section#main-content ul#all-categories a.categories-even {
+        width: 180px;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 15px; }
+      section#main-content ul#all-categories a.categories-first-odd {
+        width: 50%; }
+      section#main-content ul#all-categories a.categories-odd {
+        width: 235px;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 15px; }
 
 #main-menu {
   float: left;

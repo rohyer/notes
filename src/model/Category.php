@@ -37,6 +37,27 @@ class Category {
         }
     }
 
+    public function listCategories($idUserCategory) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUserCategory = $idUserCategory;
+
+        try {
+            $sql = "SELECT * from category where iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $idUserCategory);
+
+            if ($stmt->execute()) {
+                $result = $stmt->fetchAll();
+                return $result;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
 
 }
 
