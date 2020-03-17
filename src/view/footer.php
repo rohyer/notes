@@ -1,9 +1,14 @@
     <footer></footer>
 
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src=""></script>
+    <script type="text/javascript" src="./assets/js/lazyload-min.js"></script>
+    <script type="text/javascript">
+      LazyLoad.js(["./node_modules/jquery/dist/jquery.min.js",
+                   "./assets/js/script.js",
+                   "./node_modules/popper.js/dist/umd/popper.js",
+                   "./node_modules/bootstrap/dist/js/bootstrap.js"],
+                   function() {
+        Application.init();
+      });
+    </script>
   </body>
 </html>
