@@ -8,7 +8,7 @@ $('#meuModal').on('shown.bs.modal', function () {
 const hamburger = doc.getElementById('hamburger');
 hamburger.addEventListener('click', function(e) {
     const mainMenu = doc.getElementById('main-menu');
-    const mainContent = doc.getElementById('main-content');
+    const mainContent = doc.getElementsByClassName('main-content')[0];
     
     if (mainMenu.classList == 'opened-main-menu') {
         mainMenu.classList.remove('opened-main-menu');

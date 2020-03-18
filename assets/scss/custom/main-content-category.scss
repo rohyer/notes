@@ -1,0 +1,52 @@
+section {
+    &.main-content {
+        &#main-content-category {
+
+            ul {
+                &#all-categories {
+                    float: left;
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    a {
+                        float: left;
+                        text-align: center;
+                        padding: 15px 30px;
+                        border: 1px solid #DDD;
+                        border-radius: 5px;
+                        color: initial;
+                        text-decoration: none;
+
+                        &:hover {
+                            box-shadow: 0px 2px 4px #DDD;
+                        }
+                        
+                        &.categories-first-even {
+                            width: 47%;
+                            margin-left: 1%;
+                            margin-right: 1%;
+                            margin-bottom: 15px;
+                        }
+                        &.categories-even {
+                            width: 180px;
+                            margin-left: 1%;
+                            margin-right: 1%;
+                            margin-bottom: 15px;
+                        }
+                        &.categories-first-odd {
+                            width: 50%;
+                        }
+                        &.categories-odd {
+                            width: 235px;
+                            margin-left: 1%;
+                            margin-right: 1%;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
