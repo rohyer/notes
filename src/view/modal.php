@@ -15,7 +15,7 @@ if (isset($_POST['btnRegNote'])) {
 
 if (isset($_POST['btnRegCategory'])) {
   if ($objCategory->registerCategory($_POST)) {
-    header('location: ./index.php');
+    header('location: ./category.php');
   }
 }
 
@@ -37,7 +37,7 @@ if (isset($_POST['btnRegCategory'])) {
                   <option value="">Categoria</option>
                   <option value="1">Sem categoria</option>
                   <?php
-                  $listCategories = $objNote->listCategories($_SESSION['user_datas']['id']);
+                  $listCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
 
                   foreach ($listCategories as $value) { ?>
                     <option value="<?php echo $value['idcategory'] ?>"><?php echo $value['namecategory']; ?></option>

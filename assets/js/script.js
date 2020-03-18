@@ -1,8 +1,8 @@
 const doc = document;
 
-$('#meuModal').on('shown.bs.modal', function () {
-    $('#meuInput').trigger('focus')
-})
+// $('#meuModal').on('shown.bs.modal', function () {
+//     $('#meuInput').trigger('focus')
+// })
 
 // CLOSE-OPEN MENU
 const hamburger = doc.getElementById('hamburger');
@@ -23,8 +23,8 @@ hamburger.addEventListener('click', function(e) {
     }
 })
 
-// RESET FORM NOTE AND CATEGORY AFTER SUBMIT
-window.addEventListener('load', function(e) {
-    doc.getElementById('form-add-note').reset();
-    console.log("a");
-})
+//RESET FORM NOTE AND CATEGORY AFTER SUBMIT
+// window.addEventListener('load', function(e) {
+//     doc.getElementById('form-add-note').reset();
+//     console.log("a");
+// })

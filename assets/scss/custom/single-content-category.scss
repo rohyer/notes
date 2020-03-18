@@ -1,0 +1,26 @@
+#single-content-category {
+    .single-note {
+        float: left;
+        min-width: 110px;
+        max-width: 250px;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        margin: 0 15px 15px 15px;
+        border: 1px solid #DDD;
+        border-radius: 5px;
+
+        .title-single-note {
+            font-size: 17px;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+        }
+
+        .description-single-note {
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}

@@ -49,21 +49,22 @@ class Note {
         }
     }
 
-    public function listCategories($iduser) {
+    public function listNotes($idUserNote, $idCategoryNote) {
         $this->getConn = $this->objConn->getConnection();
 
-        $this->idUserNote = $iduser;
+        $this->idUserNote = $idUserNote;
+        $this->idCategoryNote = $idCategoryNote;
 
         try {
-            $sql = "SELECT idcategory, namecategory FROM category WHERE iduser = :iduser";
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory";
 
             $stmt = $this->getConn->prepare($sql);
             $stmt->bindParam(":iduser", $this->idUserNote);
+            $stmt->bindParam(":idcategory", $this->idCategoryNote);
             
             if ($stmt->execute()) {
-                $listCategories = $stmt->fetchAll();
-
-                return $listCategories;
+                $result = $stmt->fetchAll();
+                return $result;
             } else {
                 return false;
             }
