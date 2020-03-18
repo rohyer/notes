@@ -1,12 +1,14 @@
+const doc = document;
+
 $('#meuModal').on('shown.bs.modal', function () {
     $('#meuInput').trigger('focus')
-  })
+})
 
 // CLOSE-OPEN MENU
-const hamburger = window.document.getElementById('hamburger');
+const hamburger = doc.getElementById('hamburger');
 hamburger.addEventListener('click', function(e) {
-    const mainMenu = window.document.getElementById('main-menu');
-    const mainContent = window.document.getElementById('main-content');
+    const mainMenu = doc.getElementById('main-menu');
+    const mainContent = doc.getElementById('main-content');
     
     if (mainMenu.classList == 'opened-main-menu') {
         mainMenu.classList.remove('opened-main-menu');
@@ -23,6 +25,6 @@ hamburger.addEventListener('click', function(e) {
 
 // RESET FORM NOTE AND CATEGORY AFTER SUBMIT
 window.addEventListener('load', function(e) {
-    document.getElementById('form-add-note').reset();
+    doc.getElementById('form-add-note').reset();
     console.log("a");
 })
