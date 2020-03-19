@@ -18366,17 +18366,17 @@ section.main-content#main-content-category ul#all-categories {
       margin-right: 1%;
       margin-bottom: 15px; }
 
-#single-content-category #title-category-name {
+.main-content #title-category-name, #single-content-category #title-category-name {
   font-size: 24px;
   font-weight: 500;
   font-style: normal;
-  margin-bottom: 15px;
-  margin-left: 0.5%; }
-#single-content-category #notes-container {
+  margin-bottom: 15px; }
+.main-content .note-container, #single-content-category .note-container {
   -webkit-column-count: 4;
   -moz-column-count: 4;
   column-count: 4; }
-  #single-content-category #notes-container .single-note {
+  .main-content .note-container .single-note, #single-content-category .note-container .single-note {
+    position: relative;
     min-width: 24%;
     min-height: 115px;
     height: auto;
@@ -18385,19 +18385,67 @@ section.main-content#main-content-category ul#all-categories {
     -moz-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
-    padding: 20px 20px 45px 20px;
+    padding: 20px 20px 50px 20px;
     margin: 0 0.5% 15px 0.5%;
     border: 1px solid #DDD;
     border-radius: 5px; }
-    #single-content-category #notes-container .single-note .title-single-note {
+    .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note {
+      visibility: visible; }
+    .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note {
       font-size: 17px;
       font-weight: 400;
       font-style: normal;
       margin-bottom: 10px; }
-    #single-content-category #notes-container .single-note .description-single-note {
+    .main-content .note-container .single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note {
       font-size: 15px;
       font-weight: 400;
       font-style: normal; }
+    .main-content .note-container .single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      visibility: hidden; }
+      .main-content .note-container .single-note .options-single-note .colors-options, #single-content-category .note-container .single-note .options-single-note .colors-options {
+        float: left;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius: 50px; }
+        .main-content .note-container .single-note .options-single-note .colors-options:hover, #single-content-category .note-container .single-note .options-single-note .colors-options:hover {
+          background: #ddd; }
+        .main-content .note-container .single-note .options-single-note .colors-options i, #single-content-category .note-container .single-note .options-single-note .colors-options i {
+          font-size: 15px; }
+      .main-content .note-container .single-note .options-single-note .all-options-single-note, #single-content-category .note-container .single-note .options-single-note .all-options-single-note {
+        position: relative;
+        float: left;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        border-radius: 50px; }
+        .main-content .note-container .single-note .options-single-note .all-options-single-note:hover, #single-content-category .note-container .single-note .options-single-note .all-options-single-note:hover {
+          background: #ddd; }
+        .main-content .note-container .single-note .options-single-note .all-options-single-note i, #single-content-category .note-container .single-note .options-single-note .all-options-single-note i {
+          font-size: 15px; }
+        .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options {
+          position: absolute;
+          top: 26px;
+          left: 0;
+          text-align: left;
+          width: 125px;
+          height: auto;
+          border: 1px solid #DDD;
+          border-radius: 5px;
+          padding: 15px;
+          background-color: #FFF;
+          box-shadow: 0px 2px 4px #DDD;
+          display: none;
+          visibility: hidden; }
+        .main-content .note-container .single-note .options-single-note .all-options-single-note.visible-container-all-options .container-all-options, #single-content-category .note-container .single-note .options-single-note .all-options-single-note.visible-container-all-options .container-all-options {
+          display: inline-block;
+          visibility: visible; }
 
 #main-menu {
   float: left;

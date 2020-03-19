@@ -1,29 +1,14 @@
 <!-- Modal Add Note -->
 <?php
 
-require_once "./src/model/Note.php";
 require_once "./src/model/Category.php";
-
-$objNote = new Note();
 $objCategory = new Category();
-
-if (isset($_POST['btnRegNote'])) {
-  if ($objNote->registerNote($_POST)) {
-    // header('location: ./index.php'); RESETAR O FORM DO MODAL
-  }
-}
-
-if (isset($_POST['btnRegCategory'])) {
-  if ($objCategory->registerCategory($_POST)) {
-    // header('location: ./category.php'); RESETAR O FORM DO MODAL
-  }
-}
 
 ?>
 <div class="modal fade" id="add-note" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-        <form action="" id="form-add-note" method="post">
+        <form action="./src/model/insert-datas.php" id="form-add-note" method="post">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Adicione uma nota</h5>
 
@@ -69,7 +54,7 @@ if (isset($_POST['btnRegCategory'])) {
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="./src/model/insert-datas.php" method="post">
             <input type="text" name="title-category" placeholder="Ex: trabalho">
 
             <input type="text" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>

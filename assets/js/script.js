@@ -23,6 +23,22 @@ hamburger.addEventListener('click', function(e) {
     }
 })
 
+let allOptionsSingleNote = doc.getElementsByClassName('all-options-single-note');
+for (let i = 0; i <= allOptionsSingleNote.length; i++) {
+    allOptionsSingleNote[i].addEventListener('click', function(e) {
+        let optionsSingleNote = doc.getElementsByClassName('options-single-note');
+
+        let allClass = allOptionsSingleNote[i].className.split(" ");
+
+        if (allClass.length == 1) {
+            allOptionsSingleNote[i].classList.add('visible-container-all-options');
+        } else {
+            allOptionsSingleNote[i].classList.remove('visible-container-all-options');
+        }        
+    });
+}
+
+
 //RESET FORM NOTE AND CATEGORY AFTER SUBMIT
 // window.addEventListener('load', function(e) {
 //     doc.getElementById('form-add-note').reset();

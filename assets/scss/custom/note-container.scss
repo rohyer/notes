@@ -1,0 +1,121 @@
+.main-content, #single-content-category {
+
+    #title-category-name {
+        font-size: 24px;
+        font-weight: 500;
+        font-style: normal;
+        margin-bottom: 15px;
+    }
+
+    .note-container {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+        // -webkit-column-gap: 10px;
+        // -moz-column-gap: 10px;
+        // column-gap: 15px;
+        // display: inline-block;
+        // width: 100%;
+
+        .single-note {
+            position: relative;
+            min-width: 24%;
+            min-height: 115px;
+            height: auto;
+            margin: 0 2px 15px 2px;
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            padding: 20px 20px 50px 20px;
+            margin: 0 0.5% 15px 0.5%;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+
+            &:hover {
+                .options-single-note {
+                    visibility: visible;
+                }
+            }
+
+            .title-single-note {
+                font-size: 17px;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 10px;
+            }
+
+            .description-single-note {
+                font-size: 15px;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .options-single-note {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                visibility: hidden;
+
+                .colors-options {
+                    float: left;
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                    text-align: center;
+                    margin-right: 10px;
+                    border-radius: 50px;
+
+                    &:hover {
+                        background: #ddd;
+                    }
+
+                    i {
+                        font-size: 15px;
+                    }
+                }
+
+                .all-options-single-note {
+                    position: relative;
+                    float: left;
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                    text-align: center;
+                    border-radius: 50px;
+
+                    &:hover {
+                        background: #ddd;
+                    }
+
+                    i {
+                        font-size: 15px;
+                    }
+
+                    .container-all-options {
+                        position: absolute;
+                        top: 26px;
+                        left: 0;
+                        text-align: left;
+                        width: 125px;
+                        height: auto;
+                        border: 1px solid #DDD;
+                        border-radius: 5px;
+                        padding: 15px;
+                        background-color: #FFF;
+                        box-shadow: 0px 2px 4px #DDD;
+                        display: none;
+                        visibility: hidden;
+                    }
+                    
+                    &.visible-container-all-options {
+                        .container-all-options {
+                            display: inline-block;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
