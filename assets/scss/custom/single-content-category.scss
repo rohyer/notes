@@ -9,15 +9,24 @@
     }
 
     #notes-container {
-        display: inline-block;
-        width: 100%;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+        // -webkit-column-gap: 10px;
+        // -moz-column-gap: 10px;
+        // column-gap: 15px;
+        // display: inline-block;
+        // width: 100%;
 
         .single-note {
-            float: left;
             min-width: 24%;
-            max-width: 24%;
             min-height: 115px;
             height: auto;
+            margin: 0 2px 15px 2px;
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
             padding: 20px 20px 45px 20px;
             margin: 0 0.5% 15px 0.5%;
             border: 1px solid #DDD;
