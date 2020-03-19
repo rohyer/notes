@@ -16,13 +16,13 @@ $moduleAmountCategories = $amountCategories % 2;
 <?php foreach ($allCategories as $value) { ?>
 
     <?php if (($amountCategories == 1) && ($moduleAmountCategories != 0)) { ?>
-        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>" class="categories-first-odd"><li><?php echo $value['namecategory']; ?></li></a>
+        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-first-odd"><li><?php echo $value['namecategory']; ?></li></a>
     <?php } elseif (($amountCategories == 2) && ($moduleAmountCategories == 0)) { ?>
-        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>" class="categories-first-even"><li><?php echo $value['namecategory']; ?></li></a>
+        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-first-even"><li><?php echo $value['namecategory']; ?></li></a>
     <?php } elseif (($amountCategories == 3) && ($moduleAmountCategories != 0)) { ?>
-        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>" class="categories-odd"><li><?php echo $value['namecategory']; ?></li></a>
+        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-odd"><li><?php echo $value['namecategory']; ?></li></a>
     <?php } elseif ($amountCategories >= 4) { ?>
-        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>" class="categories-even"><li><?php echo $value['namecategory']; ?></li></a>
+        <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-even"><li><?php echo $value['namecategory']; ?></li></a>
     <?php } ?>
     
 <?php } ?>
