@@ -23,21 +23,27 @@ hamburger.addEventListener('click', function(e) {
     }
 })
 
+const deleteNote = doc.getElementById('delete-note');
+deleteNote.addEventListener("click", function(event) {
+    let attributeDeleteNote = deleteNote.getAttribute('data-id');
+    let yesDeleteNote = doc.getElementById('yes-delete-note');
+    yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeDeleteNote;
+})
+
 let allOptionsSingleNote = doc.getElementsByClassName('all-options-single-note');
 for (let i = 0; i <= allOptionsSingleNote.length; i++) {
-    allOptionsSingleNote[i].addEventListener('click', function(e) {
+    allOptionsSingleNote[i].addEventListener("click", function() {
         let optionsSingleNote = doc.getElementsByClassName('options-single-note');
 
         let allClass = allOptionsSingleNote[i].className.split(" ");
 
         if (allClass.length == 1) {
-            allOptionsSingleNote[i].classList.add('visible-container-all-options');
+            allOptionsSingleNote[i].classList.add("visible-container-all-options");
         } else {
-            allOptionsSingleNote[i].classList.remove('visible-container-all-options');
+            allOptionsSingleNote[i].classList.remove("visible-container-all-options");
         }        
     });
 }
-
 
 //RESET FORM NOTE AND CATEGORY AFTER SUBMIT
 // window.addEventListener('load', function(e) {

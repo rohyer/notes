@@ -19,6 +19,7 @@
         <div class="single-note">
             <div class="title-single-note"><?php echo $value['titlenote']; ?></div>
             <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
+            <input type="hidden" name="id-note" value="<?php echo $value['idnote'] ?>" readonly>
             <div class="options-single-note">
                 <div class="colors-options">
                     <i class="fas fa-palette"></i>

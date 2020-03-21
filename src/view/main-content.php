@@ -17,15 +17,16 @@
         <div class="single-note">
             <div class="title-single-note"><?php echo $value['titlenote']; ?></div>
             <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
+            <!-- <input type="hidden" name="id-note" data-id="<?php echo $value['idnote']; ?>" readonly> -->
             <div class="options-single-note">
                 <div class="colors-options">
                     <i class="fas fa-palette"></i>
                 </div>
                 <div class="all-options-single-note">
                     <i class="fas fa-ellipsis-v"></i>
-                    <div class="container-all-options">
-                        <span>Editar nota</span>
-                        <span>Excluir nota</span>
+                    <div class="container-all-options" id="delete-update-options">
+                        <button data-toggle="modal" data-target="#update-note-modal" id="update-modal">Editar nota</button>
+                        <button data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" id="delete-note">Excluir nota</button>
                     </div>
                 </div>
             </div>

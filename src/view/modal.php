@@ -69,3 +69,18 @@ $objCategory = new Category();
     </div>
   </div>
 </div>
+
+<!-- Small modal -->
+<div class="modal fade bd-example-modal-sm" id="delete-note-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        Deseja mesmo excluir esta nota?
+      </div>
+      <div class="modal-body">
+        <a class="btn btn-secondary" data-dismiss="modal">Não</a>
+        <a href="#" class="btn btn-secondary" id="yes-delete-note">Sim</a>
+      </div>
+    </div>
+  </div>
+</div>

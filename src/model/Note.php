@@ -3,6 +3,7 @@
 require_once "Connection.php";
 
 class Note {
+    private $idUser;
     private $titleNote;
     private $descriptionNote;
     private $markedNote;
@@ -45,6 +46,29 @@ class Note {
             }
 
         } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function deleteNote($idUser, $idUserNote) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $idUser;
+        $this->idUserNote = $idUserNote;
+
+        try {
+            $sql = "DELETE FROM note WHERE iduser = :iduser AND idnote = :idnote";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+            $stmt->bindParam(":idnote", $this->idUserNote);
+
+            if ($stmt->execute()) {
+                header("Location: /notes/index.php");
+            } else {
+                echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
+            }
+        } catch (PDOExcpetion $e) {
             echo "Error: " . $e->getMessage();
         }
     }
