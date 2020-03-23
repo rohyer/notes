@@ -6,9 +6,9 @@
                    "./assets/js/script.js",
                    "./node_modules/popper.js/dist/umd/popper.js",
                    "./node_modules/bootstrap/dist/js/bootstrap.js"],
-                   function() {
-        Application.init();
-      });
+                   //function() {
+        //Application.init();}
+        );
     </script>
   </body>
 </html>

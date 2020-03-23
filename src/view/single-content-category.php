@@ -26,6 +26,10 @@
                 </div>
                 <div class="all-options-single-note">
                     <i class="fas fa-ellipsis-v"></i>
+                    <div class="container-all-options delete-update-options">
+                        <button data-toggle="modal" data-target="#update-note-modal" id="update-modal">Editar</button>
+                        <button data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="delete-note">Excluir</button>
+                    </div>
                 </div>
             </div>
         </div>
