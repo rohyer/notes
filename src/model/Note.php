@@ -82,7 +82,32 @@ class Note {
         $this->idCategoryNote = $idCategoryNote;
 
         try {
-            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory";
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 1";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUserNote);
+            $stmt->bindParam(":idcategory", $this->idCategoryNote);
+            
+            if ($stmt->execute()) {
+                $result = $stmt->fetchAll();
+                return $result;
+            } else {
+                return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function listNoMarkedNotes($idUserNote, $idCategoryNote) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUserNote = $idUserNote;
+        $this->idCategoryNote = $idCategoryNote;
+
+        try {
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 0";
 
             $stmt = $this->getConn->prepare($sql);
             $stmt->bindParam(":iduser", $this->idUserNote);

@@ -8,14 +8,46 @@
     }
 
     .note-container {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
-        // -webkit-column-gap: 10px;
-        // -moz-column-gap: 10px;
-        // column-gap: 15px;
-        // display: inline-block;
-        // width: 100%;
+        float: left;
+        width: 100%;
+        .sec-marked-notes {
+            float: left;
+            width: 100%;
+
+            h4 {
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .marked-notes {
+                float: left;
+                width: 100%;
+                margin-bottom: 30px;
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+            }
+        }
+
+        .sec-no-marked-notes {
+            float: left;
+            width: 100%;
+
+            h4 {
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+            }
+            
+            .no-marked-notes {
+                float: left;
+                width: 100%;
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+            }
+        }
 
         .single-note {
             position: relative;
