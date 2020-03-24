@@ -16,6 +16,9 @@
         foreach ($listNotes as $value) { ?>
         <div class="single-note">
             <div class="title-single-note"><?php echo $value['titlenote']; ?></div>
+            <?php if ($value['markednote'] == 1) { ?>
+                <div class="marked-single-note"><i class="fas fa-check"></i></div>
+            <?php } ?>
             <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
             <!-- <input type="hidden" name="id-note" data-id="<?php echo $value['idnote']; ?>" readonly> -->
             <div class="options-single-note">

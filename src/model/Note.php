@@ -27,6 +27,8 @@ class Note {
 
         if (isset($datas['marked-note'])) {
             $this->markedNote = $datas['marked-note'];
+        } else {
+            $this->markedNote = 0;
         }
 
         try {

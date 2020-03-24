@@ -45,6 +45,16 @@
                 margin-bottom: 10px;
             }
 
+            .marked-single-note {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+
             .description-single-note {
                 font-size: 15px;
                 font-weight: 400;
