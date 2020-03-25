@@ -18418,6 +18418,7 @@ section.main-content#main-content-category ul#all-categories {
     .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note {
       visibility: visible; }
     .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note {
+      cursor: default;
       font-size: 17px;
       font-weight: 400;
       font-style: normal;
@@ -18429,6 +18430,7 @@ section.main-content#main-content-category ul#all-categories {
       .main-content .note-container .single-note .marked-single-note i, #single-content-category .note-container .single-note .marked-single-note i {
         font-size: 14px; }
     .main-content .note-container .single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note {
+      cursor: default;
       font-size: 15px;
       font-weight: 400;
       font-style: normal; }
@@ -18450,22 +18452,21 @@ section.main-content#main-content-category ul#all-categories {
           background: #ddd; }
         .main-content .note-container .single-note .options-single-note .colors-options i, #single-content-category .note-container .single-note .options-single-note .colors-options i {
           font-size: 15px; }
-      .main-content .note-container .single-note .options-single-note .all-options-single-note, #single-content-category .note-container .single-note .options-single-note .all-options-single-note {
-        position: relative;
+      .main-content .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note {
         float: left;
         cursor: pointer;
         width: 25px;
         height: 25px;
         text-align: center;
         border-radius: 50px; }
-        .main-content .note-container .single-note .options-single-note .all-options-single-note:hover, #single-content-category .note-container .single-note .options-single-note .all-options-single-note:hover {
+        .main-content .note-container .single-note .options-single-note .delete-note:hover, #single-content-category .note-container .single-note .options-single-note .delete-note:hover {
           background: #ddd; }
-          .main-content .note-container .single-note .options-single-note .all-options-single-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .all-options-single-note:hover .container-all-options {
+          .main-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note:hover .container-all-options {
             display: inline-block;
             visibility: visible; }
-        .main-content .note-container .single-note .options-single-note .all-options-single-note i, #single-content-category .note-container .single-note .options-single-note .all-options-single-note i {
+        .main-content .note-container .single-note .options-single-note .delete-note i, #single-content-category .note-container .single-note .options-single-note .delete-note i {
           font-size: 15px; }
-        .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options {
+        .main-content .note-container .single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options {
           position: absolute;
           top: 25px;
           left: 0;
@@ -18482,19 +18483,19 @@ section.main-content#main-content-category ul#all-categories {
           visibility: hidden;
           z-index: 999;
           transition-duration: .2s; }
-          .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options:hover {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options:hover {
             display: inline-block;
             visibility: visible; }
-          .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options button {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button {
             width: 100%;
             height: 30px;
             text-align: left;
             padding: 0 15px;
             border: none;
             transition-duration: .2s; }
-            .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options button:hover {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:hover {
               background: #ddd; }
-            .main-content .note-container .single-note .options-single-note .all-options-single-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .all-options-single-note .container-all-options button:focus {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus {
               outline: none; }
 
 #main-menu {
@@ -18544,7 +18545,7 @@ section.main-content#main-content-category ul#all-categories {
   #main-menu #main-menu-trash {
     padding-top: 10px; }
 
-#add-note .modal-header input {
+#add-note-modal .modal-header input, #update-note-modal .modal-header input {
   float: right;
   font-size: 1.5rem;
   font-weight: 700;
@@ -18555,16 +18556,16 @@ section.main-content#main-content-category ul#all-categories {
   background-color: transparent;
   border: 0;
   outline: 0; }
-#add-note .modal-header input[type="checkbox"] {
+#add-note-modal .modal-header input[type="checkbox"], #update-note-modal .modal-header input[type="checkbox"] {
   position: absolute;
   z-index: -1;
   opacity: 0; }
-#add-note .modal-header input[type="checkbox"] + label {
+#add-note-modal .modal-header input[type="checkbox"] + label, #update-note-modal .modal-header input[type="checkbox"] + label {
   position: relative;
   cursor: pointer;
   padding-left: 30px;
   margin-bottom: 0; }
-  #add-note .modal-header input[type="checkbox"] + label:before {
+  #add-note-modal .modal-header input[type="checkbox"] + label:before, #update-note-modal .modal-header input[type="checkbox"] + label:before {
     content: '';
     position: absolute;
     width: 20px;
@@ -18574,10 +18575,10 @@ section.main-content#main-content-category ul#all-categories {
     border: 2px solid;
     border-radius: 4px;
     vertical-align: bottom; }
-#add-note .modal-header input[type="checkbox"]:checked + label:before {
+#add-note-modal .modal-header input[type="checkbox"]:checked + label:before, #update-note-modal .modal-header input[type="checkbox"]:checked + label:before {
   border: 2px solid #000;
   background-color: #000; }
-#add-note .modal-header input[type="checkbox"]:checked + label:after {
+#add-note-modal .modal-header input[type="checkbox"]:checked + label:after, #update-note-modal .modal-header input[type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
   left: 7px;
@@ -18587,7 +18588,7 @@ section.main-content#main-content-category ul#all-categories {
   border-right: solid 3px #fff;
   border-bottom: solid 3px #fff;
   transform: rotate(45deg); }
-#add-note .modal-body input {
+#add-note-modal .modal-body input, #update-note-modal .modal-body input {
   float: left;
   width: 75%;
   height: 40px;
@@ -18600,9 +18601,9 @@ section.main-content#main-content-category ul#all-categories {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-  #add-note .modal-body input#id-user-note {
+  #add-note-modal .modal-body input.id-user-note, #update-note-modal .modal-body input.id-user-note {
     display: none; }
-#add-note .modal-body select {
+#add-note-modal .modal-body select, #update-note-modal .modal-body select {
   float: left;
   width: 23%;
   height: 40px;
@@ -18616,7 +18617,7 @@ section.main-content#main-content-category ul#all-categories {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-#add-note .modal-body textarea {
+#add-note-modal .modal-body textarea, #update-note-modal .modal-body textarea {
   width: 100%;
   border-top: none;
   border-right: none;
@@ -18627,7 +18628,7 @@ section.main-content#main-content-category ul#all-categories {
   padding-bottom: 5px;
   text-indent: 5px; }
 
-#add-category .modal-body input {
+#add-category-modal .modal-body input {
   width: 100%;
   height: 40px;
   border-top: none;
@@ -18639,7 +18640,7 @@ section.main-content#main-content-category ul#all-categories {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-  #add-category .modal-body input#id-user-category {
+  #add-category-modal .modal-body input#id-user-category {
     display: none; }
 
 .modal-body .modal-footer-custom {

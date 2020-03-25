@@ -38,7 +38,40 @@ function deleteNote() {
         });
     }
 }
-deleteNote();
+// deleteNote();
+
+function updateNote() {
+    const note = doc.getElementsByClassName('single-note');
+
+    for (let i = 0; i < note.length; i++) {
+        note[i].addEventListener("click", function(e) {
+             if (e.target.classList.contains('single-note') || e.target.classList.contains('title-single-note') || e.target.classList.contains('description-single-note')) {
+
+                let idSingleNote = note[i].getAttribute('data-id');
+                let titleSingleNote = doc.getElementsByClassName('title-single-note')[i].innerHTML;
+                let categorySingleNote = doc.getElementsByClassName('category-single-note')[i].value;
+                let markedSingleNote = doc.getElementsByClassName('marked-single-note-value')[i].value;
+                let descriptionSingleNote = doc.getElementsByClassName('description-single-note')[i].innerHTML;
+                
+                let idUpdateModal = doc.getElementById('id-update-modal').value = idSingleNote;
+                let titleUpdateModal = doc.getElementById('title-update-modal').value = titleSingleNote;
+                let categoryUpdateModal = doc.getElementById('category-update-modal').value = categorySingleNote;
+                let descriptionUpdateModal = doc.getElementById('description-update-modal').value = descriptionSingleNote;
+                let markedUpdateModal = doc.getElementById('marked-update-modal');
+
+                if (markedSingleNote == 1) {
+                    markedUpdateModal.checked = true;
+                } else {
+                    markedUpdateModal.checked = false;
+                }
+
+            } else {
+                e.stopPropagation();
+            }
+        })
+    }
+}
+updateNote();
     
 
 

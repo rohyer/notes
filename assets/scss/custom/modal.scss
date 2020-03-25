@@ -1,4 +1,4 @@
-#add-note {
+#add-note-modal, #update-note-modal {
     .modal-header {
         input {
             float: right;
@@ -72,7 +72,7 @@
             padding-bottom: 5px;
             text-indent: 5px;
 
-            &#id-user-note {
+            &.id-user-note {
                 display: none;
             }
         }
@@ -107,7 +107,7 @@
     }
 }
 
-#add-category {
+#add-category-modal {
     .modal-body {
         input {
             width: 100%;

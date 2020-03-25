@@ -71,6 +71,7 @@
             }
 
             .title-single-note {
+                cursor: default;
                 font-size: 17px;
                 font-weight: 400;
                 font-style: normal;
@@ -88,6 +89,7 @@
             }
 
             .description-single-note {
+                cursor: default;
                 font-size: 15px;
                 font-weight: 400;
                 font-style: normal;
@@ -118,8 +120,7 @@
                     }
                 }
 
-                .all-options-single-note {
-                    position: relative;
+                .delete-note {
                     float: left;
                     cursor: pointer;
                     width: 25px;
