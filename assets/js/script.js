@@ -32,13 +32,23 @@ function deleteNote() {
 
     for (let i = 0; i < note.length; i++) {
         note[i].addEventListener("click", function() {
+            
+            // get modals
+            const modals = document.getElementById('delete-note-modal');
+
+            // on every modal change state like in hidden modal
+            modals.classList.add('show');
+            modals.setAttribute('aria-hidden', 'false');
+            modals.setAttribute('style', 'display: block');
+            
+
             let attributeNote = note[i].getAttribute('data-id');
             let yesDeleteNote = doc.getElementById('yes-delete-note');
             yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
         });
     }
 }
-// deleteNote();
+deleteNote();
 
 function updateNote() {
     const note = doc.getElementsByClassName('single-note');
