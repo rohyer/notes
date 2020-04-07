@@ -9,13 +9,13 @@ $objCategory = new Category();
 
 if (isset($_POST['btnRegNote'])) {
   if ($objNote->registerNote($_POST)) {
-    header('location: ../../index.php');
+    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
   }
 }
 
 if (isset($_POST['btnRegCategory'])) {
   if ($objCategory->registerCategory($_POST)) {
-    header('location: ../../category.php');
+    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
   }
 }
 
