@@ -76,7 +76,7 @@ $objCategory = new Category();
 <div class="modal fade" id="update-note-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-        <form action="" id="form-update-note" method="post">
+        <form action="./src/model/processing/update-note.php" id="form-update-note" method="post">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Edite sua nota</h5>
                 

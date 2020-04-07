@@ -14,7 +14,9 @@
     ?>
     <div class="note-container">
         <div class="sec-marked-notes">
+            <?php if (count($listMarkedNotes) >= 1 && count($listNoMarkedNotes) >= 1) { ?>
             <h4>Marcadas</h4>
+            <?php } ?>
             <div class="marked-notes">
                 <?php 
                 foreach ($listMarkedNotes as $value) { ?>
@@ -39,7 +41,9 @@
             </div>
         </div>
         <div class="sec-no-marked-notes">
-            <h4>Outras</h4>
+            <?php if (count($listNoMarkedNotes) >= 1 && count($listMarkedNotes) >= 1) { ?>
+                <h4>Outras</h4>
+            <?php } ?>
             <div class="no-marked-notes">
                 <?php 
                 foreach ($listNoMarkedNotes as $value) { ?>

@@ -125,7 +125,42 @@ class Note {
         }
     }
 
-    public function updateNote($datas) {}
+    public function updateNote($datas) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $datas['id-update-user-note'];
+        $this->titleNote = $datas['title-update-note'];
+        $this->descriptionNote = $datas['description-update-note'];
+        $this->idUserNote = $datas['id-update-note'];
+        $this->idCategoryNote = $datas['category-update-note'];
+
+        if (isset($datas['marked-update-note'])) {
+            $this->markedNote = $datas['marked-update-note'];
+        } else {
+            $this->markedNote = 0;
+        }
+        
+        try {
+            $sql = "UPDATE note SET titlenote = :titlenote, descriptionnote = :descriptionnote, markednote = :markednote, idcategory = :idcategory WHERE idnote = :idnote AND iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":titlenote", $this->titleNote);
+            $stmt->bindParam(":descriptionnote", $this->descriptionNote);
+            $stmt->bindParam(":markednote", $this->markedNote);
+            $stmt->bindParam(":idcategory", $this->idCategoryNote);
+            $stmt->bindParam(":idnote", $this->idUserNote);
+            $stmt->bindParam(":iduser", $this->idUser);
+
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+    }
 
 }
 
