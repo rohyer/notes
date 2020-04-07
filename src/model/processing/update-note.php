@@ -5,7 +5,7 @@ $objNote = new Note();
 
 if (isset($_POST['btnUpdateNote'])) {
     if ($objNote->updateNote($_POST)) {
-        header('location: ../../../index.php');
+        header('location: ' . $_SERVER['HTTP_REFERER'] . "");
     }
 }
 
