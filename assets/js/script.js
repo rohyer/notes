@@ -1,3 +1,14 @@
+// $('#delete-note-modal').on('shown.bs.modal', function () {
+//     $('#delete-note-modal').focus()
+// })
+
+$('.delete-note').click(function(event) {
+    let attributeNote = $(this).attr('data-id');
+    let yesDeleteNote = doc.getElementById('yes-delete-note');
+    yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
+    $('#delete-note-modal').modal('show');
+})
+
 const doc = document;
 
 // $('#meuModal').on('shown.bs.modal', function () {
@@ -27,28 +38,28 @@ function closeOpenMenu() {
 closeOpenMenu();
 
 // FUNÇÃO PARA DELETAR NOTA
-function deleteNote() {
-    const note = doc.getElementsByClassName('delete-note');
+// function deleteNote() {
+//     const note = doc.getElementsByClassName('delete-note');
 
-    for (let i = 0; i < note.length; i++) {
-        note[i].addEventListener("click", function() {
+//     for (let i = 0; i < note.length; i++) {
+//         note[i].addEventListener("click", function() {
             
-            // get modals
-            const modals = document.getElementById('delete-note-modal');
+//             // get modals
+//             const modals = document.getElementById('delete-note-modal');
 
-            // on every modal change state like in hidden modal
-            modals.classList.add('show');
-            modals.setAttribute('aria-hidden', 'false');
-            modals.setAttribute('style', 'display: block');
+//             // on every modal change state like in hidden modal
+//             modals.classList.add('show');
+//             modals.setAttribute('aria-hidden', 'false');
+//             modals.setAttribute('style', 'display: block');
             
 
-            let attributeNote = note[i].getAttribute('data-id');
-            let yesDeleteNote = doc.getElementById('yes-delete-note');
-            yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
-        });
-    }
-}
-deleteNote();
+//             let attributeNote = note[i].getAttribute('data-id');
+//             let yesDeleteNote = doc.getElementById('yes-delete-note');
+//             yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
+//         });
+//     }
+// }
+// deleteNote();
 
 function updateNote() {
     const note = doc.getElementsByClassName('single-note');

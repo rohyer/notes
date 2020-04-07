@@ -58,6 +58,10 @@ class Category {
         }
     }
 
+    public function updateCategory($datas) {}
+
+    public function deleteCategory($datas) {}
+
 
 }
 

@@ -124,6 +124,9 @@ class Note {
             echo "Error: " . $e->getMessage();
         }
     }
+
+    public function updateNote($datas) {}
+
 }
 
 
