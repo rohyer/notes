@@ -97,8 +97,15 @@ header {
             border: 2px solid #000;
         }
 
-        #profile-box {
-            display: flex;
+        #profile-box, .main-profile-box {
+
+            &.show-profile {
+                display: flex;
+                visibility: visible;
+            }
+            
+            display: none;
+            visibility: hidden;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;

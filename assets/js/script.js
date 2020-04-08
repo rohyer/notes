@@ -1,7 +1,3 @@
-// $('#delete-note-modal').on('shown.bs.modal', function () {
-//     $('#delete-note-modal').focus()
-// })
-
 $('.delete-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');
     let yesDeleteNote = doc.getElementById('yes-delete-note');
@@ -11,9 +7,22 @@ $('.delete-note').click(function(event) {
 
 const doc = document;
 
-// $('#meuModal').on('shown.bs.modal', function () {
-//     $('#meuInput').trigger('focus')
-// })
+function closeOpenProfile() {
+    const profile = doc.getElementById('profile');
+    profile.addEventListener('click', function() {
+        
+        const mainProfileBox = doc.getElementsByClassName('main-profile-box')[0];
+        const mainProfileBoxLen = mainProfileBox.classList.length;
+        console.log(mainProfileBoxLen);
+
+        if (mainProfileBoxLen == 1) {
+            mainProfileBox.classList.add('show-profile');
+        } else {
+            mainProfileBox.classList.remove('show-profile');
+        }
+    });
+}
+closeOpenProfile();
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU
 function closeOpenMenu() {

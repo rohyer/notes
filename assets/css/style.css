@@ -18271,8 +18271,9 @@ header#header {
     border-radius: 50px;
     background-color: #FFF;
     border: 2px solid #000; }
-  #header-right #profile #profile-box {
-    display: flex;
+  #header-right #profile #profile-box, #header-right #profile .main-profile-box {
+    display: none;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -18286,12 +18287,15 @@ header#header {
     border-radius: 8px;
     box-shadow: 0px 0px 10px #ccc;
     padding: 15px; }
-    #header-right #profile #profile-box a {
+    #header-right #profile #profile-box.show-profile, #header-right #profile .main-profile-box.show-profile {
+      display: flex;
+      visibility: visible; }
+    #header-right #profile #profile-box a, #header-right #profile .main-profile-box a {
       font-size: 14px;
       font-weight: 400;
       font-style: normal;
       text-decoration: none; }
-      #header-right #profile #profile-box a:nth-child(2) {
+      #header-right #profile #profile-box a:nth-child(2), #header-right #profile .main-profile-box a:nth-child(2) {
         width: 100%;
         text-align: center;
         background-color: #fff;
@@ -18301,9 +18305,9 @@ header#header {
         padding: 7px;
         text-decoration: none;
         transition-duration: .2s; }
-        #header-right #profile #profile-box a:nth-child(2):hover {
+        #header-right #profile #profile-box a:nth-child(2):hover, #header-right #profile .main-profile-box a:nth-child(2):hover {
           background-color: #f1f1f1; }
-    #header-right #profile #profile-box button {
+    #header-right #profile #profile-box button, #header-right #profile .main-profile-box button {
       font-size: 14px;
       font-weight: 400;
       font-style: normal;
@@ -18316,7 +18320,7 @@ header#header {
       padding: 7px;
       text-decoration: none;
       transition-duration: .2s; }
-      #header-right #profile #profile-box button:hover {
+      #header-right #profile #profile-box button:hover, #header-right #profile .main-profile-box button:hover {
         background-color: #f1f1f1; }
 
 section.main-content {

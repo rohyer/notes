@@ -36,7 +36,7 @@
                     <i class="fas fa-caret-down"></i>
                     <img src="" alt="">
 
-                    <div id="profile-box">
+                    <div id="profile-box" class="main-profile-box">
                         <p><?php echo $_SESSION['user_datas']['email']; ?></p>
                         <!-- <p><?php echo $_SESSION['user_datas']['id']; ?></p> -->
                         <p><?php echo $_SESSION['user_datas']['name']; ?></p>
