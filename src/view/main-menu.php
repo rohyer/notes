@@ -15,7 +15,7 @@ $moduleAmountCategories = $amountCategories % 2;
         <h4><a href="./index.php" id="notes">Notas</a></h4>
         <button type="button" data-toggle="modal" data-target="#add-note-modal"><i class="fas fa-plus"></i></button>
 
-        <h4 id="category"><!--<a href="./category.php" id="category">-->Categorias <i class="fas fa-caret-down"></i><!--</a>--></h4>
+        <h4 id="category"><!--<a href="./category.php" id="category">-->Categorias <i id="category-arrow" class="fas fa-caret-down"></i><!--</a>--></h4>
         <button type="button" data-toggle="modal" data-target="#add-category-modal"><i class="fas fa-plus"></i></button>
         
         <ul id="all-categories">

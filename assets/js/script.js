@@ -46,6 +46,27 @@ function closeOpenMenu() {
 }
 closeOpenMenu();
 
+function closeOpenCategories() {
+    const category = doc.getElementById('category');
+    category.addEventListener("click", function() {
+        const allCategories = doc.getElementById('all-categories');
+        const allCategoriesLen = allCategories.classList.length;
+
+        const categoryArrow = doc.getElementById('category-arrow');
+        
+        if (allCategoriesLen == 0) {
+            allCategories.classList.add("open-all-categories");
+            categoryArrow.classList.remove('fa-caret-down');
+            categoryArrow.classList.add('fa-caret-up');
+        } else {
+            allCategories.classList.remove("open-all-categories");
+            categoryArrow.classList.remove('fa-caret-up');
+            categoryArrow.classList.add('fa-caret-down');
+        }
+    });
+}
+closeOpenCategories();
+
 // FUNÇÃO PARA DELETAR NOTA
 // function deleteNote() {
 //     const note = doc.getElementsByClassName('delete-note');

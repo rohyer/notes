@@ -18558,10 +18558,27 @@ section.main-content#main-content-category ul#all-categories {
       outline: 0; }
       #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover {
         background-color: #f1f1f1; }
-  #main-menu #main-menu-notes {
-    border-bottom: 1px solid #ddd; }
   #main-menu #main-menu-trash {
-    padding-top: 10px; }
+    padding-top: 10px;
+    border-top: 1px solid #ddd; }
+  #main-menu #all-categories {
+    display: none;
+    height: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px 15px 45px; }
+    #main-menu #all-categories.open-all-categories {
+      display: inline-block;
+      height: auto; }
+    #main-menu #all-categories a {
+      float: left;
+      width: 100%;
+      text-decoration: none;
+      color: initial;
+      padding: 2px 0 2px 0;
+      transition-duration: .3s; }
+      #main-menu #all-categories a:hover {
+        padding-left: 10px; }
 
 #add-note-modal .modal-header input, #update-note-modal .modal-header input {
   float: right;
