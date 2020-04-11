@@ -27,6 +27,26 @@
             font-style: normal;
             margin: 0 5px 0 0;
 
+            &#category {
+                cursor: pointer;
+                float: left;
+                width: 230px;
+                height: 45px;
+                text-align: left;
+                padding: 12px 15px 12px 30px;
+                border-radius: 0 50px 50px 0;
+                color: #444;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+
+                i {
+                    float: right;
+                }
+            }
+
             a {
                 float: left;
                 width: 230px;

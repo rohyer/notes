@@ -18524,6 +18524,20 @@ section.main-content#main-content-category ul#all-categories {
       font-weight: 400;
       font-style: normal;
       margin: 0 5px 0 0; }
+      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category {
+        cursor: pointer;
+        float: left;
+        width: 230px;
+        height: 45px;
+        text-align: left;
+        padding: 12px 15px 12px 30px;
+        border-radius: 0 50px 50px 0;
+        color: #444;
+        text-decoration: none; }
+        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover {
+          background-color: #f1f1f1; }
+        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i {
+          float: right; }
       #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a {
         float: left;
         width: 230px;
