@@ -18081,6 +18081,58 @@ p {
   padding-left: 30px;
   padding-right: 30px; }
 
+body.dark-theme {
+  background-color: #1f2324; }
+  body.dark-theme #header {
+    background-color: #1f2324; }
+    body.dark-theme #header #hamburger:hover {
+      background-color: #26292a; }
+    body.dark-theme #header .fas.fa-bars {
+      color: #fff; }
+    body.dark-theme #header #logo h1 {
+      color: #fff; }
+  body.dark-theme #main-menu {
+    background-color: #1f2324; }
+    body.dark-theme #main-menu #main-menu-notes h4 a {
+      color: #fff; }
+      body.dark-theme #main-menu #main-menu-notes h4 a:hover {
+        background-color: #26292a; }
+    body.dark-theme #main-menu #main-menu-notes h4#category {
+      color: #fff; }
+      body.dark-theme #main-menu #main-menu-notes h4#category:hover {
+        background-color: #26292a; }
+    body.dark-theme #main-menu #main-menu-notes button {
+      color: #fff;
+      background-color: #1f2324; }
+      body.dark-theme #main-menu #main-menu-notes button:hover {
+        background-color: #26292a; }
+    body.dark-theme #main-menu #main-menu-notes ul#all-categories a {
+      color: #fff; }
+    body.dark-theme #main-menu #main-menu-trash h4 a {
+      color: #fff; }
+      body.dark-theme #main-menu #main-menu-trash h4 a:hover {
+        background-color: #26292a; }
+  body.dark-theme #main-content, body.dark-theme #single-content-category {
+    background-color: #1f2324 !important; }
+    body.dark-theme #main-content .sec-marked-notes h4, body.dark-theme #single-content-category .sec-marked-notes h4 {
+      color: #fff; }
+    body.dark-theme #main-content .sec-no-marked-notes h4, body.dark-theme #single-content-category .sec-no-marked-notes h4 {
+      color: #fff; }
+    body.dark-theme #main-content .single-note .title-single-note, body.dark-theme #single-content-category .single-note .title-single-note {
+      color: #fff; }
+    body.dark-theme #main-content .single-note .marked-single-note .fas.fa-check, body.dark-theme #single-content-category .single-note .marked-single-note .fas.fa-check {
+      color: #fff; }
+    body.dark-theme #main-content .single-note .description-single-note, body.dark-theme #single-content-category .single-note .description-single-note {
+      color: #fff; }
+  body.dark-theme #single-content-category #title-category-name {
+    color: #fff; }
+  body.dark-theme#page-notes #notes {
+    background-color: #26292a; }
+  body.dark-theme#page-category #category {
+    background-color: #26292a; }
+  body.dark-theme#page-trash #trash {
+    background-color: #26292a; }
+
 #login-box {
   font-family: 'Noto Sans TC';
   position: absolute;

@@ -67,6 +67,22 @@ function closeOpenCategories() {
 }
 closeOpenCategories();
 
+function loadTheme() {
+    window.addEventListener("load", function() {
+        const themeValue = doc.getElementById('theme-value').value;
+        const body = doc.getElementsByTagName('body')[0]
+
+        if (themeValue == 0) {
+            body.classList.remove('dark-theme')
+        } else {
+            body.classList.add('dark-theme')
+        }
+    })
+}
+
+loadTheme();
+
+
 // FUNÇÃO PARA DELETAR NOTA
 // function deleteNote() {
 //     const note = doc.getElementsByClassName('delete-note');

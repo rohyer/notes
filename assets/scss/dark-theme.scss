@@ -1,0 +1,138 @@
+body {
+    &.dark-theme {
+        background-color: #1f2324;
+
+        #header {
+            background-color: #1f2324;
+
+            #hamburger {
+                &:hover {
+                    background-color: rgb(38, 41, 42);
+                }
+            }
+
+            .fas {
+                &.fa-bars {
+                    color: #fff;
+                }
+            }
+
+            #logo {
+                h1 {
+                    color: #fff;
+                }
+            }
+        }
+
+        #main-menu {
+            background-color: #1f2324;
+
+            #main-menu-notes {
+                h4 {
+                    a {
+                        color: #fff;
+                        
+                        &:hover {
+                            background-color: rgb(38, 41, 42);
+                        }
+                    }
+
+                    &#category {
+                        color: #fff;
+
+                        &:hover {
+                            background-color: rgb(38, 41, 42);
+                        }
+                    }
+                }
+
+                button {
+                    color: #fff;
+                    background-color: #1f2324;
+
+                    &:hover {
+                        background-color: rgb(38, 41, 42);
+                    }
+                }
+
+                ul {
+                    &#all-categories {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            #main-menu-trash {
+                h4 {
+                    a {
+                        color: #fff;
+
+                         &:hover {
+                            background-color: rgb(38, 41, 42);
+                         }
+                    }
+                }
+            }
+        }
+
+        #main-content, #single-content-category {
+            background-color: #1f2324 !important;
+
+            .sec-marked-notes {
+                h4 {
+                    color: #fff;
+                }
+            }
+            .sec-no-marked-notes {
+                h4 {
+                    color: #fff;
+                }
+            }
+
+            .single-note {
+                .title-single-note {
+                    color: #fff;
+                }
+
+                .marked-single-note {
+                    .fas {
+                        &.fa-check {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .description-single-note {
+                    color: #fff;
+                }
+            }
+        }
+
+        #single-content-category {
+            #title-category-name {
+                color: #fff;
+            }
+        }
+
+        &#page-notes {
+            #notes {
+                background-color: rgb(38, 41, 42);
+            }
+        }
+        
+        &#page-category {
+            #category {
+                background-color: rgb(38, 41, 42);
+            }
+        }
+        
+        &#page-trash {
+            #trash {
+                background-color: rgb(38, 41, 42);
+            }
+        }
+    }
+}
+
