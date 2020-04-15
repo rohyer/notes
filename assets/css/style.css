@@ -18430,6 +18430,27 @@ section.main-content#main-content-category ul#all-categories {
       margin-right: 1%;
       margin-bottom: 15px; }
 
+#main-trash-content .all-trash-options {
+  float: left;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50px; }
+  #main-trash-content .all-trash-options .trash-options {
+    visibility: hidden;
+    float: left;
+    width: 110px;
+    height: 60px;
+    text-align: left;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #cdcdcd; }
+  #main-trash-content .all-trash-options:hover {
+    background-color: #f1f1f1; }
+    #main-trash-content .all-trash-options:hover .trash-options {
+      visibility: visible; }
+
 .main-content #title-category-name, #single-content-category #title-category-name, #main-trash-content #title-category-name {
   font-size: 24px;
   font-weight: 500;

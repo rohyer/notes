@@ -66,7 +66,7 @@ class Note {
             $stmt->bindParam(":idnote", $this->idUserNote);
 
             if ($stmt->execute()) {
-                header("Location: /notes/index.php");
+                header('Location: ' . $_SERVER['HTTP_REFERER'] . '');
             } else {
                 echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
             }
@@ -75,7 +75,7 @@ class Note {
         }
     }
 
-    public function maindeleteNote($idUser, $idUserNote) {
+    public function mainDeleteNote($idUser, $idUserNote) {
         $this->getConn = $this->objConn->getConnection();
 
         $this->idUser = $idUser;
@@ -89,7 +89,7 @@ class Note {
             $stmt->bindParam(":idnote", $this->idUserNote);
 
             if ($stmt->execute()) {
-                header("Location: /notes/index.php");
+                header('location: ' . $_SERVER['HTTP_REFERER'] . '');
             } else {
                 echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
             }

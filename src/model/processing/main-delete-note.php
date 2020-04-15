@@ -7,7 +7,7 @@ $idUser = $_SESSION['user_datas']['id'];
 require_once "../Note.php";
 $objNote = new Note();
 
-$objNote->deleteNote($idUser, $idNote);
+$objNote->mainDeleteNote($idUser, $idNote);
 
 
 ?>
