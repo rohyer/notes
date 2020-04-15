@@ -77,7 +77,7 @@ body {
             }
         }
 
-        #main-content, #single-content-category {
+        #main-content, #single-content-category, #main-trash-content {
             background-color: #1f2324 !important;
 
             .sec-marked-notes {
@@ -106,6 +106,34 @@ body {
 
                 .description-single-note {
                     color: #fff;
+                }
+
+                .options-single-note {
+                    .colors-options {
+                        .fas {
+                            &.fa-palette {
+                                color: #fff;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #26292a
+                        }
+                    }
+
+                    .delete-note {
+                        .fas {
+                            &.fa-trash-alt {
+                                color: #fff;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #26292a
+                        }
+                    }
+
+
                 }
             }
         }

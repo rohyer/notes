@@ -5,6 +5,13 @@ $('.delete-note').click(function(event) {
     $('#delete-note-modal').modal('show');
 })
 
+$('.main-delete-note').click(function(event) {
+    let attributeNote = $(this).attr('data-id');
+    let yesDeleteNote = doc.getElementById('yes-delete-note');
+    yesDeleteNote.href = "./src/model/processing/main-delete-note.php?idnote=" + attributeNote;
+    $('#delete-note-modal').modal('show');
+})
+
 const doc = document;
 
 function closeOpenProfile() {
@@ -77,7 +84,7 @@ function loadTheme() {
         } else {
             body.classList.add('dark-theme')
         }
-    })
+    });
 }
 
 loadTheme();

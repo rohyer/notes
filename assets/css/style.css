@@ -18112,18 +18112,26 @@ body.dark-theme {
       color: #fff; }
       body.dark-theme #main-menu #main-menu-trash h4 a:hover {
         background-color: #26292a; }
-  body.dark-theme #main-content, body.dark-theme #single-content-category {
+  body.dark-theme #main-content, body.dark-theme #single-content-category, body.dark-theme #main-trash-content {
     background-color: #1f2324 !important; }
-    body.dark-theme #main-content .sec-marked-notes h4, body.dark-theme #single-content-category .sec-marked-notes h4 {
+    body.dark-theme #main-content .sec-marked-notes h4, body.dark-theme #single-content-category .sec-marked-notes h4, body.dark-theme #main-trash-content .sec-marked-notes h4 {
       color: #fff; }
-    body.dark-theme #main-content .sec-no-marked-notes h4, body.dark-theme #single-content-category .sec-no-marked-notes h4 {
+    body.dark-theme #main-content .sec-no-marked-notes h4, body.dark-theme #single-content-category .sec-no-marked-notes h4, body.dark-theme #main-trash-content .sec-no-marked-notes h4 {
       color: #fff; }
-    body.dark-theme #main-content .single-note .title-single-note, body.dark-theme #single-content-category .single-note .title-single-note {
+    body.dark-theme #main-content .single-note .title-single-note, body.dark-theme #single-content-category .single-note .title-single-note, body.dark-theme #main-trash-content .single-note .title-single-note {
       color: #fff; }
-    body.dark-theme #main-content .single-note .marked-single-note .fas.fa-check, body.dark-theme #single-content-category .single-note .marked-single-note .fas.fa-check {
+    body.dark-theme #main-content .single-note .marked-single-note .fas.fa-check, body.dark-theme #single-content-category .single-note .marked-single-note .fas.fa-check, body.dark-theme #main-trash-content .single-note .marked-single-note .fas.fa-check {
       color: #fff; }
-    body.dark-theme #main-content .single-note .description-single-note, body.dark-theme #single-content-category .single-note .description-single-note {
+    body.dark-theme #main-content .single-note .description-single-note, body.dark-theme #single-content-category .single-note .description-single-note, body.dark-theme #main-trash-content .single-note .description-single-note {
       color: #fff; }
+    body.dark-theme #main-content .single-note .options-single-note .colors-options .fas.fa-palette, body.dark-theme #single-content-category .single-note .options-single-note .colors-options .fas.fa-palette, body.dark-theme #main-trash-content .single-note .options-single-note .colors-options .fas.fa-palette {
+      color: #fff; }
+    body.dark-theme #main-content .single-note .options-single-note .colors-options:hover, body.dark-theme #single-content-category .single-note .options-single-note .colors-options:hover, body.dark-theme #main-trash-content .single-note .options-single-note .colors-options:hover {
+      background-color: #26292a; }
+    body.dark-theme #main-content .single-note .options-single-note .delete-note .fas.fa-trash-alt, body.dark-theme #single-content-category .single-note .options-single-note .delete-note .fas.fa-trash-alt, body.dark-theme #main-trash-content .single-note .options-single-note .delete-note .fas.fa-trash-alt {
+      color: #fff; }
+    body.dark-theme #main-content .single-note .options-single-note .delete-note:hover, body.dark-theme #single-content-category .single-note .options-single-note .delete-note:hover, body.dark-theme #main-trash-content .single-note .options-single-note .delete-note:hover {
+      background-color: #26292a; }
   body.dark-theme #single-content-category #title-category-name {
     color: #fff; }
   body.dark-theme#page-notes #notes {
@@ -18422,42 +18430,49 @@ section.main-content#main-content-category ul#all-categories {
       margin-right: 1%;
       margin-bottom: 15px; }
 
-.main-content #title-category-name, #single-content-category #title-category-name {
+.main-content #title-category-name, #single-content-category #title-category-name, #main-trash-content #title-category-name {
   font-size: 24px;
   font-weight: 500;
   font-style: normal;
   margin-bottom: 15px; }
-.main-content .note-container, #single-content-category .note-container {
+.main-content .note-container, #single-content-category .note-container, #main-trash-content .note-container {
   float: left;
   width: 100%; }
-  .main-content .note-container .sec-marked-notes, #single-content-category .note-container .sec-marked-notes {
+  .main-content .note-container .deleted-notes, #single-content-category .note-container .deleted-notes, #main-trash-content .note-container .deleted-notes {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4; }
+  .main-content .note-container .sec-marked-notes, #single-content-category .note-container .sec-marked-notes, #main-trash-content .note-container .sec-marked-notes {
     float: left;
     width: 100%; }
-    .main-content .note-container .sec-marked-notes h4, #single-content-category .note-container .sec-marked-notes h4 {
+    .main-content .note-container .sec-marked-notes h4, #single-content-category .note-container .sec-marked-notes h4, #main-trash-content .note-container .sec-marked-notes h4 {
       font-size: 16px;
       font-weight: 400;
       font-style: normal; }
-    .main-content .note-container .sec-marked-notes .marked-notes, #single-content-category .note-container .sec-marked-notes .marked-notes {
+    .main-content .note-container .sec-marked-notes .marked-notes, #single-content-category .note-container .sec-marked-notes .marked-notes, #main-trash-content .note-container .sec-marked-notes .marked-notes {
       float: left;
       width: 100%;
       margin-bottom: 30px;
       -webkit-column-count: 4;
       -moz-column-count: 4;
       column-count: 4; }
-  .main-content .note-container .sec-no-marked-notes, #single-content-category .note-container .sec-no-marked-notes {
+  .main-content .note-container .sec-no-marked-notes, #single-content-category .note-container .sec-no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes {
     float: left;
     width: 100%; }
-    .main-content .note-container .sec-no-marked-notes h4, #single-content-category .note-container .sec-no-marked-notes h4 {
+    .main-content .note-container .sec-no-marked-notes h4, #single-content-category .note-container .sec-no-marked-notes h4, #main-trash-content .note-container .sec-no-marked-notes h4 {
       font-size: 16px;
       font-weight: 400;
       font-style: normal; }
-    .main-content .note-container .sec-no-marked-notes .no-marked-notes, #single-content-category .note-container .sec-no-marked-notes .no-marked-notes {
+    .main-content .note-container .sec-no-marked-notes .no-marked-notes, #single-content-category .note-container .sec-no-marked-notes .no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes .no-marked-notes {
       float: left;
       width: 100%;
       -webkit-column-count: 4;
       -moz-column-count: 4;
       column-count: 4; }
-  .main-content .note-container .single-note, #single-content-category .note-container .single-note {
+  .main-content .note-container .single-note, #single-content-category .note-container .single-note, #main-trash-content .note-container .single-note {
     position: relative;
     min-width: 24%;
     min-height: 115px;
@@ -18471,32 +18486,32 @@ section.main-content#main-content-category ul#all-categories {
     margin: 0 0.5% 15px 0.5%;
     border: 1px solid #DDD;
     border-radius: 5px; }
-    .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note {
+    .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note, #main-trash-content .note-container .single-note:hover .options-single-note {
       visibility: visible; }
-    .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note {
+    .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note, #main-trash-content .note-container .single-note .title-single-note {
       cursor: default;
       font-size: 17px;
       font-weight: 400;
       font-style: normal;
       margin-bottom: 10px; }
-    .main-content .note-container .single-note .marked-single-note, #single-content-category .note-container .single-note .marked-single-note {
+    .main-content .note-container .single-note .marked-single-note, #single-content-category .note-container .single-note .marked-single-note, #main-trash-content .note-container .single-note .marked-single-note {
       position: absolute;
       top: 5px;
       right: 10px; }
-      .main-content .note-container .single-note .marked-single-note i, #single-content-category .note-container .single-note .marked-single-note i {
+      .main-content .note-container .single-note .marked-single-note i, #single-content-category .note-container .single-note .marked-single-note i, #main-trash-content .note-container .single-note .marked-single-note i {
         font-size: 14px; }
-    .main-content .note-container .single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note {
+    .main-content .note-container .single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note, #main-trash-content .note-container .single-note .description-single-note {
       cursor: default;
       font-size: 15px;
       font-weight: 400;
       font-style: normal; }
-    .main-content .note-container .single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note {
+    .main-content .note-container .single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note, #main-trash-content .note-container .single-note .options-single-note {
       display: inline-block;
       position: absolute;
       bottom: 15px;
       right: 15px;
       visibility: hidden; }
-      .main-content .note-container .single-note .options-single-note .colors-options, #single-content-category .note-container .single-note .options-single-note .colors-options {
+      .main-content .note-container .single-note .options-single-note .colors-options, #single-content-category .note-container .single-note .options-single-note .colors-options, #main-trash-content .note-container .single-note .options-single-note .colors-options {
         float: left;
         cursor: pointer;
         width: 25px;
@@ -18504,25 +18519,25 @@ section.main-content#main-content-category ul#all-categories {
         text-align: center;
         margin-right: 10px;
         border-radius: 50px; }
-        .main-content .note-container .single-note .options-single-note .colors-options:hover, #single-content-category .note-container .single-note .options-single-note .colors-options:hover {
+        .main-content .note-container .single-note .options-single-note .colors-options:hover, #single-content-category .note-container .single-note .options-single-note .colors-options:hover, #main-trash-content .note-container .single-note .options-single-note .colors-options:hover {
           background: #ddd; }
-        .main-content .note-container .single-note .options-single-note .colors-options i, #single-content-category .note-container .single-note .options-single-note .colors-options i {
+        .main-content .note-container .single-note .options-single-note .colors-options i, #single-content-category .note-container .single-note .options-single-note .colors-options i, #main-trash-content .note-container .single-note .options-single-note .colors-options i {
           font-size: 15px; }
-      .main-content .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note {
+      .main-content .note-container .single-note .options-single-note .delete-note, .main-content .note-container .single-note .options-single-note .main-delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .main-delete-note, #main-trash-content .note-container .single-note .options-single-note .delete-note, #main-trash-content .note-container .single-note .options-single-note .main-delete-note {
         float: left;
         cursor: pointer;
         width: 25px;
         height: 25px;
         text-align: center;
         border-radius: 50px; }
-        .main-content .note-container .single-note .options-single-note .delete-note:hover, #single-content-category .note-container .single-note .options-single-note .delete-note:hover {
+        .main-content .note-container .single-note .options-single-note .delete-note:hover, .main-content .note-container .single-note .options-single-note .main-delete-note:hover, #single-content-category .note-container .single-note .options-single-note .delete-note:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover {
           background: #ddd; }
-          .main-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note:hover .container-all-options {
+          .main-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options {
             display: inline-block;
             visibility: visible; }
-        .main-content .note-container .single-note .options-single-note .delete-note i, #single-content-category .note-container .single-note .options-single-note .delete-note i {
+        .main-content .note-container .single-note .options-single-note .delete-note i, .main-content .note-container .single-note .options-single-note .main-delete-note i, #single-content-category .note-container .single-note .options-single-note .delete-note i, #single-content-category .note-container .single-note .options-single-note .main-delete-note i, #main-trash-content .note-container .single-note .options-single-note .delete-note i, #main-trash-content .note-container .single-note .options-single-note .main-delete-note i {
           font-size: 15px; }
-        .main-content .note-container .single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options {
+        .main-content .note-container .single-note .options-single-note .delete-note .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options {
           position: absolute;
           top: 25px;
           left: 0;
@@ -18539,19 +18554,19 @@ section.main-content#main-content-category ul#all-categories {
           visibility: hidden;
           z-index: 999;
           transition-duration: .2s; }
-          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options:hover {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover {
             display: inline-block;
             visibility: visible; }
-          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button {
             width: 100%;
             height: 30px;
             text-align: left;
             padding: 0 15px;
             border: none;
             transition-duration: .2s; }
-            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:hover {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover {
               background: #ddd; }
-            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus {
               outline: none; }
 
 #main-menu {

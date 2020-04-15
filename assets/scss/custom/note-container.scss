@@ -1,4 +1,4 @@
-.main-content, #single-content-category {
+.main-content, #single-content-category, #main-trash-content {
 
     #title-category-name {
         font-size: 24px;
@@ -10,6 +10,16 @@
     .note-container {
         float: left;
         width: 100%;
+
+        .deleted-notes {
+            float: left;
+            width: 100%;
+            margin-bottom: 30px;
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
+        
         .sec-marked-notes {
             float: left;
             width: 100%;
@@ -120,7 +130,7 @@
                     }
                 }
 
-                .delete-note {
+                .delete-note, .main-delete-note {
                     float: left;
                     cursor: pointer;
                     width: 25px;
