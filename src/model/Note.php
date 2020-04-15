@@ -59,7 +59,30 @@ class Note {
         $this->idUserNote = $idUserNote;
 
         try {
-            $sql = "DELETE FROM note WHERE iduser = :iduser AND idnote = :idnote";
+            $sql = "UPDATE note SET statusnote = 0 WHERE iduser = :iduser AND idnote = :idnote";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+            $stmt->bindParam(":idnote", $this->idUserNote);
+
+            if ($stmt->execute()) {
+                header("Location: /notes/index.php");
+            } else {
+                echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
+            }
+        } catch (PDOExcpetion $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function maindeleteNote($idUser, $idUserNote) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $idUser;
+        $this->idUserNote = $idUserNote;
+
+        try {
+            $sql = "DELETE FROM note WHERE iduser = :iduser AND idnote = :idnote AND statusnote = 0";
 
             $stmt = $this->getConn->prepare($sql);
             $stmt->bindParam(":iduser", $this->idUser);
@@ -82,7 +105,7 @@ class Note {
         $this->idCategoryNote = $idCategoryNote;
 
         try {
-            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 1";
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 1 AND statusnote = 1";
 
             $stmt = $this->getConn->prepare($sql);
             $stmt->bindParam(":iduser", $this->idUserNote);
@@ -107,7 +130,7 @@ class Note {
         $this->idCategoryNote = $idCategoryNote;
 
         try {
-            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 0";
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory AND markednote = 0 AND statusnote = 1";
 
             $stmt = $this->getConn->prepare($sql);
             $stmt->bindParam(":iduser", $this->idUserNote);
@@ -118,6 +141,29 @@ class Note {
                 return $result;
             } else {
                 return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function listTrashNotes($idUserNote) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUserNote = $idUserNote;
+
+        try {
+            $sql = "SELECT * from note WHERE iduser = :iduser AND statusnote = 0";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUserNote);
+
+            if ($stmt->execute()) {
+                $result = $stmt->fetchAll();
+                return $result;
+            } else {
+                echo "<script type='text/javascript'>alert('Error');</script>";
             }
 
         } catch (PDOException $e) {
