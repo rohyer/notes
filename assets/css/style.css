@@ -18321,8 +18321,13 @@ header#header {
   position: relative;
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center; }
+  #header-right #profile:hover {
+    width: 100px; }
+    #header-right #profile:hover #profile-box {
+      display: flex;
+      visibility: visible; }
   #header-right #profile i {
     margin-right: 10px; }
   #header-right #profile img {
@@ -18347,9 +18352,6 @@ header#header {
     border-radius: 8px;
     box-shadow: 0px 0px 10px #ccc;
     padding: 15px; }
-    #header-right #profile #profile-box.show-profile, #header-right #profile .main-profile-box.show-profile {
-      display: flex;
-      visibility: visible; }
     #header-right #profile #profile-box a, #header-right #profile .main-profile-box a {
       font-size: 14px;
       font-weight: 400;

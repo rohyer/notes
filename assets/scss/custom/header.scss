@@ -82,8 +82,19 @@ header {
         position: relative;
         height: 60px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
+
+        &:hover {
+            width: 100px;
+
+            #profile-box {
+                display: flex;
+                visibility: visible;
+            }
+        }
+
+
 
         i {
             margin-right: 10px;
@@ -99,10 +110,10 @@ header {
 
         #profile-box, .main-profile-box {
 
-            &.show-profile {
-                display: flex;
-                visibility: visible;
-            }
+            // &.show-profile {
+            //     display: flex;
+            //     visibility: visible;
+            // }
             
             display: none;
             visibility: hidden;

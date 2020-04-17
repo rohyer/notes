@@ -29,7 +29,7 @@ function closeOpenProfile() {
         }
     });
 }
-closeOpenProfile();
+//closeOpenProfile();
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU
 function closeOpenMenu() {
