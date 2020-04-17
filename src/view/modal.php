@@ -10,7 +10,7 @@ $objCategory = new Category();
 <div class="modal fade" id="add-note-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-        <form action="./src/model/insert-datas.php" id="form-add-note" method="post">
+        <form action="./src/model/processing/insert-datas.php" id="form-add-note" method="post">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Adicione uma nota</h5>
 
@@ -36,7 +36,7 @@ $objCategory = new Category();
                 <div class="modal-footer-custom">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    <button type="submit" name="btnRegNote" class="btn btn-primary">Save changes</button>
+                    <button type="submit" name="btnRegisterNote" class="btn btn-primary">Save changes</button>
                 </div>
         
             </div>
@@ -56,7 +56,7 @@ $objCategory = new Category();
         </button>
       </div>
       <div class="modal-body">
-        <form action="./src/model/insert-datas.php" method="post">
+        <form action="./src/model/processing/insert-datas.php" method="post">
             <input type="text" name="title-category" placeholder="Ex: trabalho">
 
             <input type="text" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
@@ -64,7 +64,7 @@ $objCategory = new Category();
             <div class="modal-footer-custom">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                <button type="submit" name="btnRegCategory" class="btn btn-primary">Save changes</button>
+                <button type="submit" name="btnRegisterCategory" class="btn btn-primary">Save changes</button>
             </div>
         </form>
       </div>

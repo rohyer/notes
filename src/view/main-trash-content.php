@@ -29,8 +29,19 @@ $listDeletedNotes = $objNote->listTrashNotes($idUser);
                     <div class="options-single-note">
                         <div class="all-trash-options"><i class="fas fa-ellipsis-v"></i>
                             <div class="trash-options">
-                                <div class="main-restore-note">Restaurar</div>
-                                <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="main-delete-note">Deletar</div>
+
+
+                                <!-- <div class="action-trash-note">Restaurar</div> -->
+                                <form action="./src/model/processing/restore-note.php" method="POST">
+                                    <input type="hidden" name="restore-id-user" value="<?php echo $idUser; ?>" readonly>
+                                    <input type="hidden" name="restore-id-note" value="<?php echo $value['idnote']; ?>" readonly>
+                                    <input type="hidden" name="restore-id-category" value="<?php echo $value['idcategory']; ?>" readonly>
+
+                                    <button type="submit" name="btnRestoreNote" class="action-trash-note">Restaurar</button>
+                                </form>
+
+
+                                <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="action-trash-note delete-trash-note">Deletar</div>
                             </div>
                         </div>
                     </div>

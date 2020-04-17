@@ -208,6 +208,31 @@ class Note {
 
     }
 
+    public function restoreNote($datas) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $datas['restore-id-user'];
+        $this->idUserNote = $datas['restore-id-note'];
+        $this->idCategoryNote = $datas['restore-id-category'];
+
+        try {
+            $sql = "UPDATE note SET statusnote = 1 WHERE iduser = :iduser AND idnote = :idnote AND idcategory = :idcategory";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+            $stmt->bindParam(":idnote", $this->idUserNote);
+            $stmt->bindParam(":idcategory", $this->idCategoryNote);
+
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
 }
 
 

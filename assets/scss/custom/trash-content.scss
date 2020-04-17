@@ -8,20 +8,33 @@
         border-radius: 50px;
 
         .trash-options {
+            display: none;
             visibility: hidden;
             float: left;
-            width: 110px;
-            height: 60px;
+            width: 120px;
+            height: auto;
             text-align: left;
             margin: auto;
             background-color: #fff;
             border: 1px solid #cdcdcd;
+
+            .action-trash-note {
+                text-align: left;
+                padding: 3px 15px;
+                border: none;
+                width: 100%;
+
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
         }
 
         &:hover {
             background-color: #f1f1f1;
 
             .trash-options {
+                display: inline-block;
                 visibility: visible;
             }
         }
