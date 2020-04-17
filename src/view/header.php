@@ -46,13 +46,13 @@ $value = $objUserHeader->readTheme($_SESSION['user_datas']['id']);
                         <!-- <p><?php echo $_SESSION['user_datas']['id']; ?></p> -->
                         <p><?php echo $_SESSION['user_datas']['name']; ?></p>
                         <a href="#">Ver perfil</a>
-                        <form action="./src/model/processing/alter-theme.php" method="POST" id="theme-form">
+                        <form action="./src/model/processing/processing.php" method="POST" id="theme-form">
                             <input type="hidden" value="<?php echo $_SESSION['user_datas']['id']; ?>" name="iduser" readonly>
                             <input type="checkbox" value="1" name="themeuser" id="theme">
                             <?php if ($value['themeuser'] != 1) { ?>
-                                <button type="submit" name="RegTheme">Ativar tema escuro</button>
+                                <button type="submit" name="btnChangeTheme">Ativar tema escuro</button>
                             <?php } else { ?>
-                                <button type="submit" name="RegTheme">desativar tema escuro</button>
+                                <button type="submit" name="btnChangeTheme">desativar tema escuro</button>
                             <?php } ?>
                         </form>
                         <input type="hidden" value="<?php echo $value['themeuser']; ?>" id="theme-value">
