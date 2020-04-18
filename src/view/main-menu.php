@@ -1,12 +1,8 @@
 <?php
 
 require_once "./src/model/Category.php";
-
 $objCategory = new Category();
 $allCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
-
-$amountCategories = count($allCategories);
-$moduleAmountCategories = $amountCategories % 2;
 
 ?>
 
@@ -15,23 +11,21 @@ $moduleAmountCategories = $amountCategories % 2;
         <h4><a href="./index.php" id="notes">Notas</a></h4>
         <button type="button" data-toggle="modal" data-target="#add-note-modal"><i class="fas fa-plus"></i></button>
 
-        <h4 id="category"><!--<a href="./category.php" id="category">-->Categorias <i id="category-arrow" class="fas fa-caret-down"></i><!--</a>--></h4>
+        <h4 id="category">Categorias <i id="category-arrow" class="fas fa-caret-down"></i></h4>
         <button type="button" data-toggle="modal" data-target="#add-category-modal"><i class="fas fa-plus"></i></button>
         
         <ul id="all-categories">
-        <?php foreach ($allCategories as $value) { ?>
+            <?php foreach ($allCategories as $value) { ?>
 
-            <?php if (($amountCategories == 1) && ($moduleAmountCategories != 0)) { ?>
-                <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-first-odd"><li><?php echo $value['namecategory']; ?></li></a>
-            <?php } elseif (($amountCategories == 2) && ($moduleAmountCategories == 0)) { ?>
-                <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-first-even"><li><?php echo $value['namecategory']; ?></li></a>
-            <?php } elseif (($amountCategories == 3) && ($moduleAmountCategories != 0)) { ?>
-                <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-odd"><li><?php echo $value['namecategory']; ?></li></a>
-            <?php } elseif ($amountCategories >= 4) { ?>
-                <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>" class="categories-even"><li><?php echo $value['namecategory']; ?></li></a>
+                <li>
+                    <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>"><?php echo $value['namecategory']; ?></a>
+                    
+                    <i class="far fa-edit" data-toggle="modal" data-target="#update-category-modal" data-id="<?php echo $value['idcategory']; ?>"></i>
+
+                    <i class="fas fa-trash-alt delete-category" data-toggle="modal" data-target="#delete-category-modal" data-id="<?php echo $value['idcategory']; ?>"></i>
+                </li>
+                
             <?php } ?>
-            
-        <?php } ?>
         </ul>
     </div>
 

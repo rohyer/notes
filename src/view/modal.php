@@ -111,6 +111,33 @@ $objCategory = new Category();
   </div>
 </div>
 
+<!-- Update Modal Category -->
+<div class="modal fade" id="update-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Adicione uma categoria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="./src/model/processing/processing.php" method="post">
+            <input type="text" name="title-category" placeholder="Ex: trabalho">
+
+            <input type="text" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
+
+            <div class="modal-footer-custom">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                <button type="submit" name="btnRegisterCategory" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal Delete Note -->
 <div class="delete-note-modal modal fade bd-example-modal-sm" id="delete-note-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm">
@@ -121,6 +148,21 @@ $objCategory = new Category();
       <div class="modal-body">
         <a class="btn btn-secondary" data-dismiss="modal">Não</a>
         <a href="#" class="btn btn-secondary" id="yes-delete-note">Sim</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Delete Category -->
+<div class="delete-category-modal modal fade bd-example-modal-sm" id="delete-category-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        Deseja excluir essa categoria e todas notas pertencentes a ela permanentemente?
+      </div>
+      <div class="modal-body">
+        <a class="btn btn-secondary" data-dismiss="modal">Não</a>
+        <a href="#" class="btn btn-secondary" id="yes-delete-category">Sim</a>
       </div>
     </div>
   </div>

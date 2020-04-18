@@ -1,3 +1,4 @@
+// FUNÇÃO PARA ENVIAR NOTA PARA LIXEIRA (DELETAR)
 $('.delete-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');
     let yesDeleteNote = doc.getElementById('yes-delete-note');
@@ -5,6 +6,7 @@ $('.delete-note').click(function(event) {
     $('#delete-note-modal').modal('show');
 })
 
+// FUNÇÃO PARA DELETAR A NOTA DA LIXEIRA PERMANENTEMENTE
 $('.delete-trash-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');
     let yesDeleteNote = doc.getElementById('yes-delete-note');
@@ -13,23 +15,6 @@ $('.delete-trash-note').click(function(event) {
 })
 
 const doc = document;
-
-function closeOpenProfile() {
-    const profile = doc.getElementById('profile');
-    profile.addEventListener('click', function() {
-        
-        const mainProfileBox = doc.getElementsByClassName('main-profile-box')[0];
-        const mainProfileBoxLen = mainProfileBox.classList.length;
-        console.log(mainProfileBoxLen);
-
-        if (mainProfileBoxLen == 1) {
-            mainProfileBox.classList.add('show-profile');
-        } else {
-            mainProfileBox.classList.remove('show-profile');
-        }
-    });
-}
-//closeOpenProfile();
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU
 function closeOpenMenu() {
@@ -53,6 +38,7 @@ function closeOpenMenu() {
 }
 closeOpenMenu();
 
+// FUNÇÃO PARA ABRIR E FECHAR A LISTA DE CATEGORIAS
 function closeOpenCategories() {
     const category = doc.getElementById('category');
     category.addEventListener("click", function() {
@@ -74,6 +60,7 @@ function closeOpenCategories() {
 }
 closeOpenCategories();
 
+// FUNÇÃO PARA CARREGAR TEMA
 function loadTheme() {
     window.addEventListener("load", function() {
         const themeValue = doc.getElementById('theme-value').value;
@@ -86,34 +73,9 @@ function loadTheme() {
         }
     });
 }
-
 loadTheme();
 
-
-// FUNÇÃO PARA DELETAR NOTA
-// function deleteNote() {
-//     const note = doc.getElementsByClassName('delete-note');
-
-//     for (let i = 0; i < note.length; i++) {
-//         note[i].addEventListener("click", function() {
-            
-//             // get modals
-//             const modals = document.getElementById('delete-note-modal');
-
-//             // on every modal change state like in hidden modal
-//             modals.classList.add('show');
-//             modals.setAttribute('aria-hidden', 'false');
-//             modals.setAttribute('style', 'display: block');
-            
-
-//             let attributeNote = note[i].getAttribute('data-id');
-//             let yesDeleteNote = doc.getElementById('yes-delete-note');
-//             yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
-//         });
-//     }
-// }
-// deleteNote();
-
+// FUNÇÃO PARA ATUALIZAR NOTA
 function updateNote() {
     const note = doc.getElementsByClassName('single-note');
 
@@ -146,11 +108,3 @@ function updateNote() {
     }
 }
 updateNote();
-    
-
-
-//RESET FORM NOTE AND CATEGORY AFTER SUBMIT
-// window.addEventListener('load', function(e) {
-//     doc.getElementById('form-add-note').reset();
-//     console.log("a");
-// })

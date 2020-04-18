@@ -39,33 +39,6 @@ header {
         i {
             font-size: 17px;
         }
-
-        // span {
-        //     display: inline-block;
-        //     width: 25px;
-        //     height: 1.5px;
-        //     background-color: #444;
-
-        //     &:before {
-        //         content: '';
-        //         position: absolute;
-        //         top: 7px;
-        //         left: 0;
-        //         width: 25px;
-        //         height: 1.5px;
-        //         background-color: #444;
-        //     }
-
-        //     &:after {
-        //         content: '';
-        //         position: absolute;
-        //         bottom: 7px;
-        //         left: 0;
-        //         width: 25px;
-        //         height: 1.5px;
-        //         background-color: #444;
-        //     }
-        // }
     }
 
     #logo {
@@ -109,19 +82,11 @@ header {
         }
 
         #profile-box, .main-profile-box {
-
-            // &.show-profile {
-            //     display: flex;
-            //     visibility: visible;
-            // }
-            
             display: none;
             visibility: hidden;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            // display: none;
-            // opacity: 0;
             position: absolute;
             top: 60px;
             right: 0;

@@ -18669,15 +18669,28 @@ section.main-content#main-content-category ul#all-categories {
     #main-menu #all-categories.open-all-categories {
       display: inline-block;
       height: auto; }
-    #main-menu #all-categories a {
+    #main-menu #all-categories li {
       float: left;
       width: 100%;
-      text-decoration: none;
-      color: initial;
-      padding: 2px 0 2px 0;
       transition-duration: .3s; }
-      #main-menu #all-categories a:hover {
+      #main-menu #all-categories li:hover {
         padding-left: 10px; }
+        #main-menu #all-categories li:hover i {
+          visibility: visible;
+          opacity: 1; }
+      #main-menu #all-categories li i {
+        cursor: pointer;
+        padding: 0 2px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s; }
+      #main-menu #all-categories li a {
+        float: left;
+        width: 65%;
+        text-decoration: none;
+        color: initial;
+        padding: 2px 0 2px 0;
+        margin-right: 10px; }
 
 #add-note-modal .modal-header input, #update-note-modal .modal-header input {
   float: right;

@@ -94,16 +94,36 @@
             height: auto;
         }
 
-        a {
+        li {
             float: left;
             width: 100%;
-            text-decoration: none;
-            color: initial;
-            padding: 2px 0 2px 0;
             transition-duration: .3s;
-        
+
             &:hover {
                 padding-left: 10px;
+                
+                i {
+                    
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            i {
+                cursor: pointer;
+                padding: 0 2px;
+                visibility: hidden;
+                opacity: 0;
+                transition: .3s;
+            }
+
+            a {
+                float: left;
+                width: 65%;
+                text-decoration: none;
+                color: initial;
+                padding: 2px 0 2px 0;
+                margin-right: 10px;
             }
         }
 
