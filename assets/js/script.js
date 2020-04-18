@@ -108,3 +108,22 @@ function updateNote() {
     }
 }
 updateNote();
+
+// FUNÇÃO PARA ATUALIZAR CATEGORIA
+function updateCategory() {
+    const updateCategory = doc.getElementsByClassName('update-category');
+    const updateCategoryLen = updateCategory.length;
+    for (let i = 0; i < updateCategoryLen; i++) {
+        updateCategory[i].addEventListener("click", function(event) {
+            const idCategory = updateCategory[i].getAttribute("data-id");
+            const nameCategory = updateCategory[i].getAttribute("data-name");
+            const idUserCategoryUpdate = doc.getElementById('id-category-update');
+            const nameCategoryUpdate = doc.getElementById('name-category-update');
+
+            idUserCategoryUpdate.value = idCategory;
+            nameCategoryUpdate.value = nameCategory;
+            
+        })
+    }
+}
+updateCategory();

@@ -59,7 +59,7 @@ $objCategory = new Category();
         <form action="./src/model/processing/processing.php" method="post">
             <input type="text" name="title-category" placeholder="Ex: trabalho">
 
-            <input type="text" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
+            <input type="hidden" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
 
             <div class="modal-footer-custom">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -123,14 +123,15 @@ $objCategory = new Category();
       </div>
       <div class="modal-body">
         <form action="./src/model/processing/processing.php" method="post">
-            <input type="text" name="title-category" placeholder="Ex: trabalho">
+            <input type="text" name="title-category" id="name-category-update" placeholder="Ex: trabalho">
 
-            <input type="text" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
+            <input type="hidden" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category-update" readonly>
+            <input type="hidden" name="id-category" id="id-category-update" readonly>
 
             <div class="modal-footer-custom">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                <button type="submit" name="btnRegisterCategory" class="btn btn-primary">Save changes</button>
+                <button type="submit" name="btnUpdateCategory" class="btn btn-primary">Save changes</button>
             </div>
         </form>
       </div>

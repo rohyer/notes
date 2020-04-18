@@ -19,9 +19,9 @@ $allCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
 
                 <li>
                     <a href="./single-category.php?idcategory=<?php echo $value['idcategory'] ?>&namecategory=<?php echo $value['namecategory']; ?>"><?php echo $value['namecategory']; ?></a>
-                    
-                    <i class="far fa-edit" data-toggle="modal" data-target="#update-category-modal" data-id="<?php echo $value['idcategory']; ?>"></i>
 
+                    <i class="far fa-edit update-category" data-toggle="modal" data-target="#update-category-modal" data-id="<?php echo $value['idcategory']; ?>" data-name="<?php echo $value['namecategory']; ?>"></i>
+                    
                     <i class="fas fa-trash-alt delete-category" data-toggle="modal" data-target="#delete-category-modal" data-id="<?php echo $value['idcategory']; ?>"></i>
                 </li>
                 

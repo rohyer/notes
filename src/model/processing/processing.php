@@ -23,6 +23,13 @@ if (isset($_POST['btnRegisterCategory'])) {
   }
 }
 
+// Category Update
+if (isset($_POST['btnUpdateCategory'])) {
+  if ($objCategory->updateCategory($_POST)) {
+    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
+  }
+}
+
 // Note Update
 if (isset($_POST['btnUpdateNote'])) {
     if ($objNote->updateNote($_POST)) {

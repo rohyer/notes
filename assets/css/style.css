@@ -18775,7 +18775,7 @@ section.main-content#main-content-category ul#all-categories {
   padding-bottom: 5px;
   text-indent: 5px; }
 
-#add-category-modal .modal-body input {
+#add-category-modal .modal-body input, #update-category-modal .modal-body input {
   width: 100%;
   height: 40px;
   border-top: none;
@@ -18787,7 +18787,7 @@ section.main-content#main-content-category ul#all-categories {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-  #add-category-modal .modal-body input#id-user-category {
+  #add-category-modal .modal-body input#id-user-category, #update-category-modal .modal-body input#id-user-category {
     display: none; }
 
 .modal-body .modal-footer-custom {
