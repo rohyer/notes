@@ -83,7 +83,29 @@ class Category {
         }
     }
 
-    public function deleteCategory($datas) {}
+    public function deleteCategory($idUserCategory, $idCategory) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUserCategory = $idUserCategory;
+        $this->idCategory = $idCategory;
+
+        try {
+            $sql = "DELETE FROM category WHERE iduser = :iduser AND idcategory = :idcategory";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUserCategory);
+            $stmt->bindParam(":idcategory", $this->idCategory);
+
+            if ($stmt->execute()) {
+                header('location: ' . $_SERVER['HTTP_REFERER'] . '');
+            } else {
+                echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 
 
 }

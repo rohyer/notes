@@ -1,13 +1,14 @@
 <?php
-session_start();
+// session_start();
 
-$idNote = $_GET['idnote'];
-$idUser = $_SESSION['user_datas']['id'];
+// require_once "../Note.php";
+// $objNote = new Note();
 
-require_once "../Note.php";
-$objNote = new Note();
+// $idUser = $_SESSION['user_datas']['id'];
 
-$objNote->mainDeleteNote($idUser, $idNote);
-
+// if (isset($_GET['idmaindeletenote'])) {
+//     $idNote = $_GET['idmaindeletenote'];
+//     $objNote->mainDeleteNote($idUser, $idNote);
+// }
 
 ?>

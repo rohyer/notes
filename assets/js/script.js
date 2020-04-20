@@ -2,7 +2,7 @@
 $('.delete-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');
     let yesDeleteNote = doc.getElementById('yes-delete-note');
-    yesDeleteNote.href = "./src/model/processing/delete-note.php?idnote=" + attributeNote;
+    yesDeleteNote.href = "./src/model/processing/processing.php?iddeletenote=" + attributeNote;
     $('#delete-note-modal').modal('show');
 })
 
@@ -10,7 +10,7 @@ $('.delete-note').click(function(event) {
 $('.delete-trash-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');
     let yesDeleteNote = doc.getElementById('yes-delete-note');
-    yesDeleteNote.href = "./src/model/processing/main-delete-note.php?idnote=" + attributeNote;
+    yesDeleteNote.href = "./src/model/processing/processing.php?idmaindeletenote=" + attributeNote;
     $('#delete-note-modal').modal('show');
 })
 
@@ -127,3 +127,19 @@ function updateCategory() {
     }
 }
 updateCategory();
+
+// FUNÇÃO PARA DELETAR CATEGORIA
+function deleteCategory() {
+    const deleteCategory = doc.getElementsByClassName("delete-category");
+    deleteCategoryLen = deleteCategory.length;
+    for (let i = 0; i < deleteCategoryLen; i++) {
+        deleteCategory[i].addEventListener("click", function(e) {
+            deleteCategoryID = deleteCategory[i].getAttribute("data-id");
+            yesDeleteCategory = doc.getElementById("yes-delete-category");
+            
+            yesDeleteCategory.href = "./src/model/processing/processing.php?idmaindeletecategory=" + deleteCategoryID;
+            
+        });
+    }
+}
+deleteCategory();
