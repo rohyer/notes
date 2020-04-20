@@ -1,6 +1,7 @@
 <?php
 
 require_once "Connection.php";
+require_once "Note.php";
 
 class Category {
     private $idCategory;
@@ -9,6 +10,9 @@ class Category {
 
     private $objConn;
     private $getConn;
+
+    private $objNote;
+    private $listNotes;
 
     public function __construct() {
         $this->objConn = new Connection();
@@ -86,24 +90,45 @@ class Category {
     public function deleteCategory($idUserCategory, $idCategory) {
         $this->getConn = $this->objConn->getConnection();
 
+        $this->objNote = new Note();
+        $this->listNotes = $this->objNote->listAllNotes($idUserCategory, $idCategory);
+
         $this->idUserCategory = $idUserCategory;
         $this->idCategory = $idCategory;
 
-        try {
-            $sql = "DELETE FROM category WHERE iduser = :iduser AND idcategory = :idcategory";
+        if ($this->listNotes == 0) {
+            try {
+                $sql = "DELETE FROM category WHERE iduser = :iduser AND idcategory = :idcategory";
 
-            $stmt = $this->getConn->prepare($sql);
-            $stmt->bindParam(":iduser", $this->idUserCategory);
-            $stmt->bindParam(":idcategory", $this->idCategory);
+                $stmt = $this->getConn->prepare($sql);
+                $stmt->bindParam(":iduser", $this->idUserCategory);
+                $stmt->bindParam(":idcategory", $this->idCategory);
 
-            if ($stmt->execute()) {
-                header('location: ' . $_SERVER['HTTP_REFERER'] . '');
-            } else {
-                echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
+                if ($stmt->execute()) {
+                    header('location: ../../../index.php');
+                }
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
             }
+        } elseif ($this->listNotes >= 1) {
+            try {
+                $sql = "DELETE category.*, note.* FROM category
+                JOIN note ON category.idcategory = note.idcategory
+                WHERE category.iduser = :iduser AND category.idcategory = :idcategory";
 
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
+                $stmt = $this->getConn->prepare($sql);
+                $stmt->bindParam(":iduser", $this->idUserCategory);
+                $stmt->bindParam(":idcategory", $this->idCategory);
+
+                if ($stmt->execute()) {
+                    header('location: ../../../index.php');
+                } else {
+                    echo "<script type='text/javascript'>alert('Erro ao deletar nota');</script>";
+                }
+
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
         }
     }
 

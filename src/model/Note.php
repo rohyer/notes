@@ -98,6 +98,31 @@ class Note {
         }
     }
 
+    public function listAllNotes($idUserNote, $idCategoryNote) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUserNote = $idUserNote;
+        $this->idCategoryNote = $idCategoryNote;
+
+        try {
+            $sql = "SELECT * FROM note WHERE iduser = :iduser AND idcategory = :idcategory";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUserNote);
+            $stmt->bindParam(":idcategory", $this->idCategoryNote);
+            
+            if ($stmt->execute()) {
+                $result = $stmt->rowCount();
+                return $result;
+            } else {
+                return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
     public function listNotes($idUserNote, $idCategoryNote) {
         $this->getConn = $this->objConn->getConnection();
 
