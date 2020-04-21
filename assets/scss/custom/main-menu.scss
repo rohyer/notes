@@ -1,4 +1,4 @@
-#main-menu {
+#main-menu, #user-menu {
     float: left;
     position: absolute;
     top: 60px;
@@ -17,7 +17,7 @@
         transition-duration: .2s;
     }
 
-    #main-menu-notes, #main-menu-trash {
+    #main-menu-notes, #main-menu-trash, #user-menu-notes {
         padding-bottom: 10px;
 
         h4 {

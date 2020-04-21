@@ -16,6 +16,9 @@ $('.delete-trash-note').click(function(event) {
 
 const doc = document;
 
+const body = doc.getElementsByTagName('body')[0].className;
+const bodyClass = body.split(' ');
+
 // FUNÇÃO PARA ABRIR E FECHAR MENU
 function closeOpenMenu() {
     const hamburger = doc.getElementById('hamburger');
@@ -36,7 +39,28 @@ function closeOpenMenu() {
         }
     });
 }
-closeOpenMenu();
+
+// FUNÇÃO PARA ABRIR E FECHAR MENU DO PROFILE
+function closeOpenProfileMenu() {
+    const hamburger = doc.getElementById('hamburger');
+    hamburger.addEventListener('click', function(e) {
+        const mainMenu = doc.getElementById('user-menu');
+        const mainContent = doc.getElementsByClassName('main-content')[0];
+        
+        if (mainMenu.classList == 'opened-main-menu') {
+            mainMenu.classList.remove('opened-main-menu');
+            mainContent.classList.remove('open-menu-for-content');
+            mainMenu.classList.add('closed-main-menu');
+            mainContent.classList.add('open-menu-for-content-2');
+        } else {
+            mainMenu.classList.remove('closed-main-menu');
+            mainContent.classList.remove('open-menu-for-content-2');
+            mainMenu.classList.add('opened-main-menu');
+            mainContent.classList.add('open-menu-for-content');
+        }
+    });
+}
+closeOpenProfileMenu();
 
 // FUNÇÃO PARA ABRIR E FECHAR A LISTA DE CATEGORIAS
 function closeOpenCategories() {
@@ -58,7 +82,6 @@ function closeOpenCategories() {
         }
     });
 }
-closeOpenCategories();
 
 // FUNÇÃO PARA CARREGAR TEMA
 function loadTheme() {
@@ -107,7 +130,6 @@ function updateNote() {
         })
     }
 }
-updateNote();
 
 // FUNÇÃO PARA ATUALIZAR CATEGORIA
 function updateCategory() {
@@ -126,7 +148,6 @@ function updateCategory() {
         })
     }
 }
-updateCategory();
 
 // FUNÇÃO PARA DELETAR CATEGORIA
 function deleteCategory() {
@@ -142,4 +163,12 @@ function deleteCategory() {
         });
     }
 }
-deleteCategory();
+
+// CHAMADA DAS FUNÇÕES
+if (bodyClass == "body-pages-in") {
+    closeOpenMenu();
+    closeOpenCategories();
+    updateNote();
+    updateCategory();
+    deleteCategory();
+}

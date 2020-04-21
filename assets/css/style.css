@@ -18054,7 +18054,7 @@ body {
   font-family: 'Noto Sans TC';
   float: left;
   width: 100%; }
-  body.body-pages-in {
+  body.body-pages-in, body.body-profile-page {
     position: relative; }
 
 ul {
@@ -18601,7 +18601,7 @@ section.main-content#main-content-category ul#all-categories {
             .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus {
               outline: none; }
 
-#main-menu {
+#main-menu, #user-menu {
   float: left;
   position: absolute;
   top: 60px;
@@ -18609,21 +18609,21 @@ section.main-content#main-content-category ul#all-categories {
   height: 92vh;
   padding-top: 20px;
   padding-bottom: 20px; }
-  #main-menu.opened-main-menu {
+  #main-menu.opened-main-menu, #user-menu.opened-main-menu {
     left: 0;
     transition-duration: .2s; }
-  #main-menu.closed-main-menu {
+  #main-menu.closed-main-menu, #user-menu.closed-main-menu {
     left: -280px;
     transition-duration: .2s; }
-  #main-menu #main-menu-notes, #main-menu #main-menu-trash {
+  #main-menu #main-menu-notes, #main-menu #main-menu-trash, #main-menu #user-menu-notes, #user-menu #main-menu-notes, #user-menu #main-menu-trash, #user-menu #user-menu-notes {
     padding-bottom: 10px; }
-    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4 {
+    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4, #main-menu #user-menu-notes h4, #user-menu #main-menu-notes h4, #user-menu #main-menu-trash h4, #user-menu #user-menu-notes h4 {
       float: left;
       font-size: 20px;
       font-weight: 400;
       font-style: normal;
       margin: 0 5px 0 0; }
-      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category {
+      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category, #main-menu #user-menu-notes h4#category, #user-menu #main-menu-notes h4#category, #user-menu #main-menu-trash h4#category, #user-menu #user-menu-notes h4#category {
         cursor: pointer;
         float: left;
         width: 230px;
@@ -18633,11 +18633,11 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover {
+        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover, #main-menu #user-menu-notes h4#category:hover, #user-menu #main-menu-notes h4#category:hover, #user-menu #main-menu-trash h4#category:hover, #user-menu #user-menu-notes h4#category:hover {
           background-color: #f1f1f1; }
-        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i {
+        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i, #main-menu #user-menu-notes h4#category i, #user-menu #main-menu-notes h4#category i, #user-menu #main-menu-trash h4#category i, #user-menu #user-menu-notes h4#category i {
           float: right; }
-      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a {
+      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a, #main-menu #user-menu-notes h4 a, #user-menu #main-menu-notes h4 a, #user-menu #main-menu-trash h4 a, #user-menu #user-menu-notes h4 a {
         float: left;
         width: 230px;
         height: 45px;
@@ -18646,45 +18646,45 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover {
+        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover, #main-menu #user-menu-notes h4 a:hover, #user-menu #main-menu-notes h4 a:hover, #user-menu #main-menu-trash h4 a:hover, #user-menu #user-menu-notes h4 a:hover {
           background-color: #f1f1f1; }
-    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button {
+    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button, #main-menu #user-menu-notes button, #user-menu #main-menu-notes button, #user-menu #main-menu-trash button, #user-menu #user-menu-notes button {
       width: 45px;
       height: 45px;
       border: 1px solid transparent;
       border-radius: 50px;
       background-color: #fff;
       outline: 0; }
-      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover {
+      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover, #main-menu #user-menu-notes button:hover, #user-menu #main-menu-notes button:hover, #user-menu #main-menu-trash button:hover, #user-menu #user-menu-notes button:hover {
         background-color: #f1f1f1; }
-  #main-menu #main-menu-trash {
+  #main-menu #main-menu-trash, #user-menu #main-menu-trash {
     padding-top: 10px;
     border-top: 1px solid #ddd; }
-  #main-menu #all-categories {
+  #main-menu #all-categories, #user-menu #all-categories {
     display: none;
     height: 0;
     width: 100%;
     text-align: left;
     padding: 10px 10px 15px 45px; }
-    #main-menu #all-categories.open-all-categories {
+    #main-menu #all-categories.open-all-categories, #user-menu #all-categories.open-all-categories {
       display: inline-block;
       height: auto; }
-    #main-menu #all-categories li {
+    #main-menu #all-categories li, #user-menu #all-categories li {
       float: left;
       width: 100%;
       transition-duration: .3s; }
-      #main-menu #all-categories li:hover {
+      #main-menu #all-categories li:hover, #user-menu #all-categories li:hover {
         padding-left: 10px; }
-        #main-menu #all-categories li:hover i {
+        #main-menu #all-categories li:hover i, #user-menu #all-categories li:hover i {
           visibility: visible;
           opacity: 1; }
-      #main-menu #all-categories li i {
+      #main-menu #all-categories li i, #user-menu #all-categories li i {
         cursor: pointer;
         padding: 0 2px;
         visibility: hidden;
         opacity: 0;
         transition: .3s; }
-      #main-menu #all-categories li a {
+      #main-menu #all-categories li a, #user-menu #all-categories li a {
         float: left;
         width: 65%;
         text-decoration: none;

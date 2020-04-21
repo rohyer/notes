@@ -7,7 +7,6 @@ class User {
     private $nameUser;
     private $emailUser;
     private $passwordUser;
-    // private $confirmPasswordUser;
     private $encryptedPasswordUser;
     private $sexUser;
     private $cellPhoneUser;

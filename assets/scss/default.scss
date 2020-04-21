@@ -3,7 +3,7 @@ body {
     float: left;
     width: 100%;
 
-    &.body-pages-in {
+    &.body-pages-in, &.body-profile-page {
         position: relative;
     }
 }
