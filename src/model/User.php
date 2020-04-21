@@ -180,6 +180,28 @@ class User {
             echo "Error: " . $e->getMessage();
         }
     }
+
+    public function listDatasUser($idUser) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $idUser;
+
+        try {
+            $sql = "SELECT * FROM main_user WHERE iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+
+            if ($stmt->execute()) {
+                $result = $stmt->fetchAll();
+                return $result;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
 
 

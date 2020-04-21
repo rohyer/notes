@@ -18385,16 +18385,16 @@ header#header {
       #header-right #profile #profile-box button:hover, #header-right #profile .main-profile-box button:hover {
         background-color: #f1f1f1; }
 
-section.main-content {
+section.main-content, section.main-user-content {
   float: left;
   width: 100%;
   transition-duration: .2s;
   padding-right: 230px;
   margin-top: 20px; }
-  section.main-content.open-menu-for-content {
+  section.main-content.open-menu-for-content, section.main-user-content.open-menu-for-content {
     padding-left: 420px;
     padding-right: 140px; }
-  section.main-content.open-menu-for-content-2 {
+  section.main-content.open-menu-for-content-2, section.main-user-content.open-menu-for-content-2 {
     padding-left: 300px;
     padding-right: 300px; }
 

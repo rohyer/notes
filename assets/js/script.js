@@ -45,7 +45,7 @@ function closeOpenProfileMenu() {
     const hamburger = doc.getElementById('hamburger');
     hamburger.addEventListener('click', function(e) {
         const mainMenu = doc.getElementById('user-menu');
-        const mainContent = doc.getElementsByClassName('main-content')[0];
+        const mainContent = doc.getElementsByClassName('main-user-content')[0];
         
         if (mainMenu.classList == 'opened-main-menu') {
             mainMenu.classList.remove('opened-main-menu');

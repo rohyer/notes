@@ -1,5 +1,5 @@
 section {
-    &.main-content {
+    &.main-content, &.main-user-content {
         float: left;
         width: 100%;
         transition-duration: .2s;
