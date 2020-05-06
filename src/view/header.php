@@ -32,7 +32,7 @@ $value = $objUserHeader->readTheme($_SESSION['user_datas']['id']);
                     <i class="fas fa-bars"></i>
                 </div>
                 <div id="logo">
-                    <h1>Notes</h1>
+                    <h1><a href="/notes/index.php">Notes</a></h1>
                 </div>
             </div>
 

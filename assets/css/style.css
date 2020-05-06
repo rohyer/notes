@@ -18316,6 +18316,9 @@ header#header {
   font-size: 20px;
   color: #444;
   margin-left: 15px; }
+  #header-left #logo h1 a {
+    text-decoration: none;
+    color: #444; }
 
 #header-right #profile {
   position: relative;
@@ -18487,10 +18490,17 @@ section.main-content#main-content-category ul#all-categories {
     .main-content .note-container .sec-marked-notes .marked-notes, #single-content-category .note-container .sec-marked-notes .marked-notes, #main-trash-content .note-container .sec-marked-notes .marked-notes {
       float: left;
       width: 100%;
-      margin-bottom: 30px;
-      -webkit-column-count: 4;
-      -moz-column-count: 4;
-      column-count: 4; }
+      margin-bottom: 30px; }
+      @media (min-width: 1400px) {
+        .main-content .note-container .sec-marked-notes .marked-notes, #single-content-category .note-container .sec-marked-notes .marked-notes, #main-trash-content .note-container .sec-marked-notes .marked-notes {
+          -webkit-column-count: 4;
+          -moz-column-count: 4;
+          column-count: 4; } }
+      @media (min-width: 992px) and (max-width: 1399px) {
+        .main-content .note-container .sec-marked-notes .marked-notes, #single-content-category .note-container .sec-marked-notes .marked-notes, #main-trash-content .note-container .sec-marked-notes .marked-notes {
+          -webkit-column-count: 3;
+          -moz-column-count: 3;
+          column-count: 3; } }
   .main-content .note-container .sec-no-marked-notes, #single-content-category .note-container .sec-no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes {
     float: left;
     width: 100%; }
@@ -18665,7 +18675,19 @@ section.main-content#main-content-category ul#all-categories {
     height: 0;
     width: 100%;
     text-align: left;
-    padding: 10px 10px 15px 45px; }
+    padding: 10px 10px 15px 45px;
+    overflow: auto; }
+    #main-menu #all-categories::-webkit-scrollbar, #user-menu #all-categories::-webkit-scrollbar {
+      width: 6px; }
+    #main-menu #all-categories::-webkit-scrollbar-thumb, #user-menu #all-categories::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px; }
+    @media (min-width: 992px) {
+      #main-menu #all-categories, #user-menu #all-categories {
+        max-height: 400px; } }
+    @media (max-width: 991px) {
+      #main-menu #all-categories, #user-menu #all-categories {
+        max-height: 200px; } }
     #main-menu #all-categories.open-all-categories, #user-menu #all-categories.open-all-categories {
       display: inline-block;
       height: auto; }

@@ -88,6 +88,24 @@
         width: 100%;
         text-align: left;
         padding: 10px 10px 15px 45px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+
+        @media (min-width: 992px) {
+            max-height: 400px;
+        }
+        @media (max-width: 991px) {
+            max-height: 200px;
+        }
 
         &.open-all-categories {
             display: inline-block;
