@@ -168,3 +168,70 @@ $objCategory = new Category();
     </div>
   </div>
 </div>
+
+<!-- Update User Modal -->
+<div class="modal fade" id="update-user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <form action="./src/model/processing/processing.php" id="form-update-user" method="post">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Atualize seus dados</h5>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="id-update-user" id="id-update-user" value="<?php echo $_SESSION['user_datas']['id']; ?>" readonly>
+                
+                <div class="modal-body-first-box">
+                  <input type="text" name="name-update-user" id="name-update-user" placeholder="Nome" required>
+                  <input type="text" name="cel-update-user" id="cel-update-user" placeholder="Celular" required>
+                  <select name="state-update-user" id="state-update-user" required>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                  </select>
+                </div>
+
+                <div class="modal-body-second-box">
+                  <input type="email" name="email-update-user" id="email-update-user" placeholder="Email" required>
+                  <select name="sex-update-user" id="sex-update-user" required>
+                    <option value="">Sexo</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                  </select>
+                  <input type="text" name="city-update-user" id="city-update-user" placeholder="Cidade" required>
+                </div>
+            
+                <div class="modal-footer-custom">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    <button type="submit" name="btnUpdateUser" class="btn btn-primary" id="yes-update-note">Save changes</button>
+                </div>
+        
+            </div>
+        </form>  
+    </div>
+  </div>
+</div>
