@@ -12,7 +12,15 @@ $objCategory = new Category();
 
 $idUser = $_SESSION['user_datas']['id'];
 
-// NOTES
+// USER ************************************
+// User Update
+if (isset($_POST['btnUpdateUser'])) {
+  if ($objUser->updateUser($_POST)) {
+    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
+  }
+}
+
+// NOTES ************************************
 // Note Register
 if (isset($_POST['btnRegisterNote'])) {
   if ($objNote->registerNote($_POST)) {
@@ -48,7 +56,7 @@ if (isset($_GET['idmaindeletenote'])) {
   $objNote->mainDeleteNote($idUser, $idNote);
 }
 
-// CATEGORY
+// CATEGORY ************************************
 // Category Register
 if (isset($_POST['btnRegisterCategory'])) {
   if ($objCategory->registerCategory($_POST)) {

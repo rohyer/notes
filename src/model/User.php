@@ -202,6 +202,40 @@ class User {
             echo "Error: " . $e->getMessage();
         }
     }
+
+    public function updateUser($datas) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $datas['id-update-user'];
+        $this->nameUser = $datas['name-update-user'];
+        $this->emailUser = $datas['email-update-user'];
+        $this->sexUser = $datas['sex-update-user'];
+        $this->cellPhoneUser = $datas['cellphone-update-user'];
+        $this->stateUser = $datas['state-update-user'];
+        $this->cityUser = $datas['city-update-user'];
+
+        try {
+            $sql = "UPDATE main_user SET nameuser = :nameuser, emailuser = :emailuser, sexuser = :sexuser, cellphoneuser = :cellphoneuser, stateuser = :stateuser, cityuser = :cityuser WHERE iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+            $stmt->bindParam(":nameuser", $this->nameUser);
+            $stmt->bindParam(":emailuser", $this->emailUser);
+            $stmt->bindParam(":sexuser", $this->sexUser);
+            $stmt->bindParam(":cellphoneuser", $this->cellPhoneUser);
+            $stmt->bindParam(":stateuser", $this->stateUser);
+            $stmt->bindParam(":cityuser", $this->cityUser);
+
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
 
 

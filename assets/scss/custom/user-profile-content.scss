@@ -13,12 +13,17 @@ section {
                 margin-bottom: 30px;
             }
 
-            p {
+            .main-info-user {
                 float: left;
                 font-size: 18px;
                 font-weight: 400;
                 font-style: normal;
                 margin-bottom: 3px;
+
+                .info-user {
+                    float: left;
+                    margin-right: 7px;
+                }
 
                 @media (min-width: 992px) {
                     &:nth-child(even) {

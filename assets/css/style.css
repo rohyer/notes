@@ -18761,19 +18761,22 @@ section#user-content .user-container h4 {
   font-weight: 300;
   font-style: normal;
   margin-bottom: 30px; }
-section#user-content .user-container p {
+section#user-content .user-container .main-info-user {
   float: left;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 3px; }
+  section#user-content .user-container .main-info-user .info-user {
+    float: left;
+    margin-right: 7px; }
   @media (min-width: 992px) {
-    section#user-content .user-container p:nth-child(even) {
+    section#user-content .user-container .main-info-user:nth-child(even) {
       width: 40%; }
-    section#user-content .user-container p:nth-child(odd) {
+    section#user-content .user-container .main-info-user:nth-child(odd) {
       width: 60%; } }
   @media (max-width: 991px) {
-    section#user-content .user-container p {
+    section#user-content .user-container .main-info-user {
       width: 100%; } }
 section#user-content .user-container button {
   border: 1px solid #ddd;

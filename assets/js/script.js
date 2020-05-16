@@ -164,6 +164,28 @@ function deleteCategory() {
     }
 }
 
+// FUNÇÃO PARA ATUALIZAR DADOS DO USUÁRIO
+function updateUser() {
+    const btnUpdateUser = doc.getElementById("btn-update-user");
+    btnUpdateUser.addEventListener("click", function() {
+        
+        const mainNameUser = doc.getElementById("main-name-user").innerHTML;
+        const mainEmailUser = doc.getElementById("main-email-user").innerHTML;
+        const mainSexUser = doc.getElementById("main-sex-user").innerText;
+        const mainCellphoneUser = doc.getElementById("main-cellphone-user").innerHTML;
+        const mainStateUser = doc.getElementById("main-state-user").innerText;
+        const mainCityUser = doc.getElementById("main-city-user").innerHTML;
+
+        const nameUpdateUser = doc.getElementById("name-update-user").value = mainNameUser;
+        const emailUpdateUser = doc.getElementById("email-update-user").value = mainEmailUser;
+        const sexUpdateUser = doc.getElementById("sex-update-user").value = mainSexUser;
+        const cellphoneUpdateUser = doc.getElementById("cellphone-update-user").value = mainCellphoneUser;
+        const stateUpdateUser = doc.getElementById("state-update-user").value = mainStateUser;
+        const cityUpdateUser = doc.getElementById("city-update-user").value = mainCityUser;
+    })
+}
+updateUser();
+
 // CHAMADA DAS FUNÇÕES
 if (bodyClass == "body-pages-in") {
     closeOpenMenu();

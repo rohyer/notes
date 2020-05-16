@@ -182,7 +182,7 @@ $objCategory = new Category();
                 
                 <div class="modal-body-first-box">
                   <input type="text" name="name-update-user" id="name-update-user" placeholder="Nome" required>
-                  <input type="text" name="cel-update-user" id="cel-update-user" placeholder="Celular" required>
+                  <input type="text" name="cellphone-update-user" id="cellphone-update-user" placeholder="Celular" required>
                   <select name="state-update-user" id="state-update-user" required>
                     <option value="AC">AC</option>
                     <option value="AL">AL</option>
