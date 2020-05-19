@@ -227,7 +227,7 @@ $objCategory = new Category();
                 <div class="modal-footer-custom">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    <button type="submit" name="btnUpdateUser" class="btn btn-primary" id="yes-update-note">Save changes</button>
+                    <button type="submit" name="btnUpdateUser" class="btn btn-primary" id="yes-update-user">Save changes</button>
                 </div>
         
             </div>

@@ -1,3 +1,23 @@
+$(document).ready(function () {
+    $("#btn-change-password").click(function () {
+        var form = new FormData($("#form-change-password")[0]);
+        $.ajax({
+            url: 'http://localhost/notes/src/model/processing/ajaxDatas.php',
+            type: 'post',
+            dataType: 'json',
+            cache: false,
+            processData: false,
+            contentType: false,
+            data: form,
+            timeout: 8000,
+            success: function(resultado) {
+                $("#resposta").html(resultado);
+            }
+        })
+    })
+})
+
+
 // FUNÇÃO PARA ENVIAR NOTA PARA LIXEIRA (DELETAR)
 $('.delete-note').click(function(event) {
     let attributeNote = $(this).attr('data-id');

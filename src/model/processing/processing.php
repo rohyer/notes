@@ -21,11 +21,11 @@ if (isset($_POST['btnUpdateUser'])) {
 }
 
 // Password Update
-if (isset($_POST['btnChangePassword'])) {
-  if ($objUser->changePassword($_POST)) {
-    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
-  }
-}
+// if (isset($_POST['btnChangePassword'])) {
+//   if ($objUser->changePassword($_POST)) {
+//     header('location: ' . $_SERVER['HTTP_REFERER'] . '');
+//   }
+// }
 
 // NOTES ************************************
 // Note Register

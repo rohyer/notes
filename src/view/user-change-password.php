@@ -13,7 +13,7 @@
     <div class="user-container">
         <h4>Alterar senha</h4>
 
-        <form action="./src/model/processing/processing.php" method="post">
+        <form id="form-change-password">
 
             <input type="hidden" name="id-user" value="<?php echo $_SESSION['user_datas']['id'] ?>">
 
@@ -29,7 +29,9 @@
                 <input type="password" name="new-password-repeated" id="new-password-repeated" required>
             </label>
 
-            <button type="submit" name="btnChangePassword">Alterar</button>
+            <button type="button" id="btn-change-password" name="btnChangePassword">Alterar</button>
         </form>
+
+        <div id="resposta"></div>
     </div>
 </section>
