@@ -18,15 +18,15 @@
             <input type="hidden" name="id-user" value="<?php echo $_SESSION['user_datas']['id'] ?>">
 
             <label for="current-password">Senha atual:
-                <input type="password" name="current-password" id="current-password">
+                <input type="password" name="current-password" id="current-password" required>
             </label>
 
             <label for="new-password">Nova senha:
-                <input type="password" name="new-password" id="new-password">
+                <input type="password" name="new-password" id="new-password" required>
             </label>
 
             <label for="new-password-repeated">Repita a nova senha:
-                <input type="password" name="new-password-repeated" id="new-password-repeated">
+                <input type="password" name="new-password-repeated" id="new-password-repeated" required>
             </label>
 
             <button type="submit" name="btnChangePassword">Alterar</button>

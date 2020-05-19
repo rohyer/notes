@@ -15,6 +15,7 @@ class User {
     private $themeUser;
 
     private $newPasswordUser;
+    private $encryptedNewPasswordUser;
     private $newPasswordRepeatedUser;
 
     private $objConn;
@@ -272,17 +273,18 @@ class User {
         $this->newPasswordRepeatedUser = $datas['new-password-repeated'];
 
         $this->encryptedPasswordUser = md5($this->passwordUser);
+        $this->encryptedNewPasswordUser = md5($this->newPasswordUser);
 
         $currentPassword = $this->verifyCurrentPassword($datas['id-user']);
 
-        if ($this->encryptedPasswordUser === $currentPassword) {
-            if ($this->newPassword === $this->newPasswordRepeatedUser) {
+        if ($this->encryptedPasswordUser === $currentPassword['passworduser']) {
+            if ($this->newPasswordUser === $this->newPasswordRepeatedUser) {
                 try {
                     $sql = "UPDATE main_user SET passworduser = :passworduser WHERE iduser = :iduser";
 
                     $stmt = $this->getConn->prepare($sql);
                     $stmt->bindParam(":iduser", $this->idUser);
-                    $stmt->bindParam(":passworduser", $this->encryptedPasswordUser);
+                    $stmt->bindParam(":passworduser", $this->encryptedNewPasswordUser);
 
                     if ($stmt->execute()) {
                         return true;
