@@ -22,7 +22,8 @@ $value = $objUserHeader->readTheme($_SESSION['user_datas']['id']);
 
 $firstLetterName = substr($_SESSION['user_datas']['name'], 0, 1);
 
-            
+$datasUserHeader = $objUserHeader->listDatasUser($_SESSION['user_datas']['id']);
+          
 ?>
 
 <header id="header">
@@ -40,13 +41,13 @@ $firstLetterName = substr($_SESSION['user_datas']['name'], 0, 1);
             <div id="header-right" class="col-8">
                 <div id="profile">
                     <i class="fas fa-caret-down"></i>
-                    <!-- <img src="" alt=""> -->
                     <div id="first-letter-name"><?php echo $firstLetterName; ?></div>
 
                     <div id="profile-box" class="main-profile-box">
-                        <p><?php echo $_SESSION['user_datas']['email']; ?></p>
-                        <!-- <p><?php echo $_SESSION['user_datas']['id']; ?></p> -->
-                        <p><?php echo $_SESSION['user_datas']['name']; ?></p>
+                        <?php foreach ($datasUserHeader as $value) { ?>
+                            <p><?php echo $value['emailuser']; ?></p>
+                        <?php } ?>
+                        <!--<p><?php echo $_SESSION['user_datas']['id']; ?></p>-->
                         <a href="./user-profile-datas.php">Ver perfil</a>
                         <form action="./src/model/processing/processing.php" method="POST" id="theme-form">
                             <input type="hidden" value="<?php echo $_SESSION['user_datas']['id']; ?>" name="iduser" readonly>

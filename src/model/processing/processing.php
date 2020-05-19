@@ -20,6 +20,13 @@ if (isset($_POST['btnUpdateUser'])) {
   }
 }
 
+// Password Update
+if (isset($_POST['btnChangePassword'])) {
+  if ($objUser->changePassword($_POST)) {
+    header('location: ' . $_SERVER['HTTP_REFERER'] . '');
+  }
+}
+
 // NOTES ************************************
 // Note Register
 if (isset($_POST['btnRegisterNote'])) {
@@ -72,7 +79,7 @@ if (isset($_POST['btnUpdateCategory'])) {
 }
 
 // Category Delete
-if ($_GET['idmaindeletecategory']) {
+if (isset($_GET['idmaindeletecategory'])) {
   $idCategory = $_GET['idmaindeletecategory'];
   $objCategory->deleteCategory($idUser, $idCategory);
 }

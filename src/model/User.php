@@ -14,6 +14,9 @@ class User {
     private $cityUser;
     private $themeUser;
 
+    private $newPasswordUser;
+    private $newPasswordRepeatedUser;
+
     private $objConn;
     private $getConn;
 
@@ -235,6 +238,68 @@ class User {
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
+    }
+
+    public function verifyCurrentPassword($idUser) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $idUser;
+
+        try {
+            $sql = "SELECT passworduser from main_user WHERE iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+
+            if ($stmt->execute()) {
+                $result = $stmt->fetch();
+                return $result;
+            } else {
+                return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    public function changePassword($datas) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $datas['id-user'];
+        $this->passwordUser = $datas['current-password'];
+        $this->newPasswordUser = $datas['new-password'];
+        $this->newPasswordRepeatedUser = $datas['new-password-repeated'];
+
+        $this->encryptedPasswordUser = md5($this->passwordUser);
+
+        $currentPassword = $this->verifyCurrentPassword($datas['id-user']);
+
+        if ($this->encryptedPasswordUser === $currentPassword) {
+            if ($this->newPassword === $this->newPasswordRepeatedUser) {
+                try {
+                    $sql = "UPDATE main_user SET passworduser = :passworduser WHERE iduser = :iduser";
+
+                    $stmt = $this->getConn->prepare($sql);
+                    $stmt->bindParam(":iduser", $this->idUser);
+                    $stmt->bindParam(":passworduser", $this->encryptedPasswordUser);
+
+                    if ($stmt->execute()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                } catch (PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+            } else {
+                echo "<script type='text/javascript'>alert('A nova senha não confere, veja se digitou igualmente');</script>";
+            }
+        } else {
+            echo "<script type='text/javascript'>alert('A senha atual não confere com a cadastrada');</script>";
+        }
+
     }
 }
 

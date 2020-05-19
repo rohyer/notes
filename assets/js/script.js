@@ -184,7 +184,6 @@ function updateUser() {
         const cityUpdateUser = doc.getElementById("city-update-user").value = mainCityUser;
     })
 }
-updateUser();
 
 // CHAMADA DAS FUNÇÕES
 if (bodyClass == "body-pages-in") {
@@ -193,4 +192,7 @@ if (bodyClass == "body-pages-in") {
     updateNote();
     updateCategory();
     deleteCategory();
+}
+if (bodyClass == "body-profile-page") {
+    updateUser();
 }

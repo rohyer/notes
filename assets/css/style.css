@@ -18754,37 +18754,37 @@ section.main-content#main-content-category ul#all-categories {
         margin-right: 10px; }
 
 @media (max-width: 991px) {
-  section#user-content .user-container {
+  section#user-content .user-container, section#user-change-password .user-container {
     text-align: center; } }
-section#user-content .user-container h4 {
+section#user-content .user-container h4, section#user-change-password .user-container h4 {
   font-size: 32px;
   font-weight: 300;
   font-style: normal;
   margin-bottom: 30px; }
-section#user-content .user-container .main-info-user {
+section#user-content .user-container .main-info-user, section#user-change-password .user-container .main-info-user {
   float: left;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 3px; }
-  section#user-content .user-container .main-info-user .info-user {
+  section#user-content .user-container .main-info-user .info-user, section#user-change-password .user-container .main-info-user .info-user {
     float: left;
     margin-right: 7px; }
   @media (min-width: 992px) {
-    section#user-content .user-container .main-info-user:nth-child(even) {
+    section#user-content .user-container .main-info-user:nth-child(even), section#user-change-password .user-container .main-info-user:nth-child(even) {
       width: 40%; }
-    section#user-content .user-container .main-info-user:nth-child(odd) {
+    section#user-content .user-container .main-info-user:nth-child(odd), section#user-change-password .user-container .main-info-user:nth-child(odd) {
       width: 60%; } }
   @media (max-width: 991px) {
-    section#user-content .user-container .main-info-user {
+    section#user-content .user-container .main-info-user, section#user-change-password .user-container .main-info-user {
       width: 100%; } }
-section#user-content .user-container button {
+section#user-content .user-container button, section#user-change-password .user-container button {
   border: 1px solid #ddd;
   background-color: #fff;
   border-radius: 30px;
   padding: 5px 20px;
   margin-top: 30px; }
-  section#user-content .user-container button:hover {
+  section#user-content .user-container button:hover, section#user-change-password .user-container button:hover {
     background-color: #f1f1f1; }
 
 #add-note-modal .modal-header input, #update-note-modal .modal-header input {
