@@ -287,19 +287,19 @@ class User {
                     $stmt->bindParam(":passworduser", $this->encryptedNewPasswordUser);
 
                     if ($stmt->execute()) {
-                        return true;
+                        echo json_encode("1");
                     } else {
-                        return false;
+                        echo json_encode("0");
                     }
 
                 } catch (PDOException $e) {
                     echo "Error: " . $e->getMessage();
                 }
             } else {
-                echo "<script type='text/javascript'>alert('A nova senha não confere, veja se digitou igualmente');</script>";
+                echo json_encode("2");
             }
         } else {
-            echo "<script type='text/javascript'>alert('A senha atual não confere com a cadastrada');</script>";
+            echo json_encode("3");
         }
 
     }

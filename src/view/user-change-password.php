@@ -15,7 +15,7 @@
 
         <form id="form-change-password">
 
-            <input type="hidden" name="id-user" value="<?php echo $_SESSION['user_datas']['id'] ?>">
+            <input type="hidden" name="id-user" id="id-user" value="<?php echo $_SESSION['user_datas']['id'] ?>">
 
             <label for="current-password">Senha atual:
                 <input type="password" name="current-password" id="current-password" required>
@@ -32,6 +32,6 @@
             <button type="button" id="btn-change-password" name="btnChangePassword">Alterar</button>
         </form>
 
-        <div id="resposta"></div>
+        <div id="password-changed-response"></div>
     </div>
 </section>

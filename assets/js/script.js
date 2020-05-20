@@ -1,21 +1,21 @@
-$(document).ready(function () {
-    $("#btn-change-password").click(function () {
-        var form = new FormData($("#form-change-password")[0]);
-        $.ajax({
-            url: 'http://localhost/notes/src/model/processing/ajaxDatas.php',
-            type: 'post',
-            dataType: 'json',
-            cache: false,
-            processData: false,
-            contentType: false,
-            data: form,
-            timeout: 8000,
-            success: function(resultado) {
-                $("#resposta").html(resultado);
-            }
-        })
-    })
-})
+// $(document).ready(function () {
+//     $("#btn-change-password").click(function () {
+//         var form = new FormData($("#form-change-password")[0]);
+//         $.ajax({
+//             url: 'http://localhost/notes/src/model/processing/ajaxDatas.php',
+//             type: 'post',
+//             dataType: 'json',
+//             cache: false,
+//             processData: false,
+//             contentType: false,
+//             data: form,
+//             timeout: 8000,
+//             success: function(resultado) {
+//                 $("#resposta").html(resultado);
+//             }
+//         })
+//     })
+// })
 
 
 // FUNÇÃO PARA ENVIAR NOTA PARA LIXEIRA (DELETAR)
@@ -38,6 +38,41 @@ const doc = document;
 
 const body = doc.getElementsByTagName('body')[0].className;
 const bodyClass = body.split(' ');
+
+const btnChangePassword = doc.querySelector("#btn-change-password");
+btnChangePassword.addEventListener("click", function(event) {
+
+    const idUser = doc.querySelector("#id-user").value;
+    const currentPassword = doc.querySelector("#current-password").value;
+    const newPassword = doc.querySelector("#new-password").value;
+    const newPasswordRepeated = doc.querySelector("#new-password-repeated").value;
+    const passwordChangedResponse = doc.querySelector("#password-changed-response");
+
+    var ajax = new XMLHttpRequest();
+    
+    ajax.open("POST", "http://localhost/notes/src/model/processing/ajaxDatas.php");
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.responseType = 'json';
+    ajax.send("id-user=" + idUser + "&current-password=" + currentPassword + "&new-password=" + newPassword + "&new-password-repeated=" + newPasswordRepeated);
+
+    ajax.addEventListener("readystatechange", function () {
+        if (ajax.readyState === 4 && ajax.status === 200) {
+            console.log(ajax);
+            console.log(ajax.responseType);
+            console.log(ajax.response);
+
+            if (ajax.response == 1) {
+                passwordChangedResponse.innerHTML = "Senha alterada com sucesso";
+            } else if (ajax.response == 2) {
+                passwordChangedResponse.innerHTML = "Senha repetida não confere";
+            } else if (ajax.response == 3) {
+                passwordChangedResponse.innerHTML = "Senha atual não confere";
+            } else {
+                passwordChangedResponse.innerHTML = "Erro ao alterar a senha";
+            }
+        }
+    })
+})
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU
 function closeOpenMenu() {

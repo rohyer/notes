@@ -5,10 +5,8 @@ session_start();
 require_once "../User.php";
 
 $objUser = new User();
+$objUser->changePassword($_POST);
 
-if ($objUser->changePassword($_POST)) {
-    echo json_encode("Deu certo");
-}
 
 
 ?>
