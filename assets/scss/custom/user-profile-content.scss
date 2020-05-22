@@ -51,4 +51,56 @@ section {
             }
         }
     }
+
+    &#user-change-password {
+        #form-change-password {
+            #password-datas {
+                float: left;
+                width: 100%;
+
+                label {
+                    &:nth-child(2) {
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+                    @media (min-width: 992px) {
+                        &:nth-child(3) {
+                            float: left;
+                            margin-right: 15px;
+                        }
+                        &:nth-child(4) {
+                            float: left;
+                        }
+                    }
+
+                    @media (max-width: 991px) {
+                        &:nth-child(3) {
+                            float: left;
+                            width: 100%;
+                        }
+                        &:nth-child(4) {
+                            float: left;
+                            width: 100%;
+
+                        }
+                    }
+                }
+
+                input {
+                    border-top: none;
+                    border-right: none;
+                    border-bottom: 1px solid #ddd;
+                    border-left: none;
+                    height: 35px;
+                    margin-left: 10px;
+                    text-indent: 10px;
+
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+        }
+    }
 }
