@@ -18062,6 +18062,10 @@ ul {
   margin: 0;
   padding: 0; }
 
+@media (max-width: 991px) {
+  .opened-main-menu-body {
+    overflow: hidden; } }
+
 #page-notes #notes {
   background-color: #f1f1f1; }
 
@@ -18489,6 +18493,8 @@ section.main-content#main-content-category ul#all-categories {
     margin: auto;
     background-color: #fff;
     border: 1px solid #cdcdcd; }
+    #main-trash-content .all-trash-options .trash-options button:focus {
+      outline: 0; }
     #main-trash-content .all-trash-options .trash-options .action-trash-note {
       text-align: left;
       padding: 3px 15px;
@@ -18563,7 +18569,7 @@ section.main-content#main-content-category ul#all-categories {
     break-inside: avoid;
     padding: 20px 20px 50px 20px;
     margin: 0 0.5% 15px 0.5%;
-    border: 1px solid #DDD;
+    border: 1px solid #CCCCCC;
     border-radius: 5px; }
     .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note, #main-trash-content .note-container .single-note:hover .options-single-note {
       visibility: visible; }
@@ -18590,18 +18596,6 @@ section.main-content#main-content-category ul#all-categories {
       bottom: 15px;
       right: 15px;
       visibility: hidden; }
-      .main-content .note-container .single-note .options-single-note .colors-options, #single-content-category .note-container .single-note .options-single-note .colors-options, #main-trash-content .note-container .single-note .options-single-note .colors-options {
-        float: left;
-        cursor: pointer;
-        width: 25px;
-        height: 25px;
-        text-align: center;
-        margin-right: 10px;
-        border-radius: 50px; }
-        .main-content .note-container .single-note .options-single-note .colors-options:hover, #single-content-category .note-container .single-note .options-single-note .colors-options:hover, #main-trash-content .note-container .single-note .options-single-note .colors-options:hover {
-          background: #ddd; }
-        .main-content .note-container .single-note .options-single-note .colors-options i, #single-content-category .note-container .single-note .options-single-note .colors-options i, #main-trash-content .note-container .single-note .options-single-note .colors-options i {
-          font-size: 15px; }
       .main-content .note-container .single-note .options-single-note .delete-note, .main-content .note-container .single-note .options-single-note .main-delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .main-delete-note, #main-trash-content .note-container .single-note .options-single-note .delete-note, #main-trash-content .note-container .single-note .options-single-note .main-delete-note {
         float: left;
         cursor: pointer;
@@ -18653,7 +18647,7 @@ section.main-content#main-content-category ul#all-categories {
   position: absolute;
   top: 60px;
   width: 280px;
-  height: 92vh;
+  height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #FFF;
@@ -18708,7 +18702,7 @@ section.main-content#main-content-category ul#all-categories {
         background-color: #f1f1f1; }
   #main-menu #main-menu-trash, #user-menu #main-menu-trash {
     padding-top: 10px;
-    border-top: 1px solid #ddd; }
+    border-top: 1px solid #CCCCCC; }
   #main-menu #all-categories, #user-menu #all-categories {
     display: none;
     height: 0;
@@ -18720,7 +18714,8 @@ section.main-content#main-content-category ul#all-categories {
       width: 6px; }
     #main-menu #all-categories::-webkit-scrollbar-thumb, #user-menu #all-categories::-webkit-scrollbar-thumb {
       -webkit-border-radius: 10px;
-      border-radius: 10px; }
+      border-radius: 10px;
+      background: #CCCCCC; }
     @media (min-width: 992px) {
       #main-menu #all-categories, #user-menu #all-categories {
         max-height: 400px; } }
@@ -18779,13 +18774,18 @@ section#user-content .user-container .main-info-user, section#user-change-passwo
     section#user-content .user-container .main-info-user, section#user-change-password .user-container .main-info-user {
       width: 100%; } }
 section#user-content .user-container button, section#user-change-password .user-container button {
-  border: 1px solid #ddd;
+  border: 1px solid #CCCCCC;
   background-color: #fff;
   border-radius: 30px;
+  width: 115px;
+  height: 40px;
   padding: 5px 20px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 15px; }
   section#user-content .user-container button:hover, section#user-change-password .user-container button:hover {
     background-color: #f1f1f1; }
+  section#user-content .user-container button:focus, section#user-change-password .user-container button:focus {
+    outline: 0; }
 section#user-change-password #form-change-password #password-datas {
   float: left;
   width: 100%; }
@@ -18809,7 +18809,7 @@ section#user-change-password #form-change-password #password-datas {
   section#user-change-password #form-change-password #password-datas input {
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #CCCCCC;
     border-left: none;
     height: 35px;
     margin-left: 10px;
@@ -18955,6 +18955,17 @@ section#user-change-password #form-change-password #password-datas {
 #update-user-modal .modal-footer-custom {
   float: right;
   width: 100%; }
+
+#delete-note-modal .modal-body {
+  margin: auto; }
+  #delete-note-modal .modal-body a {
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 10px; }
+    #delete-note-modal .modal-body a:nth-child(1) {
+      color: #fff; }
+    #delete-note-modal .modal-body a:nth-child(2) {
+      border: 1px solid #ddd; }
 
 footer {
   float: left;

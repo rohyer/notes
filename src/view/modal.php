@@ -34,9 +34,9 @@ $objCategory = new Category();
                 <input type="text" name="id-user-note" value="<?php echo $_SESSION['user_datas']['id']; ?>" class="id-user-note" readonly>
             
                 <div class="modal-footer-custom">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
-                    <button type="submit" name="btnRegisterNote" class="btn btn-primary">Save changes</button>
+                    <button type="submit" name="btnRegisterNote" class="btn btn-primary">Salvar</button>
                 </div>
         
             </div>
@@ -62,9 +62,9 @@ $objCategory = new Category();
             <input type="hidden" name="id-user-category" value="<?php echo $_SESSION['user_datas']['id']; ?>" id="id-user-category" readonly>
 
             <div class="modal-footer-custom">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
-                <button type="submit" name="btnRegisterCategory" class="btn btn-primary">Save changes</button>
+                <button type="submit" name="btnRegisterCategory" class="btn btn-primary">Salvar</button>
             </div>
         </form>
       </div>
@@ -100,9 +100,9 @@ $objCategory = new Category();
                 <input type="text" name="id-update-user-note" value="<?php echo $_SESSION['user_datas']['id']; ?>" class="id-user-note" readonly>
             
                 <div class="modal-footer-custom">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
-                    <button type="submit" name="btnUpdateNote" class="btn btn-primary" id="yes-update-note">Save changes</button>
+                    <button type="submit" name="btnUpdateNote" class="btn btn-primary" id="yes-update-note">Salvar</button>
                 </div>
         
             </div>
@@ -129,9 +129,9 @@ $objCategory = new Category();
             <input type="hidden" name="id-category" id="id-category-update" readonly>
 
             <div class="modal-footer-custom">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
-                <button type="submit" name="btnUpdateCategory" class="btn btn-primary">Save changes</button>
+                <button type="submit" name="btnUpdateCategory" class="btn btn-primary">Salvar</button>
             </div>
         </form>
       </div>
@@ -148,7 +148,7 @@ $objCategory = new Category();
       </div>
       <div class="modal-body">
         <a class="btn btn-secondary" data-dismiss="modal">Não</a>
-        <a href="#" class="btn btn-secondary" id="yes-delete-note">Sim</a>
+        <a href="#" class="btn btn-light" id="yes-delete-note">Sim</a>
       </div>
     </div>
   </div>
@@ -225,9 +225,9 @@ $objCategory = new Category();
                 </div>
             
                 <div class="modal-footer-custom">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 
-                    <button type="submit" name="btnUpdateUser" class="btn btn-primary" id="yes-update-user">Save changes</button>
+                    <button type="submit" name="btnUpdateUser" class="btn btn-primary" id="yes-update-user">Salvar</button>
                 </div>
         
             </div>

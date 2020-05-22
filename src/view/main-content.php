@@ -36,9 +36,6 @@ $listNoMarkedNotes = $objNote->listNoMarkedNotes($idUser, $idCategory);
                             <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
 
                             <div class="options-single-note">
-                                <div class="colors-options">
-                                    <i class="fas fa-palette"></i>
-                                </div>
                                 <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="delete-note">
                                     <i class="fas fa-trash-alt"></i>
                                 </div>
@@ -69,9 +66,6 @@ $listNoMarkedNotes = $objNote->listNoMarkedNotes($idUser, $idCategory);
                             <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
 
                             <div class="options-single-note">
-                                <div class="colors-options">
-                                    <i class="fas fa-palette"></i>
-                                </div>
                                 <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="delete-note">
                                     <i class="fas fa-trash-alt"></i>
                                 </div>

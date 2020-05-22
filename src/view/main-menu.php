@@ -6,7 +6,7 @@ $allCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
 
 ?>
 
-<div id="main-menu" class="opened-main-menu">
+<div id="main-menu">
     <div id="main-menu-notes">
         <h4><a href="./index.php" id="notes">Notas</a></h4>
         <button type="button" data-toggle="modal" data-target="#add-note-modal"><i class="fas fa-plus"></i></button>

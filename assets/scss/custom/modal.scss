@@ -190,3 +190,22 @@
         width: 100%;
     }
 }
+
+#delete-note-modal {
+    .modal-body {
+        margin: auto;
+
+        a {
+            width: 70px;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            &:nth-child(1) {
+                color: #fff;
+            }
+            &:nth-child(2) {
+                border: 1px solid #ddd;
+            }
+        }
+    }
+}

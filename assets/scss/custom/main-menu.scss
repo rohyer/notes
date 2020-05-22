@@ -3,7 +3,8 @@
     position: absolute;
     top: 60px;
     width: 280px;
-    height: 92vh;
+    height: 100%;
+    //height: 92vh;
     padding-top: 20px;
     padding-bottom: 20px;
     background: #FFF;
@@ -81,7 +82,7 @@
 
     #main-menu-trash {
         padding-top: 10px;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid $border-color;
     }
 
     #all-categories {
@@ -99,6 +100,7 @@
         &::-webkit-scrollbar-thumb {
             -webkit-border-radius: 10px;
             border-radius: 10px;
+            background: $border-color; 
         }
 
 

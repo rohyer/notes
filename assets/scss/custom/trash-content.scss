@@ -18,6 +18,12 @@
             background-color: #fff;
             border: 1px solid #cdcdcd;
 
+            button {
+                &:focus {
+                    outline: 0;
+                }
+            }
+
             .action-trash-note {
                 text-align: left;
                 padding: 3px 15px;

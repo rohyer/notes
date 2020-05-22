@@ -14,6 +14,11 @@ ul {
     padding: 0;
 }
 
+.opened-main-menu-body {
+    @media (max-width: 991px) {
+        overflow: hidden;
+    }
+}
 
 #page-notes {
     #notes {

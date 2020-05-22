@@ -79,7 +79,7 @@
             break-inside: avoid;
             padding: 20px 20px 50px 20px;
             margin: 0 0.5% 15px 0.5%;
-            border: 1px solid #DDD;
+            border: 1px solid $border-color;
             border-radius: 5px;
 
             &:hover {
@@ -119,24 +119,6 @@
                 bottom: 15px;
                 right: 15px;
                 visibility: hidden;
-
-                .colors-options {
-                    float: left;
-                    cursor: pointer;
-                    width: 25px;
-                    height: 25px;
-                    text-align: center;
-                    margin-right: 10px;
-                    border-radius: 50px;
-
-                    &:hover {
-                        background: #ddd;
-                    }
-
-                    i {
-                        font-size: 15px;
-                    }
-                }
 
                 .delete-note, .main-delete-note {
                     float: left;
