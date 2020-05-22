@@ -86,12 +86,12 @@ function verifyResizeWindowProfile() {
 
     window.addEventListener('resize', function(e) {
         if (window.innerWidth >= 992) {
-            mainMenu.classList.remove('closed-main-menu');
-            mainMenu.classList.add('opened-main-menu');
+            userMenu.classList.remove('closed-main-menu');
+            userMenu.classList.add('opened-main-menu');
         } else if (window.innerWidth <= 991) {
             body.classList.remove('opened-main-menu-body');
-            mainMenu.classList.remove('opened-main-menu');
-            mainMenu.classList.add('closed-main-menu');
+            userMenu.classList.remove('opened-main-menu');
+            userMenu.classList.add('closed-main-menu');
         }
     });
 }
@@ -125,10 +125,13 @@ function closeOpenMenu() {
 function closeOpenProfileMenu() {
     const hamburger = doc.getElementById('hamburger');
     hamburger.addEventListener('click', function(e) {
+        const body = doc.getElementsByTagName('body')[0];
+
         const mainMenu = doc.getElementById('user-menu');
         const mainContent = doc.getElementsByClassName('main-user-content')[0];
         
         if (mainMenu.classList == 'opened-main-menu') {
+            body.classList.remove('opened-main-menu-body');
             mainMenu.classList.remove('opened-main-menu');
             mainContent.classList.remove('open-menu-for-content');
             mainMenu.classList.add('closed-main-menu');
@@ -136,6 +139,7 @@ function closeOpenProfileMenu() {
         } else {
             mainMenu.classList.remove('closed-main-menu');
             mainContent.classList.remove('open-menu-for-content-2');
+            body.classList.add('opened-main-menu-body');
             mainMenu.classList.add('opened-main-menu');
             mainContent.classList.add('open-menu-for-content');
         }
@@ -315,11 +319,12 @@ if (bodyClass == "body-pages-in") {
 }
 if (bodyClass == "body-profile-page") {
     updateUser();
-    closeOpenProfileMenu();
-    verifySizeWindowProfile();
 }
 if (bodyClass == "body-profile-password-page") {
     changePassword();
+}
+if (bodyClass == "body-profile-page" || bodyClass == "body-profile-password-page") {
     closeOpenProfileMenu();
     verifySizeWindowProfile();
+    verifyResizeWindowProfile();
 }
