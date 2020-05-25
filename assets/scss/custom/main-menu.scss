@@ -7,7 +7,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background: #FFF;
-    z-index: 9999;
+    z-index: 999;
 
     &.opened-main-menu {
         left: 0;
@@ -19,7 +19,7 @@
         transition-duration: .2s;
     }
 
-    #main-menu-notes, #main-menu-trash, #main-menu-profile, #user-menu-notes {
+    #main-menu-notes, #main-menu-trash, #user-menu-notes {
         padding-bottom: 10px;
 
         h4 {
@@ -85,34 +85,56 @@
         border-top: 1px solid $border-color;
     }
 
+    
     #main-menu-profile {
-        float: left;
+        @media (max-width: 991px) {
+            display: inline-block;
+            float: left;
 
-        h4 {
-            width: 230px;
-            height: 45px;
-            text-align: left;
-            padding: 12px 15px 12px 30px;
-            border-radius: 0 50px 50px 0;
-            color: #444;
-            text-decoration: none;
-        }
-
-        i {
-            float: right;
-        }
-
-        #main-menu-profile-options {
-            display: none;
-            height: 0;
-            width: 100%;
-            text-align: left;
-            padding: 10px 10px 15px 45px;
-
-            &.open-profile {
-                display: inline-block;
-                height: auto;
+            h4 {
+                width: 230px;
+                height: 45px;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: normal;
+                margin: 0 5px 0 0;
+                text-align: left;
+                padding: 12px 15px 12px 30px;
+                border-radius: 0 50px 50px 0;
+                color: #444;
+                text-decoration: none;
             }
+
+            i {
+                float: right;
+            }
+
+            #main-menu-profile-options {
+                display: none;
+                height: 0;
+                width: 100%;
+                text-align: left;
+                padding: 10px 10px 15px 45px;
+
+                li {
+                    a {
+                        float: left;
+                        width: 65%;
+                        text-decoration: none;
+                        color: initial;
+                        padding: 2px 0 2px 0;
+                        margin-right: 10px;
+                    }
+                }
+
+                &.open-profile {
+                    display: inline-block;
+                    height: auto;
+                }
+            }
+        }
+        @media (min-width: 992px) {
+            display: none; 
         }
     }
 

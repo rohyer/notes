@@ -7,7 +7,7 @@ $listDatasUser = $objUser->listDatasUser($_SESSION['user_datas']['id']);
 
 ?>
 
-<section id="user-content" class="main-user-content open-menu-for-content">
+<section id="user-content" class="main-content main-user-content open-menu-for-content">
     <div class="user-container">
         <h4>Meu dados</h4>
 

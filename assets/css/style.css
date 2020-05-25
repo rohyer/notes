@@ -18062,6 +18062,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+.modal {
+  z-index: 9999; }
+
 @media (max-width: 991px) {
   .opened-main-menu-body {
     overflow: hidden; } }
@@ -18456,7 +18459,7 @@ section.main-content {
       width: 100%;
       height: 100vh;
       background-color: rgba(20, 20, 20, 0.6);
-      z-index: 999; } }
+      z-index: 99; } }
 
 section.main-content#main-content-category ul#all-categories {
   float: left;
@@ -18677,22 +18680,22 @@ section.main-content#main-content-category ul#all-categories {
   padding-top: 20px;
   padding-bottom: 20px;
   background: #FFF;
-  z-index: 9999; }
+  z-index: 999; }
   #main-menu.opened-main-menu, #user-menu.opened-main-menu {
     left: 0;
     transition-duration: .2s; }
   #main-menu.closed-main-menu, #user-menu.closed-main-menu {
     left: -280px;
     transition-duration: .2s; }
-  #main-menu #main-menu-notes, #main-menu #main-menu-trash, #main-menu #main-menu-profile, #main-menu #user-menu-notes, #user-menu #main-menu-notes, #user-menu #main-menu-trash, #user-menu #main-menu-profile, #user-menu #user-menu-notes {
+  #main-menu #main-menu-notes, #main-menu #main-menu-trash, #main-menu #user-menu-notes, #user-menu #main-menu-notes, #user-menu #main-menu-trash, #user-menu #user-menu-notes {
     padding-bottom: 10px; }
-    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4, #main-menu #main-menu-profile h4, #main-menu #user-menu-notes h4, #user-menu #main-menu-notes h4, #user-menu #main-menu-trash h4, #user-menu #main-menu-profile h4, #user-menu #user-menu-notes h4 {
+    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4, #main-menu #user-menu-notes h4, #user-menu #main-menu-notes h4, #user-menu #main-menu-trash h4, #user-menu #user-menu-notes h4 {
       float: left;
       font-size: 20px;
       font-weight: 400;
       font-style: normal;
       margin: 0 5px 0 0; }
-      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category, #main-menu #main-menu-profile h4#category, #main-menu #user-menu-notes h4#category, #user-menu #main-menu-notes h4#category, #user-menu #main-menu-trash h4#category, #user-menu #main-menu-profile h4#category, #user-menu #user-menu-notes h4#category {
+      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category, #main-menu #user-menu-notes h4#category, #user-menu #main-menu-notes h4#category, #user-menu #main-menu-trash h4#category, #user-menu #user-menu-notes h4#category {
         cursor: pointer;
         float: left;
         width: 230px;
@@ -18702,11 +18705,11 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover, #main-menu #main-menu-profile h4#category:hover, #main-menu #user-menu-notes h4#category:hover, #user-menu #main-menu-notes h4#category:hover, #user-menu #main-menu-trash h4#category:hover, #user-menu #main-menu-profile h4#category:hover, #user-menu #user-menu-notes h4#category:hover {
+        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover, #main-menu #user-menu-notes h4#category:hover, #user-menu #main-menu-notes h4#category:hover, #user-menu #main-menu-trash h4#category:hover, #user-menu #user-menu-notes h4#category:hover {
           background-color: #f1f1f1; }
-        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i, #main-menu #main-menu-profile h4#category i, #main-menu #user-menu-notes h4#category i, #user-menu #main-menu-notes h4#category i, #user-menu #main-menu-trash h4#category i, #user-menu #main-menu-profile h4#category i, #user-menu #user-menu-notes h4#category i {
+        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i, #main-menu #user-menu-notes h4#category i, #user-menu #main-menu-notes h4#category i, #user-menu #main-menu-trash h4#category i, #user-menu #user-menu-notes h4#category i {
           float: right; }
-      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a, #main-menu #main-menu-profile h4 a, #main-menu #user-menu-notes h4 a, #user-menu #main-menu-notes h4 a, #user-menu #main-menu-trash h4 a, #user-menu #main-menu-profile h4 a, #user-menu #user-menu-notes h4 a {
+      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a, #main-menu #user-menu-notes h4 a, #user-menu #main-menu-notes h4 a, #user-menu #main-menu-trash h4 a, #user-menu #user-menu-notes h4 a {
         float: left;
         width: 230px;
         height: 45px;
@@ -18715,42 +18718,58 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover, #main-menu #main-menu-profile h4 a:hover, #main-menu #user-menu-notes h4 a:hover, #user-menu #main-menu-notes h4 a:hover, #user-menu #main-menu-trash h4 a:hover, #user-menu #main-menu-profile h4 a:hover, #user-menu #user-menu-notes h4 a:hover {
+        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover, #main-menu #user-menu-notes h4 a:hover, #user-menu #main-menu-notes h4 a:hover, #user-menu #main-menu-trash h4 a:hover, #user-menu #user-menu-notes h4 a:hover {
           background-color: #f1f1f1; }
-    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button, #main-menu #main-menu-profile button, #main-menu #user-menu-notes button, #user-menu #main-menu-notes button, #user-menu #main-menu-trash button, #user-menu #main-menu-profile button, #user-menu #user-menu-notes button {
+    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button, #main-menu #user-menu-notes button, #user-menu #main-menu-notes button, #user-menu #main-menu-trash button, #user-menu #user-menu-notes button {
       width: 45px;
       height: 45px;
       border: 1px solid transparent;
       border-radius: 50px;
       background-color: #fff;
       outline: 0; }
-      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover, #main-menu #main-menu-profile button:hover, #main-menu #user-menu-notes button:hover, #user-menu #main-menu-notes button:hover, #user-menu #main-menu-trash button:hover, #user-menu #main-menu-profile button:hover, #user-menu #user-menu-notes button:hover {
+      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover, #main-menu #user-menu-notes button:hover, #user-menu #main-menu-notes button:hover, #user-menu #main-menu-trash button:hover, #user-menu #user-menu-notes button:hover {
         background-color: #f1f1f1; }
   #main-menu #main-menu-trash, #user-menu #main-menu-trash {
     float: left;
     padding-top: 10px;
     border-top: 1px solid #CCCCCC; }
-  #main-menu #main-menu-profile, #user-menu #main-menu-profile {
-    float: left; }
-    #main-menu #main-menu-profile h4, #user-menu #main-menu-profile h4 {
-      width: 230px;
-      height: 45px;
-      text-align: left;
-      padding: 12px 15px 12px 30px;
-      border-radius: 0 50px 50px 0;
-      color: #444;
-      text-decoration: none; }
-    #main-menu #main-menu-profile i, #user-menu #main-menu-profile i {
-      float: right; }
-    #main-menu #main-menu-profile #main-menu-profile-options, #user-menu #main-menu-profile #main-menu-profile-options {
-      display: none;
-      height: 0;
-      width: 100%;
-      text-align: left;
-      padding: 10px 10px 15px 45px; }
-      #main-menu #main-menu-profile #main-menu-profile-options.open-profile, #user-menu #main-menu-profile #main-menu-profile-options.open-profile {
-        display: inline-block;
-        height: auto; }
+  @media (max-width: 991px) {
+    #main-menu #main-menu-profile, #user-menu #main-menu-profile {
+      display: inline-block;
+      float: left; }
+      #main-menu #main-menu-profile h4, #user-menu #main-menu-profile h4 {
+        width: 230px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0 5px 0 0;
+        text-align: left;
+        padding: 12px 15px 12px 30px;
+        border-radius: 0 50px 50px 0;
+        color: #444;
+        text-decoration: none; }
+      #main-menu #main-menu-profile i, #user-menu #main-menu-profile i {
+        float: right; }
+      #main-menu #main-menu-profile #main-menu-profile-options, #user-menu #main-menu-profile #main-menu-profile-options {
+        display: none;
+        height: 0;
+        width: 100%;
+        text-align: left;
+        padding: 10px 10px 15px 45px; }
+        #main-menu #main-menu-profile #main-menu-profile-options li a, #user-menu #main-menu-profile #main-menu-profile-options li a {
+          float: left;
+          width: 65%;
+          text-decoration: none;
+          color: initial;
+          padding: 2px 0 2px 0;
+          margin-right: 10px; }
+        #main-menu #main-menu-profile #main-menu-profile-options.open-profile, #user-menu #main-menu-profile #main-menu-profile-options.open-profile {
+          display: inline-block;
+          height: auto; } }
+  @media (min-width: 992px) {
+    #main-menu #main-menu-profile, #user-menu #main-menu-profile {
+      display: none; } }
   #main-menu #all-categories, #user-menu #all-categories {
     display: none;
     height: 0;

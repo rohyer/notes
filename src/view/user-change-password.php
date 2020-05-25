@@ -1,4 +1,4 @@
-<section id="user-change-password" class="main-user-content open-menu-for-content">
+<section id="user-change-password" class="main-content main-user-content open-menu-for-content">
     <div class="user-container">
         <h4>Alterar senha</h4>
 
