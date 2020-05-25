@@ -18553,10 +18553,17 @@ section.main-content#main-content-category ul#all-categories {
       font-style: normal; }
     .main-content .note-container .sec-no-marked-notes .no-marked-notes, #single-content-category .note-container .sec-no-marked-notes .no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes .no-marked-notes {
       float: left;
-      width: 100%;
-      -webkit-column-count: 4;
-      -moz-column-count: 4;
-      column-count: 4; }
+      width: 100%; }
+      @media (min-width: 1400px) {
+        .main-content .note-container .sec-no-marked-notes .no-marked-notes, #single-content-category .note-container .sec-no-marked-notes .no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes .no-marked-notes {
+          -webkit-column-count: 4;
+          -moz-column-count: 4;
+          column-count: 4; } }
+      @media (min-width: 992px) and (max-width: 1399px) {
+        .main-content .note-container .sec-no-marked-notes .no-marked-notes, #single-content-category .note-container .sec-no-marked-notes .no-marked-notes, #main-trash-content .note-container .sec-no-marked-notes .no-marked-notes {
+          -webkit-column-count: 3;
+          -moz-column-count: 3;
+          column-count: 3; } }
   .main-content .note-container .single-note, #single-content-category .note-container .single-note, #main-trash-content .note-container .single-note {
     position: relative;
     min-width: 24%;
@@ -18571,6 +18578,9 @@ section.main-content#main-content-category ul#all-categories {
     margin: 0 0.5% 15px 0.5%;
     border: 1px solid #CCCCCC;
     border-radius: 5px; }
+    @media (max-width: 991px) {
+      .main-content .note-container .single-note, #single-content-category .note-container .single-note, #main-trash-content .note-container .single-note {
+        margin: 0 0 15px 0; } }
     .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note, #main-trash-content .note-container .single-note:hover .options-single-note {
       visibility: visible; }
     .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note, #main-trash-content .note-container .single-note .title-single-note {
