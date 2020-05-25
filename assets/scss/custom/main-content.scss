@@ -4,7 +4,7 @@ section {
         width: 100%;
         transition-duration: .2s;
         padding-right: 230px;
-        margin-top: 20px;
+        padding-top: 20px;
 
         &.open-menu-for-content {
 
@@ -34,6 +34,25 @@ section {
             @media (max-width: 991px) {
                 padding-left: 30px;
                 padding-right: 30px;
+            }
+        }
+    }
+
+    &.main-content {
+        position: relative;
+
+        @media (max-width: 991px) {
+            &.background-opened-menu {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: rgba(20, 20, 20, 0.6);
+                    z-index: 999;
+                }
             }
         }
     }

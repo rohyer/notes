@@ -3,12 +3,11 @@
     position: absolute;
     top: 60px;
     width: 280px;
-    height: 100%;
-    //height: 92vh;
+    height: 100vh;
     padding-top: 20px;
     padding-bottom: 20px;
     background: #FFF;
-    z-index: 99;
+    z-index: 9999;
 
     &.opened-main-menu {
         left: 0;
@@ -20,7 +19,7 @@
         transition-duration: .2s;
     }
 
-    #main-menu-notes, #main-menu-trash, #user-menu-notes {
+    #main-menu-notes, #main-menu-trash, #main-menu-profile, #user-menu-notes {
         padding-bottom: 10px;
 
         h4 {
@@ -81,8 +80,40 @@
     }
 
     #main-menu-trash {
+        float: left;
         padding-top: 10px;
         border-top: 1px solid $border-color;
+    }
+
+    #main-menu-profile {
+        float: left;
+
+        h4 {
+            width: 230px;
+            height: 45px;
+            text-align: left;
+            padding: 12px 15px 12px 30px;
+            border-radius: 0 50px 50px 0;
+            color: #444;
+            text-decoration: none;
+        }
+
+        i {
+            float: right;
+        }
+
+        #main-menu-profile-options {
+            display: none;
+            height: 0;
+            width: 100%;
+            text-align: left;
+            padding: 10px 10px 15px 45px;
+
+            &.open-profile {
+                display: inline-block;
+                height: auto;
+            }
+        }
     }
 
     #all-categories {

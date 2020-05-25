@@ -51,17 +51,17 @@ function verifySizeWindow() {
     }
 }
 
-function verifySizeWindowProfile() {
-    const windowWidth = window.innerWidth;
-    const userMenu = doc.getElementById('user-menu');
+// function verifySizeWindowProfile() {
+//     const windowWidth = window.innerWidth;
+//     const mainMenu = doc.getElementById('main-menu');
 
-    if (windowWidth >= 992) {
-        userMenu.classList.add('opened-main-menu');
-    } else {
-        userMenu.classList.add('closed-main-menu');
-    }
+//     if (windowWidth >= 992) {
+//         mainMenu.classList.add('opened-main-menu');
+//     } else {
+//         mainMenu.classList.add('closed-main-menu');
+//     }
     
-}
+// }
 
 // FUNÇÕES PARA ABRIR OU FECHAR O MENU CASO A JANELA SEJA REDIMENSIONADA
 function verifyResizeWindow() {
@@ -80,21 +80,21 @@ function verifyResizeWindow() {
     });
 }
 
-function verifyResizeWindowProfile() {
-    const body = doc.getElementsByTagName('body')[0];
-    const userMenu = doc.getElementById('user-menu');
+// function verifyResizeWindowProfile() {
+//     const body = doc.getElementsByTagName('body')[0];
+//     const mainMenu = doc.getElementById('main-menu');
 
-    window.addEventListener('resize', function(e) {
-        if (window.innerWidth >= 992) {
-            userMenu.classList.remove('closed-main-menu');
-            userMenu.classList.add('opened-main-menu');
-        } else if (window.innerWidth <= 991) {
-            body.classList.remove('opened-main-menu-body');
-            userMenu.classList.remove('opened-main-menu');
-            userMenu.classList.add('closed-main-menu');
-        }
-    });
-}
+//     window.addEventListener('resize', function(e) {
+//         if (window.innerWidth >= 992) {
+//             mainMenu.classList.remove('closed-main-menu');
+//             mainMenu.classList.add('opened-main-menu');
+//         } else if (window.innerWidth <= 991) {
+//             body.classList.remove('opened-main-menu-body');
+//             mainMenu.classList.remove('opened-main-menu');
+//             mainMenu.classList.add('closed-main-menu');
+//         }
+//     });
+// }
 
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU
@@ -102,16 +102,19 @@ function closeOpenMenu() {
     const hamburger = doc.getElementById('hamburger');
     hamburger.addEventListener('click', function(e) {
         const body = doc.getElementsByTagName('body')[0];
+        //const idMainContent = doc.getElementById('main-content');
         const mainMenu = doc.getElementById('main-menu');
         const mainContent = doc.getElementsByClassName('main-content')[0];
         
         if (mainMenu.classList == 'opened-main-menu') {
             body.classList.remove('opened-main-menu-body');
+            mainContent.classList.remove('background-opened-menu');
             mainMenu.classList.remove('opened-main-menu');
             mainContent.classList.remove('open-menu-for-content');
             mainMenu.classList.add('closed-main-menu');
             mainContent.classList.add('open-menu-for-content-2');
         } else {
+            mainContent.classList.add('background-opened-menu');
             mainMenu.classList.remove('closed-main-menu');
             mainContent.classList.remove('open-menu-for-content-2');
             body.classList.add('opened-main-menu-body');
@@ -122,29 +125,30 @@ function closeOpenMenu() {
 }
 
 // FUNÇÃO PARA ABRIR E FECHAR MENU DO PROFILE
-function closeOpenProfileMenu() {
-    const hamburger = doc.getElementById('hamburger');
-    hamburger.addEventListener('click', function(e) {
-        const body = doc.getElementsByTagName('body')[0];
+// function closeOpenProfileMenu() {
+//     const hamburger = doc.getElementById('hamburger');
+//     hamburger.addEventListener('click', function(e) {
+//         const body = doc.getElementsByTagName('body')[0];
 
-        const mainMenu = doc.getElementById('user-menu');
-        const mainContent = doc.getElementsByClassName('main-user-content')[0];
+//         const mainMenu = doc.getElementById('user-menu');
+//         const mainContent = doc.getElementsByClassName('main-user-content')[0];
         
-        if (mainMenu.classList == 'opened-main-menu') {
-            body.classList.remove('opened-main-menu-body');
-            mainMenu.classList.remove('opened-main-menu');
-            mainContent.classList.remove('open-menu-for-content');
-            mainMenu.classList.add('closed-main-menu');
-            mainContent.classList.add('open-menu-for-content-2');
-        } else {
-            mainMenu.classList.remove('closed-main-menu');
-            mainContent.classList.remove('open-menu-for-content-2');
-            body.classList.add('opened-main-menu-body');
-            mainMenu.classList.add('opened-main-menu');
-            mainContent.classList.add('open-menu-for-content');
-        }
-    });
-}
+//         if (mainMenu.classList == 'opened-main-menu') {
+//             body.classList.remove('opened-main-menu-body');
+//             mainMenu.classList.remove('opened-main-menu');
+//             mainContent.classList.remove('open-menu-for-content');
+//             mainMenu.classList.add('closed-main-menu');
+//             mainContent.classList.add('open-menu-for-content-2');
+//         } else {
+//             mainMenu.classList.remove('closed-main-menu');
+//             mainContent.classList.remove('open-menu-for-content-2');
+//             body.classList.add('opened-main-menu-body');
+//             mainMenu.classList.add('opened-main-menu');
+//             mainContent.classList.add('open-menu-for-content');
+//         }
+//     });
+// }
+
 
 // FUNÇÃO PARA ABRIR E FECHAR A LISTA DE CATEGORIAS
 function closeOpenCategories() {
@@ -248,6 +252,27 @@ function deleteCategory() {
     }
 }
 
+// FUNÇÃO PARA ABRIR OPÇÕES DO PROFILE NO MENU
+function closeOpenProfile() {
+    const mainMenuProfile = doc.getElementById("main-menu-profile");
+    mainMenuProfile.addEventListener("click", function(e) {
+        mainMenuProfileOptions = doc.getElementById("main-menu-profile-options");
+        classProfileOptions = mainMenuProfileOptions.classList.length;
+        const profileArrow = doc.getElementById("profile-arrow");
+        
+        if (classProfileOptions == 0) {
+            mainMenuProfileOptions.classList.add("open-profile");
+            profileArrow.classList.remove('fa-caret-down');
+            profileArrow.classList.add('fa-caret-up');
+        } else {
+            mainMenuProfileOptions.classList.remove("open-profile");
+            profileArrow.classList.remove('fa-caret-up');
+            profileArrow.classList.add('fa-caret-down');
+        }
+    });
+}
+closeOpenProfile();
+
 // FUNÇÃO PARA ATUALIZAR DADOS DO USUÁRIO
 function updateUser() {
     const btnUpdateUser = doc.getElementById("btn-update-user");
@@ -308,7 +333,22 @@ function changePassword() {
 }
 
 // CHAMADA DAS FUNÇÕES
-if (bodyClass == "body-pages-in") {
+// if (bodyClass == "body-pages-in") {
+//     verifySizeWindow();
+//     verifyResizeWindow()
+//     closeOpenMenu();
+//     closeOpenCategories();
+//     updateNote();
+//     updateCategory();
+//     deleteCategory();
+// }
+if (bodyClass == "body-profile-page") {
+    updateUser();
+}
+if (bodyClass == "body-profile-password-page") {
+    changePassword();
+}
+if (bodyClass == "body-profile-page" || bodyClass == "body-profile-password-page" || bodyClass == "body-pages-in") {
     verifySizeWindow();
     verifyResizeWindow()
     closeOpenMenu();
@@ -316,15 +356,4 @@ if (bodyClass == "body-pages-in") {
     updateNote();
     updateCategory();
     deleteCategory();
-}
-if (bodyClass == "body-profile-page") {
-    updateUser();
-}
-if (bodyClass == "body-profile-password-page") {
-    changePassword();
-}
-if (bodyClass == "body-profile-page" || bodyClass == "body-profile-password-page") {
-    closeOpenProfileMenu();
-    verifySizeWindowProfile();
-    verifyResizeWindowProfile();
 }

@@ -18332,58 +18332,74 @@ header#header {
     text-decoration: none;
     color: #444; }
 
-#header-right #profile {
-  position: relative;
-  height: 60px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-  #header-right #profile:hover {
-    width: 100px; }
-    #header-right #profile:hover #profile-box {
-      display: flex;
-      visibility: visible; }
-  #header-right #profile #first-letter-name {
+@media (min-width: 992px) {
+  #header-right #profile {
+    position: relative;
+    height: 60px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: 700;
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    background-color: #FFF;
-    border: 2px solid #000; }
-  #header-right #profile i {
-    margin-right: 10px; }
-  #header-right #profile img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    background-color: #FFF;
-    border: 2px solid #000; }
-  #header-right #profile #profile-box, #header-right #profile .main-profile-box {
-    display: none;
-    visibility: hidden;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    min-width: 200px;
-    width: auto;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px #ccc;
-    padding: 15px; }
-    #header-right #profile #profile-box a, #header-right #profile .main-profile-box a {
-      font-size: 14px;
-      font-weight: 400;
-      font-style: normal;
-      text-decoration: none; }
-      #header-right #profile #profile-box a:nth-child(2), #header-right #profile .main-profile-box a:nth-child(2) {
+    justify-content: flex-end;
+    align-items: center; }
+    #header-right #profile:hover {
+      width: 100px; }
+      #header-right #profile:hover #profile-box {
+        display: flex;
+        visibility: visible; }
+    #header-right #profile #first-letter-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 700;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: #FFF;
+      border: 2px solid #000; }
+    #header-right #profile i {
+      margin-right: 10px; }
+    #header-right #profile img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: #FFF;
+      border: 2px solid #000; }
+    #header-right #profile #profile-box, #header-right #profile .main-profile-box {
+      display: none;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      min-width: 200px;
+      width: auto;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px #ccc;
+      padding: 15px; }
+      #header-right #profile #profile-box a, #header-right #profile .main-profile-box a {
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none; }
+        #header-right #profile #profile-box a:nth-child(2), #header-right #profile .main-profile-box a:nth-child(2) {
+          width: 100%;
+          text-align: center;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 20px;
+          color: #3c4043;
+          padding: 7px;
+          text-decoration: none;
+          transition-duration: .2s; }
+          #header-right #profile #profile-box a:nth-child(2):hover, #header-right #profile .main-profile-box a:nth-child(2):hover {
+            background-color: #f1f1f1; }
+      #header-right #profile #profile-box button, #header-right #profile .main-profile-box button {
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
         width: 100%;
         text-align: center;
         background-color: #fff;
@@ -18393,30 +18409,18 @@ header#header {
         padding: 7px;
         text-decoration: none;
         transition-duration: .2s; }
-        #header-right #profile #profile-box a:nth-child(2):hover, #header-right #profile .main-profile-box a:nth-child(2):hover {
-          background-color: #f1f1f1; }
-    #header-right #profile #profile-box button, #header-right #profile .main-profile-box button {
-      font-size: 14px;
-      font-weight: 400;
-      font-style: normal;
-      width: 100%;
-      text-align: center;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      color: #3c4043;
-      padding: 7px;
-      text-decoration: none;
-      transition-duration: .2s; }
-      #header-right #profile #profile-box button:hover, #header-right #profile .main-profile-box button:hover {
-        background-color: #f1f1f1; }
+        #header-right #profile #profile-box button:hover, #header-right #profile .main-profile-box button:hover {
+          background-color: #f1f1f1; } }
+@media (max-width: 992px) {
+  #header-right #profile {
+    display: none; } }
 
 section.main-content, section.main-user-content {
   float: left;
   width: 100%;
   transition-duration: .2s;
   padding-right: 230px;
-  margin-top: 20px; }
+  padding-top: 20px; }
   @media (min-width: 1400px) {
     section.main-content.open-menu-for-content, section.main-user-content.open-menu-for-content {
       padding-left: 360px;
@@ -18441,6 +18445,18 @@ section.main-content, section.main-user-content {
     section.main-content.open-menu-for-content-2, section.main-user-content.open-menu-for-content-2 {
       padding-left: 30px;
       padding-right: 30px; } }
+section.main-content {
+  position: relative; }
+  @media (max-width: 991px) {
+    section.main-content.background-opened-menu:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(20, 20, 20, 0.6);
+      z-index: 999; } }
 
 section.main-content#main-content-category ul#all-categories {
   float: left;
@@ -18657,26 +18673,26 @@ section.main-content#main-content-category ul#all-categories {
   position: absolute;
   top: 60px;
   width: 280px;
-  height: 100%;
+  height: 100vh;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #FFF;
-  z-index: 99; }
+  z-index: 9999; }
   #main-menu.opened-main-menu, #user-menu.opened-main-menu {
     left: 0;
     transition-duration: .2s; }
   #main-menu.closed-main-menu, #user-menu.closed-main-menu {
     left: -280px;
     transition-duration: .2s; }
-  #main-menu #main-menu-notes, #main-menu #main-menu-trash, #main-menu #user-menu-notes, #user-menu #main-menu-notes, #user-menu #main-menu-trash, #user-menu #user-menu-notes {
+  #main-menu #main-menu-notes, #main-menu #main-menu-trash, #main-menu #main-menu-profile, #main-menu #user-menu-notes, #user-menu #main-menu-notes, #user-menu #main-menu-trash, #user-menu #main-menu-profile, #user-menu #user-menu-notes {
     padding-bottom: 10px; }
-    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4, #main-menu #user-menu-notes h4, #user-menu #main-menu-notes h4, #user-menu #main-menu-trash h4, #user-menu #user-menu-notes h4 {
+    #main-menu #main-menu-notes h4, #main-menu #main-menu-trash h4, #main-menu #main-menu-profile h4, #main-menu #user-menu-notes h4, #user-menu #main-menu-notes h4, #user-menu #main-menu-trash h4, #user-menu #main-menu-profile h4, #user-menu #user-menu-notes h4 {
       float: left;
       font-size: 20px;
       font-weight: 400;
       font-style: normal;
       margin: 0 5px 0 0; }
-      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category, #main-menu #user-menu-notes h4#category, #user-menu #main-menu-notes h4#category, #user-menu #main-menu-trash h4#category, #user-menu #user-menu-notes h4#category {
+      #main-menu #main-menu-notes h4#category, #main-menu #main-menu-trash h4#category, #main-menu #main-menu-profile h4#category, #main-menu #user-menu-notes h4#category, #user-menu #main-menu-notes h4#category, #user-menu #main-menu-trash h4#category, #user-menu #main-menu-profile h4#category, #user-menu #user-menu-notes h4#category {
         cursor: pointer;
         float: left;
         width: 230px;
@@ -18686,11 +18702,11 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover, #main-menu #user-menu-notes h4#category:hover, #user-menu #main-menu-notes h4#category:hover, #user-menu #main-menu-trash h4#category:hover, #user-menu #user-menu-notes h4#category:hover {
+        #main-menu #main-menu-notes h4#category:hover, #main-menu #main-menu-trash h4#category:hover, #main-menu #main-menu-profile h4#category:hover, #main-menu #user-menu-notes h4#category:hover, #user-menu #main-menu-notes h4#category:hover, #user-menu #main-menu-trash h4#category:hover, #user-menu #main-menu-profile h4#category:hover, #user-menu #user-menu-notes h4#category:hover {
           background-color: #f1f1f1; }
-        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i, #main-menu #user-menu-notes h4#category i, #user-menu #main-menu-notes h4#category i, #user-menu #main-menu-trash h4#category i, #user-menu #user-menu-notes h4#category i {
+        #main-menu #main-menu-notes h4#category i, #main-menu #main-menu-trash h4#category i, #main-menu #main-menu-profile h4#category i, #main-menu #user-menu-notes h4#category i, #user-menu #main-menu-notes h4#category i, #user-menu #main-menu-trash h4#category i, #user-menu #main-menu-profile h4#category i, #user-menu #user-menu-notes h4#category i {
           float: right; }
-      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a, #main-menu #user-menu-notes h4 a, #user-menu #main-menu-notes h4 a, #user-menu #main-menu-trash h4 a, #user-menu #user-menu-notes h4 a {
+      #main-menu #main-menu-notes h4 a, #main-menu #main-menu-trash h4 a, #main-menu #main-menu-profile h4 a, #main-menu #user-menu-notes h4 a, #user-menu #main-menu-notes h4 a, #user-menu #main-menu-trash h4 a, #user-menu #main-menu-profile h4 a, #user-menu #user-menu-notes h4 a {
         float: left;
         width: 230px;
         height: 45px;
@@ -18699,20 +18715,42 @@ section.main-content#main-content-category ul#all-categories {
         border-radius: 0 50px 50px 0;
         color: #444;
         text-decoration: none; }
-        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover, #main-menu #user-menu-notes h4 a:hover, #user-menu #main-menu-notes h4 a:hover, #user-menu #main-menu-trash h4 a:hover, #user-menu #user-menu-notes h4 a:hover {
+        #main-menu #main-menu-notes h4 a:hover, #main-menu #main-menu-trash h4 a:hover, #main-menu #main-menu-profile h4 a:hover, #main-menu #user-menu-notes h4 a:hover, #user-menu #main-menu-notes h4 a:hover, #user-menu #main-menu-trash h4 a:hover, #user-menu #main-menu-profile h4 a:hover, #user-menu #user-menu-notes h4 a:hover {
           background-color: #f1f1f1; }
-    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button, #main-menu #user-menu-notes button, #user-menu #main-menu-notes button, #user-menu #main-menu-trash button, #user-menu #user-menu-notes button {
+    #main-menu #main-menu-notes button, #main-menu #main-menu-trash button, #main-menu #main-menu-profile button, #main-menu #user-menu-notes button, #user-menu #main-menu-notes button, #user-menu #main-menu-trash button, #user-menu #main-menu-profile button, #user-menu #user-menu-notes button {
       width: 45px;
       height: 45px;
       border: 1px solid transparent;
       border-radius: 50px;
       background-color: #fff;
       outline: 0; }
-      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover, #main-menu #user-menu-notes button:hover, #user-menu #main-menu-notes button:hover, #user-menu #main-menu-trash button:hover, #user-menu #user-menu-notes button:hover {
+      #main-menu #main-menu-notes button:hover, #main-menu #main-menu-trash button:hover, #main-menu #main-menu-profile button:hover, #main-menu #user-menu-notes button:hover, #user-menu #main-menu-notes button:hover, #user-menu #main-menu-trash button:hover, #user-menu #main-menu-profile button:hover, #user-menu #user-menu-notes button:hover {
         background-color: #f1f1f1; }
   #main-menu #main-menu-trash, #user-menu #main-menu-trash {
+    float: left;
     padding-top: 10px;
     border-top: 1px solid #CCCCCC; }
+  #main-menu #main-menu-profile, #user-menu #main-menu-profile {
+    float: left; }
+    #main-menu #main-menu-profile h4, #user-menu #main-menu-profile h4 {
+      width: 230px;
+      height: 45px;
+      text-align: left;
+      padding: 12px 15px 12px 30px;
+      border-radius: 0 50px 50px 0;
+      color: #444;
+      text-decoration: none; }
+    #main-menu #main-menu-profile i, #user-menu #main-menu-profile i {
+      float: right; }
+    #main-menu #main-menu-profile #main-menu-profile-options, #user-menu #main-menu-profile #main-menu-profile-options {
+      display: none;
+      height: 0;
+      width: 100%;
+      text-align: left;
+      padding: 10px 10px 15px 45px; }
+      #main-menu #main-menu-profile #main-menu-profile-options.open-profile, #user-menu #main-menu-profile #main-menu-profile-options.open-profile {
+        display: inline-block;
+        height: auto; }
   #main-menu #all-categories, #user-menu #all-categories {
     display: none;
     height: 0;

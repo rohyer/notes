@@ -32,4 +32,13 @@ $allCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
     <div id="main-menu-trash">
         <h4><a href="./trash.php" id="trash">Lixeira</a></h4>
     </div>
+
+    <div id="main-menu-profile">
+        <h4>Meu Perfil <i id="profile-arrow" class="fas fa-caret-down"></i></h4>
+
+        <ul id="main-menu-profile-options">
+            <li><a href="./user-profile-datas.php">Meus dados</a></li>
+            <li><a href="./user-profile-password.php">Alterar senha</a></li>
+        </ul>
+    </div>
 </div>
