@@ -15,9 +15,17 @@
             float: left;
             width: 100%;
             margin-bottom: 30px;
-            -webkit-column-count: 4;
-            -moz-column-count: 4;
-            column-count: 4;
+
+            @media (min-width: 1400px) {
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+            }
+            @media (min-width: 992px) and (max-width: 1399px) {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+            }
         }
         
         .sec-marked-notes {
@@ -131,6 +139,10 @@
                 bottom: 15px;
                 right: 15px;
                 visibility: hidden;
+
+                @media (max-width: 991px) {
+                    visibility: visible;
+                }
 
                 .delete-note, .main-delete-note {
                     float: left;
