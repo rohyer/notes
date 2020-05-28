@@ -6,15 +6,15 @@
             <div id="password-datas">
                 <input type="hidden" name="id-user" id="id-user" value="<?php echo $_SESSION['user_datas']['id'] ?>">
 
-                <label for="current-password">Senha atual:
+                <label for="current-password"> <div class="change-password-datas">Senha atual:</div>
                     <input type="password" name="current-password" id="current-password" required>
                 </label>
 
-                <label for="new-password">Nova senha:
+                <label for="new-password"> <div class="change-password-datas">Nova senha:</div>
                     <input type="password" name="new-password" id="new-password" required>
                 </label>
 
-                <label for="new-password-repeated">Repita a nova senha:
+                <label for="new-password-repeated"> <div class="change-password-datas">Repita a nova senha:</div>
                     <input type="password" name="new-password-repeated" id="new-password-repeated" required>
                 </label>
             </div>

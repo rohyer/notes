@@ -23,6 +23,11 @@ section {
                 .info-user {
                     float: left;
                     margin-right: 7px;
+
+                    @media (max-width: 991px) {
+                        display: none;
+                        visibility: hidden;
+                    }
                 }
 
                 @media (min-width: 992px) {
@@ -55,6 +60,12 @@ section {
                     outline: 0;
                 }
             }
+
+            #password-changed-response {
+                @media (max-width: 991px) {
+                    margin-top: 10px;
+                }
+            }
         }
     }
 
@@ -68,7 +79,10 @@ section {
                     &:nth-child(2) {
                         float: left;
                         width: 100%;
-                        margin-bottom: 15px;
+                        
+                        @media (min-width: 992px) {
+                            margin-bottom: 15px;
+                        }
                     }
                     @media (min-width: 992px) {
                         &:nth-child(3) {
@@ -81,6 +95,11 @@ section {
                     }
 
                     @media (max-width: 991px) {
+                        input {
+                            min-width: 250px;
+                            margin-bottom: 10px;
+                        }
+
                         &:nth-child(3) {
                             float: left;
                             width: 100%;
@@ -88,7 +107,15 @@ section {
                         &:nth-child(4) {
                             float: left;
                             width: 100%;
+                        }
+                    }
 
+                    .change-password-datas {
+                        float: left;
+
+                        @media (max-width: 991px) {
+                            display: none;
+                            visibility: hidden;
                         }
                     }
                 }
@@ -101,6 +128,10 @@ section {
                     height: 35px;
                     margin-left: 10px;
                     text-indent: 10px;
+
+                    @media (max-width: 991px) {
+                        margin-left: 0;
+                    }
 
                     &:focus {
                         outline: 0;

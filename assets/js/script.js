@@ -332,6 +332,21 @@ function changePassword() {
     })
 }
 
+// FUNÇÃO PARA INSERIR PLACEHOLDER NA PÁGINA DE ALTERAÇÃO DE SENHA NA RESOLUÇÃO MOBIBLE
+function addPlaceholder() {
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth <= 991) {
+        const currentPassword = doc.querySelector("#current-password");
+        const newPassword = doc.querySelector("#new-password");
+        const newPasswordRepeated = doc.querySelector("#new-password-repeated");
+
+        currentPassword.placeholder = "Senha atual";
+        newPassword.placeholder = "Nova senha";
+        newPasswordRepeated.placeholder = "Repita a nova senha";
+    }
+}
+
 // CHAMADA DAS FUNÇÕES
 // if (bodyClass == "body-pages-in") {
 //     verifySizeWindow();
@@ -347,6 +362,7 @@ if (bodyClass == "body-profile-page") {
 }
 if (bodyClass == "body-profile-password-page") {
     changePassword();
+    addPlaceholder();
 }
 if (bodyClass == "body-profile-page" || bodyClass == "body-profile-password-page" || bodyClass == "body-pages-in") {
     verifySizeWindow();

@@ -18843,6 +18843,10 @@ section#user-content .user-container .main-info-user, section#user-change-passwo
   section#user-content .user-container .main-info-user .info-user, section#user-change-password .user-container .main-info-user .info-user {
     float: left;
     margin-right: 7px; }
+    @media (max-width: 991px) {
+      section#user-content .user-container .main-info-user .info-user, section#user-change-password .user-container .main-info-user .info-user {
+        display: none;
+        visibility: hidden; } }
   @media (min-width: 992px) {
     section#user-content .user-container .main-info-user:nth-child(even), section#user-change-password .user-container .main-info-user:nth-child(even) {
       width: 40%; }
@@ -18864,13 +18868,18 @@ section#user-content .user-container button, section#user-change-password .user-
     background-color: #f1f1f1; }
   section#user-content .user-container button:focus, section#user-change-password .user-container button:focus {
     outline: 0; }
+@media (max-width: 991px) {
+  section#user-content .user-container #password-changed-response, section#user-change-password .user-container #password-changed-response {
+    margin-top: 10px; } }
 section#user-change-password #form-change-password #password-datas {
   float: left;
   width: 100%; }
   section#user-change-password #form-change-password #password-datas label:nth-child(2) {
     float: left;
-    width: 100%;
-    margin-bottom: 15px; }
+    width: 100%; }
+    @media (min-width: 992px) {
+      section#user-change-password #form-change-password #password-datas label:nth-child(2) {
+        margin-bottom: 15px; } }
   @media (min-width: 992px) {
     section#user-change-password #form-change-password #password-datas label:nth-child(3) {
       float: left;
@@ -18878,12 +18887,21 @@ section#user-change-password #form-change-password #password-datas {
     section#user-change-password #form-change-password #password-datas label:nth-child(4) {
       float: left; } }
   @media (max-width: 991px) {
+    section#user-change-password #form-change-password #password-datas label input {
+      min-width: 250px;
+      margin-bottom: 10px; }
     section#user-change-password #form-change-password #password-datas label:nth-child(3) {
       float: left;
       width: 100%; }
     section#user-change-password #form-change-password #password-datas label:nth-child(4) {
       float: left;
       width: 100%; } }
+  section#user-change-password #form-change-password #password-datas label .change-password-datas {
+    float: left; }
+    @media (max-width: 991px) {
+      section#user-change-password #form-change-password #password-datas label .change-password-datas {
+        display: none;
+        visibility: hidden; } }
   section#user-change-password #form-change-password #password-datas input {
     border-top: none;
     border-right: none;
@@ -18892,6 +18910,9 @@ section#user-change-password #form-change-password #password-datas {
     height: 35px;
     margin-left: 10px;
     text-indent: 10px; }
+    @media (max-width: 991px) {
+      section#user-change-password #form-change-password #password-datas input {
+        margin-left: 0; } }
     section#user-change-password #form-change-password #password-datas input:focus {
       outline: 0; }
 
