@@ -18496,6 +18496,11 @@ section.main-content#main-content-category ul#all-categories {
       margin-right: 1%;
       margin-bottom: 15px; }
 
+#main-trash-content #title-trash {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 15px; }
 #main-trash-content .all-trash-options {
   float: left;
   cursor: pointer;
