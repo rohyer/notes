@@ -49,17 +49,17 @@ $datasUserHeader = $objUserHeader->listDatasUser($_SESSION['user_datas']['id']);
                         <?php } ?>
                         <!--<p><?php echo $_SESSION['user_datas']['id']; ?></p>-->
                         <a href="./user-profile-datas.php">Ver perfil</a>
-                        <form action="./src/model/processing/processing.php" method="POST" id="theme-form">
+                        <!-- <form action="./src/model/processing/processing.php" method="POST" id="theme-form">
                             <input type="hidden" value="<?php echo $_SESSION['user_datas']['id']; ?>" name="iduser" readonly>
                             <input type="checkbox" value="1" name="themeuser" id="theme">
-                            <?php if ($value['themeuser'] != 1) { ?>
+                            <?php //if ($value['themeuser'] != 1) { ?>
                                 <button type="submit" name="btnChangeTheme">Ativar tema escuro</button>
-                            <?php } else { ?>
+                            <?php //} else { ?>
                                 <button type="submit" name="btnChangeTheme">desativar tema escuro</button>
-                            <?php } ?>
-                        </form>
+                            <?php //} ?>
+                        </form> -->
                         <input type="hidden" value="<?php echo $value['themeuser']; ?>" id="theme-value">
-                        <?php echo $value['themeuser']; ?>
+                        <?php //echo $value['themeuser']; ?>
                         <a href="./src/view/sign-out.php">Sair</a>
                     </div>
                 </div>
