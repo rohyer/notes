@@ -31,10 +31,11 @@ $listDeletedNotes = $objNote->listTrashNotes($idUser);
 
                     <div class="options-single-note">
                         <div class="all-trash-options"><i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-trash-restore"></i>
                             <div class="trash-options">
 
-                                <i class="fas fa-trash-restore"></i>
-                                <div class="action-trash-note">Restaurar</div>
+                                <!-- <i class="fas fa-trash-restore"></i>
+                                <div class="action-trash-note">Restaurar</div> -->
                                 <form action="./src/model/processing/processing.php" method="POST">
                                     <input type="hidden" name="restore-id-user" value="<?php echo $idUser; ?>" readonly>
                                     <input type="hidden" name="restore-id-note" value="<?php echo $value['idnote']; ?>" readonly>

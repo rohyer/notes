@@ -1,5 +1,5 @@
 <?php
-    
+
 require_once "./src/model/Note.php";
 $objNote = new Note();
 
