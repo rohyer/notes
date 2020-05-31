@@ -18596,7 +18596,7 @@ section.main-content#main-content-category ul#all-categories {
           -webkit-column-count: 3;
           -moz-column-count: 3;
           column-count: 3; } }
-  .main-content .note-container .single-note, #single-content-category .note-container .single-note, #main-trash-content .note-container .single-note {
+  .main-content .note-container .single-note, .main-content .note-container .trash-single-note, #single-content-category .note-container .single-note, #single-content-category .note-container .trash-single-note, #main-trash-content .note-container .single-note, #main-trash-content .note-container .trash-single-note {
     position: relative;
     min-width: 24%;
     min-height: 115px;
@@ -18611,51 +18611,51 @@ section.main-content#main-content-category ul#all-categories {
     border: 1px solid #CCCCCC;
     border-radius: 5px; }
     @media (max-width: 991px) {
-      .main-content .note-container .single-note, #single-content-category .note-container .single-note, #main-trash-content .note-container .single-note {
+      .main-content .note-container .single-note, .main-content .note-container .trash-single-note, #single-content-category .note-container .single-note, #single-content-category .note-container .trash-single-note, #main-trash-content .note-container .single-note, #main-trash-content .note-container .trash-single-note {
         margin: 0 0 15px 0; } }
-    .main-content .note-container .single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note, #main-trash-content .note-container .single-note:hover .options-single-note {
+    .main-content .note-container .single-note:hover .options-single-note, .main-content .note-container .trash-single-note:hover .options-single-note, #single-content-category .note-container .single-note:hover .options-single-note, #single-content-category .note-container .trash-single-note:hover .options-single-note, #main-trash-content .note-container .single-note:hover .options-single-note, #main-trash-content .note-container .trash-single-note:hover .options-single-note {
       visibility: visible; }
-    .main-content .note-container .single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note, #main-trash-content .note-container .single-note .title-single-note {
+    .main-content .note-container .single-note .title-single-note, .main-content .note-container .trash-single-note .title-single-note, #single-content-category .note-container .single-note .title-single-note, #single-content-category .note-container .trash-single-note .title-single-note, #main-trash-content .note-container .single-note .title-single-note, #main-trash-content .note-container .trash-single-note .title-single-note {
       cursor: default;
       font-size: 17px;
       font-weight: 400;
       font-style: normal;
       margin-bottom: 10px; }
-    .main-content .note-container .single-note .marked-single-note, #single-content-category .note-container .single-note .marked-single-note, #main-trash-content .note-container .single-note .marked-single-note {
+    .main-content .note-container .single-note .marked-single-note, .main-content .note-container .trash-single-note .marked-single-note, #single-content-category .note-container .single-note .marked-single-note, #single-content-category .note-container .trash-single-note .marked-single-note, #main-trash-content .note-container .single-note .marked-single-note, #main-trash-content .note-container .trash-single-note .marked-single-note {
       position: absolute;
       top: 5px;
       right: 10px; }
-      .main-content .note-container .single-note .marked-single-note i, #single-content-category .note-container .single-note .marked-single-note i, #main-trash-content .note-container .single-note .marked-single-note i {
+      .main-content .note-container .single-note .marked-single-note i, .main-content .note-container .trash-single-note .marked-single-note i, #single-content-category .note-container .single-note .marked-single-note i, #single-content-category .note-container .trash-single-note .marked-single-note i, #main-trash-content .note-container .single-note .marked-single-note i, #main-trash-content .note-container .trash-single-note .marked-single-note i {
         font-size: 14px; }
-    .main-content .note-container .single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note, #main-trash-content .note-container .single-note .description-single-note {
+    .main-content .note-container .single-note .description-single-note, .main-content .note-container .trash-single-note .description-single-note, #single-content-category .note-container .single-note .description-single-note, #single-content-category .note-container .trash-single-note .description-single-note, #main-trash-content .note-container .single-note .description-single-note, #main-trash-content .note-container .trash-single-note .description-single-note {
       cursor: default;
       font-size: 15px;
       font-weight: 400;
       font-style: normal; }
-    .main-content .note-container .single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note, #main-trash-content .note-container .single-note .options-single-note {
+    .main-content .note-container .single-note .options-single-note, .main-content .note-container .trash-single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note, #single-content-category .note-container .trash-single-note .options-single-note, #main-trash-content .note-container .single-note .options-single-note, #main-trash-content .note-container .trash-single-note .options-single-note {
       display: inline-block;
       position: absolute;
       bottom: 15px;
       right: 15px;
       visibility: hidden; }
       @media (max-width: 991px) {
-        .main-content .note-container .single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note, #main-trash-content .note-container .single-note .options-single-note {
+        .main-content .note-container .single-note .options-single-note, .main-content .note-container .trash-single-note .options-single-note, #single-content-category .note-container .single-note .options-single-note, #single-content-category .note-container .trash-single-note .options-single-note, #main-trash-content .note-container .single-note .options-single-note, #main-trash-content .note-container .trash-single-note .options-single-note {
           visibility: visible; } }
-      .main-content .note-container .single-note .options-single-note .delete-note, .main-content .note-container .single-note .options-single-note .main-delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .main-delete-note, #main-trash-content .note-container .single-note .options-single-note .delete-note, #main-trash-content .note-container .single-note .options-single-note .main-delete-note {
+      .main-content .note-container .single-note .options-single-note .delete-note, .main-content .note-container .single-note .options-single-note .main-delete-note, .main-content .note-container .trash-single-note .options-single-note .delete-note, .main-content .note-container .trash-single-note .options-single-note .main-delete-note, #single-content-category .note-container .single-note .options-single-note .delete-note, #single-content-category .note-container .single-note .options-single-note .main-delete-note, #single-content-category .note-container .trash-single-note .options-single-note .delete-note, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note, #main-trash-content .note-container .single-note .options-single-note .delete-note, #main-trash-content .note-container .single-note .options-single-note .main-delete-note, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note {
         float: left;
         cursor: pointer;
         width: 25px;
         height: 25px;
         text-align: center;
         border-radius: 50px; }
-        .main-content .note-container .single-note .options-single-note .delete-note:hover, .main-content .note-container .single-note .options-single-note .main-delete-note:hover, #single-content-category .note-container .single-note .options-single-note .delete-note:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover {
+        .main-content .note-container .single-note .options-single-note .delete-note:hover, .main-content .note-container .single-note .options-single-note .main-delete-note:hover, .main-content .note-container .trash-single-note .options-single-note .delete-note:hover, .main-content .note-container .trash-single-note .options-single-note .main-delete-note:hover, #single-content-category .note-container .single-note .options-single-note .delete-note:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover, #single-content-category .note-container .trash-single-note .options-single-note .delete-note:hover, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note:hover, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note:hover {
           background: #ddd; }
-          .main-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options {
+          .main-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, .main-content .note-container .trash-single-note .options-single-note .delete-note:hover .container-all-options, .main-content .note-container .trash-single-note .options-single-note .main-delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #single-content-category .note-container .trash-single-note .options-single-note .delete-note:hover .container-all-options, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note:hover .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note:hover .container-all-options, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note:hover .container-all-options, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note:hover .container-all-options {
             display: inline-block;
             visibility: visible; }
-        .main-content .note-container .single-note .options-single-note .delete-note i, .main-content .note-container .single-note .options-single-note .main-delete-note i, #single-content-category .note-container .single-note .options-single-note .delete-note i, #single-content-category .note-container .single-note .options-single-note .main-delete-note i, #main-trash-content .note-container .single-note .options-single-note .delete-note i, #main-trash-content .note-container .single-note .options-single-note .main-delete-note i {
+        .main-content .note-container .single-note .options-single-note .delete-note i, .main-content .note-container .single-note .options-single-note .main-delete-note i, .main-content .note-container .trash-single-note .options-single-note .delete-note i, .main-content .note-container .trash-single-note .options-single-note .main-delete-note i, #single-content-category .note-container .single-note .options-single-note .delete-note i, #single-content-category .note-container .single-note .options-single-note .main-delete-note i, #single-content-category .note-container .trash-single-note .options-single-note .delete-note i, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note i, #main-trash-content .note-container .single-note .options-single-note .delete-note i, #main-trash-content .note-container .single-note .options-single-note .main-delete-note i, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note i, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note i {
           font-size: 15px; }
-        .main-content .note-container .single-note .options-single-note .delete-note .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options {
+        .main-content .note-container .single-note .options-single-note .delete-note .container-all-options, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options {
           position: absolute;
           top: 25px;
           left: 0;
@@ -18672,19 +18672,19 @@ section.main-content#main-content-category ul#all-categories {
           visibility: hidden;
           z-index: 999;
           transition-duration: .2s; }
-          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options:hover, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options:hover, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options:hover, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options:hover, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options:hover {
             display: inline-block;
             visibility: visible; }
-          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button {
+          .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options button, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button {
             width: 100%;
             height: 30px;
             text-align: left;
             padding: 0 15px;
             border: none;
             transition-duration: .2s; }
-            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:hover, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:hover, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:hover, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:hover, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:hover, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:hover {
               background: #ddd; }
-            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus {
+            .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus {
               outline: none; }
 
 #main-menu, #user-menu {
@@ -18921,7 +18921,7 @@ section#user-change-password #form-change-password #password-datas {
     section#user-change-password #form-change-password #password-datas input:focus {
       outline: 0; }
 
-#add-note-modal .modal-header input, #update-note-modal .modal-header input {
+#add-note-modal .modal-header input, #update-note-modal .modal-header input, #restore-note-modal .modal-header input {
   float: right;
   font-size: 1.5rem;
   font-weight: 700;
@@ -18932,16 +18932,16 @@ section#user-change-password #form-change-password #password-datas {
   background-color: transparent;
   border: 0;
   outline: 0; }
-#add-note-modal .modal-header input[type="checkbox"], #update-note-modal .modal-header input[type="checkbox"] {
+#add-note-modal .modal-header input[type="checkbox"], #update-note-modal .modal-header input[type="checkbox"], #restore-note-modal .modal-header input[type="checkbox"] {
   position: absolute;
   z-index: -1;
   opacity: 0; }
-#add-note-modal .modal-header input[type="checkbox"] + label, #update-note-modal .modal-header input[type="checkbox"] + label {
+#add-note-modal .modal-header input[type="checkbox"] + label, #update-note-modal .modal-header input[type="checkbox"] + label, #restore-note-modal .modal-header input[type="checkbox"] + label {
   position: relative;
   cursor: pointer;
   padding-left: 30px;
   margin-bottom: 0; }
-  #add-note-modal .modal-header input[type="checkbox"] + label:before, #update-note-modal .modal-header input[type="checkbox"] + label:before {
+  #add-note-modal .modal-header input[type="checkbox"] + label:before, #update-note-modal .modal-header input[type="checkbox"] + label:before, #restore-note-modal .modal-header input[type="checkbox"] + label:before {
     content: '';
     position: absolute;
     width: 20px;
@@ -18951,10 +18951,10 @@ section#user-change-password #form-change-password #password-datas {
     border: 2px solid;
     border-radius: 4px;
     vertical-align: bottom; }
-#add-note-modal .modal-header input[type="checkbox"]:checked + label:before, #update-note-modal .modal-header input[type="checkbox"]:checked + label:before {
+#add-note-modal .modal-header input[type="checkbox"]:checked + label:before, #update-note-modal .modal-header input[type="checkbox"]:checked + label:before, #restore-note-modal .modal-header input[type="checkbox"]:checked + label:before {
   border: 2px solid #000;
   background-color: #000; }
-#add-note-modal .modal-header input[type="checkbox"]:checked + label:after, #update-note-modal .modal-header input[type="checkbox"]:checked + label:after {
+#add-note-modal .modal-header input[type="checkbox"]:checked + label:after, #update-note-modal .modal-header input[type="checkbox"]:checked + label:after, #restore-note-modal .modal-header input[type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
   left: 7px;
@@ -18964,7 +18964,7 @@ section#user-change-password #form-change-password #password-datas {
   border-right: solid 3px #fff;
   border-bottom: solid 3px #fff;
   transform: rotate(45deg); }
-#add-note-modal .modal-body input, #update-note-modal .modal-body input {
+#add-note-modal .modal-body input, #update-note-modal .modal-body input, #restore-note-modal .modal-body input {
   float: left;
   width: 75%;
   height: 40px;
@@ -18977,9 +18977,9 @@ section#user-change-password #form-change-password #password-datas {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-  #add-note-modal .modal-body input.id-user-note, #update-note-modal .modal-body input.id-user-note {
+  #add-note-modal .modal-body input.id-user-note, #update-note-modal .modal-body input.id-user-note, #restore-note-modal .modal-body input.id-user-note {
     display: none; }
-#add-note-modal .modal-body select, #update-note-modal .modal-body select {
+#add-note-modal .modal-body select, #update-note-modal .modal-body select, #restore-note-modal .modal-body select {
   float: left;
   width: 23%;
   height: 40px;
@@ -18993,7 +18993,7 @@ section#user-change-password #form-change-password #password-datas {
   padding-top: 5px;
   padding-bottom: 5px;
   text-indent: 5px; }
-#add-note-modal .modal-body textarea, #update-note-modal .modal-body textarea {
+#add-note-modal .modal-body textarea, #update-note-modal .modal-body textarea, #restore-note-modal .modal-body textarea {
   width: 100%;
   border-top: none;
   border-right: none;

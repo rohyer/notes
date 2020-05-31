@@ -104,7 +104,6 @@ $objCategory = new Category();
 
                     <button type="submit" name="btnUpdateNote" class="btn btn-primary" id="yes-update-note">Salvar</button>
                 </div>
-        
             </div>
         </form>  
     </div>
@@ -153,6 +152,47 @@ $objCategory = new Category();
     </div>
   </div>
 </div>
+
+
+<!-- Restore Note Modal -->
+<div class="modal fade" id="restore-note-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <form action="./src/model/processing/processing.php" id="form-restore-note" method="post">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Restaure ou delete sua nota</h5>
+                
+                <input type="checkbox" name="marked-update-note" id="marked-restore-modal" value="1" readonly>
+                <label for="marked-update-modal">Fixar</label>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="id-update-note" id="id-restore-modal" value="" readonly>
+                <input type="text" name="title-update-note" id="title-restore-modal" placeholder="Título" readonly>
+                
+                <select name="category-update-note" id="category-restore-modal" readonly>
+                  <option value="">Categoria</option>
+                  <option value="1">Sem categoria</option>
+                  <?php
+                  $listTrashCategories = $objCategory->listCategories($_SESSION['user_datas']['id']);
+
+                  foreach ($listTrashCategories as $value) { ?>
+                    <option value="<?php echo $value['idcategory'] ?>"><?php echo $value['namecategory']; ?></option>
+                  <?php } ?>
+                </select>
+                <textarea name="description-update-note" id="description-restore-modal" cols="30" rows="8" placeholder="Suas notas"></textarea>
+                <input type="text" name="id-update-user-note" value="<?php echo $_SESSION['user_datas']['id']; ?>" class="id-user-note" readonly>
+            
+                <div class="modal-footer-custom">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Deletar</button>
+
+                    <button type="submit" name="btnUpdateNote" class="btn btn-primary" id="yes-update-note">Restaurar</button>
+                </div>
+            </div>
+        </form>  
+    </div>
+  </div>
+</div>
+
 
 <!-- Modal Delete Category -->
 <div class="delete-category-modal modal fade bd-example-modal-sm" id="delete-category-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">

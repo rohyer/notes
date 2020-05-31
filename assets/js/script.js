@@ -186,6 +186,38 @@ function loadTheme() {
 }
 loadTheme();
 
+// FUNÇÃO PARA ABRIR NOTA DA LIXEIRA
+function closeOpenTrashNote() {
+    const note = doc.getElementsByClassName('trash-single-note');
+
+    for (let i = 0; i < note.length; i++) {
+        note[i].addEventListener("click", function(e) {
+            if (e.target.classList.contains('trash-single-note') || e.target.classList.contains('title-single-note') || e.target.classList.contains('description-single-note')) {
+                
+                let idSingleNote = note[i].getAttribute('data-trash-id');
+                let titleSingleNote = doc.getElementsByClassName('title-single-note')[i].innerHTML;
+                let categorySingleNote = doc.getElementsByClassName('category-single-note')[i].value;
+                let markedSingleNote = doc.getElementsByClassName('marked-single-note-value')[i];
+                let descriptionSingleNote = doc.getElementsByClassName('description-single-note')[i].innerHTML;
+                
+                let idRestoreModal = doc.getElementById('id-restore-modal').value = idSingleNote;
+                let titleRestoreModal = doc.getElementById('title-restore-modal').value = titleSingleNote;
+                let categoryRestoreModal = doc.getElementById('category-restore-modal').value = categorySingleNote;
+                let descriptionRestoreModal = doc.getElementById('description-restore-modal').value = descriptionSingleNote;
+                let markedRestoreModal = doc.getElementById('marked-restore-modal');
+
+                if (markedSingleNote == 1) {
+                    markedRestoreModal.checked = true;
+                } else {
+                    markedRestoreModal.checked = false;
+                }
+            } else {
+                e.stopPropagation();
+            }
+        })
+    }
+}
+
 // FUNÇÃO PARA ATUALIZAR NOTA
 function updateNote() {
     const note = doc.getElementsByClassName('single-note');
@@ -370,6 +402,7 @@ if (bodyClass == "body-profile-page" || bodyClass == "body-profile-password-page
     closeOpenMenu();
     closeOpenCategories();
     updateNote();
+    closeOpenTrashNote();
     updateCategory();
     deleteCategory();
 }
