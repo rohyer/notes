@@ -18869,7 +18869,8 @@ section#user-content .user-container button, section#user-change-password .user-
   height: 40px;
   padding: 5px 20px;
   margin-top: 30px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-right: 20px; }
   section#user-content .user-container button:hover, section#user-change-password .user-container button:hover {
     background-color: #f1f1f1; }
   section#user-content .user-container button:focus, section#user-change-password .user-container button:focus {

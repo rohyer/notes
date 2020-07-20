@@ -23,5 +23,7 @@ $listDatasUser = $objUser->listDatasUser($_SESSION['user_datas']['id']);
         <?php } ?>
 
         <button type="button" id="btn-update-user" data-toggle="modal" data-target="#update-user-modal">Alterar</button>
+
+        <a href="./user-profile-password.php" id="btn-change-password">Alterar senha</a>
     </div>
 </section>
