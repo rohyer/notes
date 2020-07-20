@@ -183,7 +183,9 @@ $objCategory = new Category();
                 <input type="text" name="id-update-user-note" value="<?php echo $_SESSION['user_datas']['id']; ?>" class="id-user-note" readonly>
             
                 <div class="modal-footer-custom">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Deletar</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" id="yes-delete-note">Deletar</button> -->
+
+                    <a href="#" class="btn btn-secondary" id="yes-delete-note">Deletar</a>
 
                     <button type="submit" name="btnUpdateNote" class="btn btn-primary" id="yes-update-note">Restaurar</button>
                 </div>

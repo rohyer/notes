@@ -18501,37 +18501,38 @@ section.main-content#main-content-category ul#all-categories {
   font-weight: 500;
   font-style: normal;
   margin-bottom: 15px; }
-#main-trash-content .all-trash-options {
+#main-trash-content #trash-content-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   float: left;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  border-radius: 50px; }
-  #main-trash-content .all-trash-options .trash-options {
-    display: none;
-    visibility: hidden;
+  width: 54px;
+  height: 35px;
+  text-align: center; }
+  #main-trash-content #trash-content-options #restore-note-form {
     float: left;
-    width: 120px;
-    height: auto;
-    text-align: left;
-    margin: auto;
-    background-color: #fff;
-    border: 1px solid #cdcdcd; }
-    #main-trash-content .all-trash-options .trash-options button:focus {
-      outline: 0; }
-    #main-trash-content .all-trash-options .trash-options .action-trash-note {
-      text-align: left;
-      padding: 3px 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px; }
+    #main-trash-content #trash-content-options #restore-note-form:hover {
+      background-color: #ddd; }
+    #main-trash-content #trash-content-options #restore-note-form button[type=submit] {
+      background-color: transparent;
       border: none;
-      width: 100%; }
-      #main-trash-content .all-trash-options .trash-options .action-trash-note:hover {
-        background-color: #f1f1f1; }
-  #main-trash-content .all-trash-options:hover {
-    background-color: #f1f1f1; }
-    #main-trash-content .all-trash-options:hover .trash-options {
-      display: inline-block;
-      visibility: visible; }
+      padding: 0;
+      outline: none; }
+    #main-trash-content #trash-content-options #restore-note-form button i {
+      font-size: 15px; }
+  #main-trash-content #trash-content-options .delete-trash-note {
+    float: left;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px; }
+    #main-trash-content #trash-content-options .delete-trash-note:hover {
+      background-color: #ddd; }
+    #main-trash-content #trash-content-options .delete-trash-note i {
+      font-size: 15px; }
 
 .main-content #title-category-name, #single-content-category #title-category-name, #main-trash-content #title-category-name {
   font-size: 24px;

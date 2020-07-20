@@ -5,49 +5,51 @@
         font-style: normal;
         margin-bottom: 15px;
     }
-    .all-trash-options {
+    #trash-content-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         float: left;
-        cursor: pointer;
-        width: 25px;
-        height: 25px;
+        width: 54px;
+        height: 35px;
         text-align: center;
-        border-radius: 50px;
 
-        .trash-options {
-            display: none;
-            visibility: hidden;
+        #restore-note-form {
             float: left;
-            width: 120px;
-            height: auto;
-            text-align: left;
-            margin: auto;
-            background-color: #fff;
-            border: 1px solid #cdcdcd;
-
-            button {
-                &:focus {
-                    outline: 0;
-                }
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            
+            &:hover {
+                background-color: #ddd;
             }
 
-            .action-trash-note {
-                text-align: left;
-                padding: 3px 15px;
-                border: none;
-                width: 100%;
+            button {
+                &[type=submit] {
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    outline: none;
+                }
 
-                &:hover {
-                    background-color: #f1f1f1;
+                i {
+                    font-size: 15px;
                 }
             }
         }
+        .delete-trash-note {
+            float: left;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            
+            &:hover {
+                background-color: #ddd;
+            }
 
-        &:hover {
-            background-color: #f1f1f1;
-
-            .trash-options {
-                display: inline-block;
-                visibility: visible;
+            i {
+                font-size: 15px;
             }
         }
     }

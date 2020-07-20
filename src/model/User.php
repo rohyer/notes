@@ -220,7 +220,6 @@ class User {
 
             if ($stmt->execute()) {
                 $result = $stmt->fetch();
-                //$result = substr($_SESSION['user_datas']['name'], 0, 1);
                 return $result[0];
             } else {
                 return false;

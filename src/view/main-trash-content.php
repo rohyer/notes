@@ -29,25 +29,18 @@ $listDeletedNotes = $objNote->listTrashNotes($idUser);
 
                     <div class="description-single-note"><?php echo $value['descriptionnote']; ?></div>
 
-                    <div class="options-single-note">
-                        <div class="all-trash-options"><i class="fas fa-ellipsis-v"></i>
-                            <i class="fas fa-trash-restore"></i>
-                            <div class="trash-options">
+                    <div class="options-single-note" id="trash-content-options">
 
-                                <!-- <i class="fas fa-trash-restore"></i>
-                                <div class="action-trash-note">Restaurar</div> -->
-                                <form action="./src/model/processing/processing.php" method="POST">
-                                    <input type="hidden" name="restore-id-user" value="<?php echo $idUser; ?>" readonly>
-                                    <input type="hidden" name="restore-id-note" value="<?php echo $value['idnote']; ?>" readonly>
-                                    <input type="hidden" name="restore-id-category" value="<?php echo $value['idcategory']; ?>" readonly>
+                        <form action="./src/model/processing/processing.php" method="POST" id="restore-note-form">
+                            <input type="hidden" name="restore-id-user" value="<?php echo $idUser; ?>" readonly>
+                            <input type="hidden" name="restore-id-note" value="<?php echo $value['idnote']; ?>" readonly>
+                            <input type="hidden" name="restore-id-category" value="<?php echo $value['idcategory']; ?>" readonly>
 
-                                    <button type="submit" name="btnRestoreNote" class="action-trash-note">Restaurar</button>
-                                </form>
+                            <button type="submit" name="btnRestoreNote" class="action-trash-note"><i class="fas fa-trash-restore"></i></button>
+                        </form>
 
-
-                                <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="action-trash-note delete-trash-note">Deletar</div>
-                            </div>
-                        </div>
+                        <div data-toggle="modal" data-target="#delete-note-modal" data-id="<?php echo $value['idnote']; ?>" class="action-trash-note delete-trash-note"><i class="fas fa-trash-alt"></i></div>
+                            
                     </div>
                 </div>
             <?php } ?>
