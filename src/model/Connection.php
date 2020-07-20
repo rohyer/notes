@@ -6,7 +6,7 @@ class Connection {
     private $pass;
 
     public function __construct() {
-        $this->dsn = "mysql:host=localhost; dbname=notes; charset=utf8";
+        $this->dsn = "mysql:host=localhost:3307; dbname=notes; charset=utf8";
         $this->user = "root";
         $this->pass = "";
     }

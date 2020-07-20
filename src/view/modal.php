@@ -255,7 +255,7 @@ $objCategory = new Category();
                 </div>
 
                 <div class="modal-body-second-box">
-                  <input type="email" name="email-update-user" id="email-update-user" placeholder="Email" required>
+                  <input type="email" name="email-update-user" id="email-update-user" placeholder="Email" readonly required>
                   <select name="sex-update-user" id="sex-update-user" required>
                     <option value="">Sexo</option>
                     <option value="M">M</option>

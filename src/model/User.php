@@ -207,6 +207,29 @@ class User {
         }
     }
 
+    public function getFirstLetter($idUser) {
+        $this->getConn = $this->objConn->getConnection();
+
+        $this->idUser = $idUser;
+
+        try {
+            $sql = "SELECT nameuser FROM main_user WHERE iduser = :iduser";
+
+            $stmt = $this->getConn->prepare($sql);
+            $stmt->bindParam(":iduser", $this->idUser);
+
+            if ($stmt->execute()) {
+                $result = $stmt->fetch();
+                //$result = substr($_SESSION['user_datas']['name'], 0, 1);
+                return $result[0];
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
     public function updateUser($datas) {
         $this->getConn = $this->objConn->getConnection();
 

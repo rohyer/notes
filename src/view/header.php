@@ -20,7 +20,8 @@ require_once "./src/model/User.php";
 $objUserHeader = new User();
 $value = $objUserHeader->readTheme($_SESSION['user_datas']['id']);
 
-$firstLetterName = substr($_SESSION['user_datas']['name'], 0, 1);
+$allNameUser = $objUserHeader->getFirstLetter($_SESSION['user_datas']['id']);
+$firstLetterName = substr($allNameUser, 0, 1);
 
 $datasUserHeader = $objUserHeader->listDatasUser($_SESSION['user_datas']['id']);
           
@@ -41,7 +42,7 @@ $datasUserHeader = $objUserHeader->listDatasUser($_SESSION['user_datas']['id']);
             <div id="header-right" class="col-8">
                 <div id="profile">
                     <i class="fas fa-caret-down"></i>
-                    <div id="first-letter-name"><?php echo $firstLetterName; ?></div>
+                    <div id="first-letter-name"><?php  echo $firstLetterName; ?></div>
 
                     <div id="profile-box" class="main-profile-box">
                         <?php foreach ($datasUserHeader as $value) { ?>
