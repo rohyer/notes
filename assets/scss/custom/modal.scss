@@ -209,3 +209,25 @@
         }
     }
 }
+
+#delete-category-modal {
+    .modal-content {
+        .modal-body {
+            margin: auto;
+
+            a {
+                width: 70px;
+                margin-right: 10px;
+                margin-left: 10px;
+
+
+                &.btn-secondary {
+                    color: #fff;
+                }
+                &.btn-light {
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+    }
+}

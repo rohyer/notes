@@ -19073,6 +19073,17 @@ section#user-change-password #form-change-password #password-datas {
     #delete-note-modal .modal-body a:nth-child(2) {
       border: 1px solid #ddd; }
 
+#delete-category-modal .modal-content .modal-body {
+  margin: auto; }
+  #delete-category-modal .modal-content .modal-body a {
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 10px; }
+    #delete-category-modal .modal-content .modal-body a.btn-secondary {
+      color: #fff; }
+    #delete-category-modal .modal-content .modal-body a.btn-light {
+      border: 1px solid #ddd; }
+
 footer {
   float: left;
   width: 100%;

@@ -205,7 +205,7 @@ $objCategory = new Category();
       </div>
       <div class="modal-body">
         <a class="btn btn-secondary" data-dismiss="modal">Não</a>
-        <a href="#" class="btn btn-secondary" id="yes-delete-category">Sim</a>
+        <a href="#" class="btn btn-light" id="yes-delete-category">Sim</a>
       </div>
     </div>
   </div>
