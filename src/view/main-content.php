@@ -75,5 +75,9 @@ $listNoMarkedNotes = $objNote->listNoMarkedNotes($idUser, $idCategory);
                 </div>
             </div>
         <?php } ?>
+
+        <?php if (count($listMarkedNotes) == 0 && count($listNoMarkedNotes) == 0) {  ?>
+            <h4 id="content-warning">Cadastre uma nota :D</h4>
+        <?php } ?>
     </div>
 </section>

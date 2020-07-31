@@ -208,5 +208,27 @@
                 }
             }
         }
+
+        h4 {
+            &#content-warning, &#trash-content-warning {
+                display: flex;
+                justify-content: center;
+                font-family: "Montserrat";
+                font-size: 50px;
+                font-weight: 500;
+                font-style: normal;
+                color: rgba(0, 0, 0, 0.22);
+                margin-top: 200px;
+                margin-bottom: 200px;
+                text-align: center;
+
+                @media (max-width: 768px) and (min-width: 577px) {
+                    font-size: 35px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 30px;
+                }
+            }
+        }
     }
 }

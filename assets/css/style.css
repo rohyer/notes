@@ -18687,6 +18687,23 @@ section.main-content#main-content-category ul#all-categories {
               background: #ddd; }
             .main-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, .main-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, .main-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #single-content-category .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, #single-content-category .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .single-note .options-single-note .main-delete-note .container-all-options button:focus, #main-trash-content .note-container .trash-single-note .options-single-note .delete-note .container-all-options button:focus, #main-trash-content .note-container .trash-single-note .options-single-note .main-delete-note .container-all-options button:focus {
               outline: none; }
+  .main-content .note-container h4#content-warning, .main-content .note-container h4#trash-content-warning, #single-content-category .note-container h4#content-warning, #single-content-category .note-container h4#trash-content-warning, #main-trash-content .note-container h4#content-warning, #main-trash-content .note-container h4#trash-content-warning {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.22);
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center; }
+    @media (max-width: 768px) and (min-width: 577px) {
+      .main-content .note-container h4#content-warning, .main-content .note-container h4#trash-content-warning, #single-content-category .note-container h4#content-warning, #single-content-category .note-container h4#trash-content-warning, #main-trash-content .note-container h4#content-warning, #main-trash-content .note-container h4#trash-content-warning {
+        font-size: 35px; } }
+    @media (max-width: 576px) {
+      .main-content .note-container h4#content-warning, .main-content .note-container h4#trash-content-warning, #single-content-category .note-container h4#content-warning, #single-content-category .note-container h4#trash-content-warning, #main-trash-content .note-container h4#content-warning, #main-trash-content .note-container h4#trash-content-warning {
+        font-size: 30px; } }
 
 #main-menu, #user-menu {
   float: left;

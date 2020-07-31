@@ -10,7 +10,9 @@ $listDeletedNotes = $objNote->listTrashNotes($idUser);
 ?>
 
 <section id="main-trash-content" class="main-content open-menu-for-content">
-    <div id="title-trash">Lixeira</div>
+    <?php if (count($listDeletedNotes) > 0) { ?>
+        <div id="title-trash">Lixeira</div>
+    <?php } ?>
     <div class="note-container">
         <div class="deleted-notes">
             <?php foreach ($listDeletedNotes as $value) { ?>
@@ -45,6 +47,10 @@ $listDeletedNotes = $objNote->listTrashNotes($idUser);
                 </div>
             <?php } ?>
         </div>
+
+        <?php if (count($listDeletedNotes) == 0) { ?>
+                <h4 id="trash-content-warning">Lixeira vazia</h4>
+        <?php } ?>
     </div>
     
 
